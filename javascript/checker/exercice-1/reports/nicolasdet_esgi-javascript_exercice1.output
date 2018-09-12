@@ -1,0 +1,119 @@
+Checking ucfirst
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' KO
+	expected : 'TEST' - got : 'Test'
+ucfirst - 'null' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+ucfirst - 'Object' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+
+Checking capitalize
+capitalize - 'test' OK
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
+capitalize - 'null' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+capitalize - 'Object' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : 'TogglecaseIsTheCoolest' - got : 'TogglecaseIs_theCoolest'
+camelCase - ' toggleCase' OK
+camelCase - 'null' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+camelCase - 'Object' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
+snake_case - 'null' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+snake_case - 'Object' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+
+Checking leet
+leet - 'anaconda' KO
+	expected : '4n4c0nd4' - got : 'anaconda'
+leet - 'leet' KO
+	expected : 'l33t' - got : 'leet'
+leet - 'yoda' KO
+	expected : '70d4' - got : 'yoda'
+leet - 'evaluation' KO
+	expected : '3v4l(_)4t10n' - got : 'evaluation'
+leet - 'mon travail' KO
+	expected : 'm0n tr4v41l' - got : 'mon travail'
+leet - ' ' OK
+leet - 'null' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+leet - 'Object' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+
+Checking verlan
+verlan - 'anaconda' KO
+	expected : 'adnocana' - got : 'undefined'
+verlan - 'kayak' KO
+	expected : 'kayak' - got : 'undefined'
+verlan - 'yoda m Luke' KO
+	expected : 'adoy m ekuL' - got : 'undefined'
+verlan - '70da m L(_)k3' KO
+	expected : 'ad07 m 3k)_(L' - got : 'undefined'
+verlan - ' ' KO
+	expected : ' ' - got : 'undefined'
+verlan - 'null' KO
+	expected : '' - got : 'undefined'
+verlan - 'Object' KO
+	expected : '' - got : 'undefined'
+
+Checking yoda
+yoda - 'anaconda' KO
+	expected : 'anaconda' - got : 'undefined'
+yoda - 'yoda m Luke' KO
+	expected : 'Luke m yoda' - got : 'undefined'
+yoda - 'Inverser la position des mots d’une phrase' KO
+	expected : 'phrase d’une mots des position la Inverser' - got : 'undefined'
+yoda - ' ' KO
+	expected : ' ' - got : 'undefined'
+yoda - 'null' KO
+	expected : '' - got : 'undefined'
+yoda - 'Object' KO
+	expected : '' - got : 'undefined'
+
+Checking vig
+vig - 'un mot' KO
+	expected : 'fbhnqcsghnhiywcsbsqzsrsby' - got : 'undefined'
+vig - 'un mot avec MAJ' KO
+	expected : 'fbhnqcsghnhiywcsbsqzsrsby' - got : 'undefined'
+vig - 'une phrase longue' KO
+	expected : 'hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv' - got : 'undefined'
+vig - ' ' KO
+	expected : ' ' - got : 'undefined'
+vig - 'null' KO
+	expected : '' - got : 'undefined'
+vig - 'Object' KO
+	expected : '' - got : 'undefined'
+
+Checking prop_access
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path not exist' KO
+	expected : 'animal.gender not exist' - got : 'null'
+prop_access - 'path empty' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of null
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
