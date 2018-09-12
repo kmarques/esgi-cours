@@ -2,6 +2,8 @@
 
 ![Here we go](https://metrouk2.files.wordpress.com/2016/02/mario-kart.png?w=1200&h=630&crop=1)
 
+Rendu : ./exercice-4/mario-kart.js
+
 ## Objectifs
 
 ### Fun
