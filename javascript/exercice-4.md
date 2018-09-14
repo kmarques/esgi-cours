@@ -2,6 +2,8 @@
 
 ![Here we go](https://metrouk2.files.wordpress.com/2016/02/mario-kart.png?w=1200&h=630&crop=1)
 
+Rendu : ./exercice-4/mario-kart.js
+
 ## Objectifs
 
 ### Fun
@@ -29,7 +31,7 @@ Il peut agir de 3 manières différentes:
     }
     ```
 - needUpdate(): (_publique_) Vérifie selon les infos si on doit appeler la fonction _speak_
-- getSate(): (_privilégié_) permet de connaître l'état du pilote
+- getState(): (_privilégié_) permet de connaître l'état du pilote
 - speak(): (_publique_) permet de générer des phrases, selon les données reçues
   - state: "ready" => "Here we go!"
   - state: "happy" => "Let's have some fun!"
