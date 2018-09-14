@@ -88,9 +88,9 @@ verlan - 'Object' KO
 Checking yoda
 yoda - 'anaconda' OK
 yoda - 'yoda m Luke' KO
-	expected : "Luke m yoda" - got "m yoda Luke"
+	expected : "Luke m yoda" - got "Luke yoda m"
 yoda - 'Inverser la position des mots d’une phrase' KO
-	expected : "phrase d’une mots des position la Inverser" - got "des position la Inverser mots phrase d’une"
+	expected : "phrase d’une mots des position la Inverser" - got "la Inverser position des mots d’une phrase"
 yoda - ' ' OK
 yoda - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null

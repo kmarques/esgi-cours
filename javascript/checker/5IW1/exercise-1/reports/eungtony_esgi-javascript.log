@@ -15,111 +15,129 @@ ucfirst - 'Object' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
 
 Checking capitalize
-capitalize - 'test' OK
-capitalize - ' test' OK
+capitalize - 'test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 capitalize - 'Object' KO
-	expected : "" - got {"foo":"data"}
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "ToggleCase"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 camelCase - 'Object' KO
-	expected : "" - got {"foo":"data"}
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "toggleCase_is_the_coolest"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "ToggleCase_is_the_3oolest"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "ToggleCase_is_the_coolest"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "_toggleCase"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 snake_case - 'Object' KO
-	expected : "" - got {"foo":"data"}
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 
 Checking leet
-leet - 'anaconda' OK
+leet - 'anaconda' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 leet - 'leet' KO
-	expected : "l33t" - got "1337"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 leet - 'yoda' KO
-	expected : "70d4" - got "y0d4"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v41u47i0n"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "m0n 7r4v4i1"
-leet - ' ' OK
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+leet - ' ' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-leet - 'Object' OK
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 
 Checking verlan
-verlan - 'anaconda' OK
-verlan - 'kayak' OK
-verlan - 'yoda m Luke' OK
-verlan - '70da m L(_)k3' OK
-verlan - ' ' OK
+verlan - 'anaconda' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+verlan - 'kayak' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+verlan - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+verlan - '70da m L(_)k3' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+verlan - ' ' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 verlan - 'Object' KO
-	expected : "" - got {"foo":"data"}
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 
 Checking yoda
-yoda - 'anaconda' OK
-yoda - 'yoda m Luke' OK
-yoda - 'Inverser la position des mots d’une phrase' OK
-yoda - ' ' OK
+yoda - 'anaconda' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+yoda - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+yoda - 'Inverser la position des mots d’une phrase' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+yoda - ' ' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 yoda - 'Object' KO
-	expected : "" - got {"foo":"data"}
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 
 Checking vig
 vig - 'un mot' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "FBHNQCSGHNHIYWCSBSQZSRSBY"
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 vig - 'un mot avec MAJ' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "FBHNQCSGHNHIYWCSBSQZSRSBY"
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 vig - 'une phrase longue' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "HNAPRUEULXQRSPROFLKNQXIOHMRDUENOIEQTKEWQSYLRNPRSRNZIBHGCYGDFTFUCGEQNDHWV"
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 vig - ' ' KO
-	expected : " " - got ""
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 vig - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of null
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 vig - 'Object' KO
-	Unexpected behaviour : TypeError - text.toUpperCase is not a function
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 
 Checking prop_access
 prop_access - 'path exist - value string' KO
-	expected : "dog" - got "[object Object].animal.type.name"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got "[object Object].animal.type"
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got null
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 prop_access - 'path empty' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 prop_access - 'object null' KO
-	expected : test not exist - got null
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
 prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined

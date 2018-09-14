@@ -15,82 +15,100 @@ ucfirst - 'Object' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
 
 Checking capitalize
-capitalize - 'test' OK
+capitalize - 'test' KO
+	expected : "Test" - got "Chaine vide"
 capitalize - ' test' KO
-	expected : " Test" - got "Chaine vide,Test"
+	expected : " Test" - got "Chaine vide"
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum,DOLOR"
+	expected : "Ipsum Dolor" - got "Chaine vide"
 capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "Sit,8met,Consectetur"
+	expected : "Sit 8met Consectetur" - got "Chaine vide"
 capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got "_dipiscing,Elit"
+	expected : "_dipiscing Elit" - got "Chaine vide"
 capitalize - 'null' KO
 	expected : "" - got "Chaine vide"
 capitalize - 'Object' KO
 	expected : "" - got "Chaine vide"
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggle case is the coolest' KO
+	expected : "ToggleCaseIsTheCoolest" - got "Chaine vide"
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "Chaine vide"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
+	expected : "TogglecaseIsThe3oolest" - got "Chaine vide"
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+	expected : "Togglecaseisthecoolest" - got "Chaine vide"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "Chaine vide"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "Chaine videToggleCase"
+	expected : "Togglecase" - got "Chaine vide"
 camelCase - 'null' KO
 	expected : "" - got "Chaine vide"
 camelCase - 'Object' KO
 	expected : "" - got "Chaine vide"
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggle case is the coolest' KO
+	expected : "toggle_case_is_the_coolest" - got "Chaine vide"
 snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "toggleCase_is_the_coolest"
+	expected : "togglecase_is_the_coolest" - got "Chaine vide"
 snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "ToggleCase_is_the_3oolest"
+	expected : "togglecase_is_the_3oolest" - got "Chaine vide"
 snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
+	expected : "togglecaseisthecool3st" - got "Chaine vide"
 snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "ToggleCase_is_the_coolest"
+	expected : "togglecase_is_the_coolest" - got "Chaine vide"
 snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "_toggleCase"
+	expected : "_togglecase" - got "Chaine vide"
 snake_case - 'null' KO
 	expected : "" - got "Chaine vide"
 snake_case - 'Object' KO
 	expected : "" - got "Chaine vide"
 
 Checking leet
-leet - 'anaconda' OK
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
-leet - ' ' OK
+leet - 'anaconda' KO
+	expected : "4n4c0nd4" - got "Chaine vide"
+leet - 'leet' KO
+	expected : "l33t" - got "Chaine vide"
+leet - 'yoda' KO
+	expected : "70d4" - got "Chaine vide"
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "Chaine vide"
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got "Chaine vide"
+leet - ' ' KO
+	expected : " " - got "Chaine vide"
 leet - 'null' KO
 	expected : "" - got "Chaine vide"
 leet - 'Object' KO
 	expected : "" - got "Chaine vide"
 
 Checking verlan
-verlan - 'anaconda' OK
-verlan - 'kayak' OK
-verlan - 'yoda m Luke' OK
-verlan - '70da m L(_)k3' OK
-verlan - ' ' OK
+verlan - 'anaconda' KO
+	expected : "adnocana" - got "Chaine vide"
+verlan - 'kayak' KO
+	expected : "kayak" - got "Chaine vide"
+verlan - 'yoda m Luke' KO
+	expected : "adoy m ekuL" - got "Chaine vide"
+verlan - '70da m L(_)k3' KO
+	expected : "ad07 m 3k)_(L" - got "Chaine vide"
+verlan - ' ' KO
+	expected : " " - got "Chaine vide"
 verlan - 'null' KO
 	expected : "" - got "Chaine vide"
 verlan - 'Object' KO
 	expected : "" - got "Chaine vide"
 
 Checking yoda
-yoda - 'anaconda' OK
-yoda - 'yoda m Luke' OK
-yoda - 'Inverser la position des mots d’une phrase' OK
-yoda - ' ' OK
+yoda - 'anaconda' KO
+	expected : "anaconda" - got "Chaine vide"
+yoda - 'yoda m Luke' KO
+	expected : "Luke m yoda" - got "Chaine vide"
+yoda - 'Inverser la position des mots d’une phrase' KO
+	expected : "phrase d’une mots des position la Inverser" - got "Chaine vide"
+yoda - ' ' KO
+	expected : " " - got "Chaine vide"
 yoda - 'null' KO
 	expected : "" - got "Chaine vide"
 yoda - 'Object' KO
@@ -112,9 +130,9 @@ vig - 'Object' KO
 
 Checking prop_access
 prop_access - 'path exist - value string' KO
-	expected : "dog" - got "animal.type not exist"
+	expected : "dog" - got undefined
 prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got "animal.type not exist"
+	expected : {"name":"dog"} - got undefined
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO

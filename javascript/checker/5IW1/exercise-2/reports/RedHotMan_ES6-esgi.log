@@ -38,4 +38,4 @@ type_check - 'objectMatch' KO
 type_check - 'objectNotMatch' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 type_check - 'objectSuperMatch' KO
-	expected : true - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'fi' of undefined

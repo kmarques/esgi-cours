@@ -1,5 +1,5 @@
 Invalid script: SyntaxError: Unexpected token )
-/Users/karl/projects/ESGI/javascript/checker/5IW1/exercise-1/scripts/clavos_esgi-javascript.js:71
+/5IW1/exercise-1/scripts/clavos_esgi-javascript.js:71
 				if (temp[i] in ) {
 				               ^
 
