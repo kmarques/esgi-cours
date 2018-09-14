@@ -1,0 +1,143 @@
+
+
+Checking ucfirst
+ucfirst - 'test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'ucfirst' of undefined
+ucfirst - ' test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'ucfirst' of undefined
+ucfirst - 'Test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'ucfirst' of undefined
+ucfirst - 'TEST' KO
+	Unexpected behaviour : TypeError - Cannot read property 'ucfirst' of undefined
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'ucfirst' of undefined
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'ucfirst' of undefined
+
+Checking capitalize
+capitalize - 'test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'capitalize' of undefined
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'capitalize' of undefined
+capitalize - 'ipsum DOLOR' KO
+	Unexpected behaviour : TypeError - Cannot read property 'capitalize' of undefined
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : TypeError - Cannot read property 'capitalize' of undefined
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : TypeError - Cannot read property 'capitalize' of undefined
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'capitalize' of undefined
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'capitalize' of undefined
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of undefined
+camelCase - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of undefined
+camelCase - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of undefined
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of undefined
+camelCase - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of undefined
+camelCase - ' toggleCase' KO
+	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of undefined
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of undefined
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of undefined
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'snake_case' of undefined
+snake_case - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'snake_case' of undefined
+snake_case - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'snake_case' of undefined
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	Unexpected behaviour : TypeError - Cannot read property 'snake_case' of undefined
+snake_case - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'snake_case' of undefined
+snake_case - ' toggleCase' KO
+	Unexpected behaviour : TypeError - Cannot read property 'snake_case' of undefined
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'snake_case' of undefined
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'snake_case' of undefined
+
+Checking leet
+leet - 'anaconda' KO
+	Unexpected behaviour : TypeError - Cannot read property 'leet' of undefined
+leet - 'leet' KO
+	Unexpected behaviour : TypeError - Cannot read property 'leet' of undefined
+leet - 'yoda' KO
+	Unexpected behaviour : TypeError - Cannot read property 'leet' of undefined
+leet - 'evaluation' KO
+	Unexpected behaviour : TypeError - Cannot read property 'leet' of undefined
+leet - 'mon travail' KO
+	Unexpected behaviour : TypeError - Cannot read property 'leet' of undefined
+leet - ' ' KO
+	Unexpected behaviour : TypeError - Cannot read property 'leet' of undefined
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'leet' of undefined
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'leet' of undefined
+
+Checking verlan
+verlan - 'anaconda' KO
+	Unexpected behaviour : TypeError - Cannot read property 'verlan' of undefined
+verlan - 'kayak' KO
+	Unexpected behaviour : TypeError - Cannot read property 'verlan' of undefined
+verlan - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - Cannot read property 'verlan' of undefined
+verlan - '70da m L(_)k3' KO
+	Unexpected behaviour : TypeError - Cannot read property 'verlan' of undefined
+verlan - ' ' KO
+	Unexpected behaviour : TypeError - Cannot read property 'verlan' of undefined
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'verlan' of undefined
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'verlan' of undefined
+
+Checking yoda
+yoda - 'anaconda' KO
+	Unexpected behaviour : TypeError - Cannot read property 'yoda' of undefined
+yoda - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - Cannot read property 'yoda' of undefined
+yoda - 'Inverser la position des mots d’une phrase' KO
+	Unexpected behaviour : TypeError - Cannot read property 'yoda' of undefined
+yoda - ' ' KO
+	Unexpected behaviour : TypeError - Cannot read property 'yoda' of undefined
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'yoda' of undefined
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'yoda' of undefined
+
+Checking vig
+vig - 'un mot' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'un mot avec MAJ' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'une phrase longue' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - ' ' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'null' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'Object' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value object' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path not exist' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path empty' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'prop_access' of null

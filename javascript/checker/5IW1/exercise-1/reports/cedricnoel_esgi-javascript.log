@@ -1,0 +1,143 @@
+
+
+Checking ucfirst
+ucfirst - 'test' KO
+	expected : "Test" - got false
+ucfirst - ' test' KO
+	expected : " test" - got false
+ucfirst - 'Test' KO
+	expected : "Test" - got false
+ucfirst - 'TEST' KO
+	expected : "TEST" - got false
+ucfirst - 'null' KO
+	expected : "" - got false
+ucfirst - 'Object' KO
+	expected : "" - got false
+
+Checking capitalize
+capitalize - 'test' KO
+	expected : "Test" - got false
+capitalize - ' test' KO
+	expected : " Test" - got false
+capitalize - 'ipsum DOLOR' KO
+	expected : "Ipsum Dolor" - got false
+capitalize - 'sit 8met consectetur' KO
+	expected : "Sit 8met Consectetur" - got false
+capitalize - '_dipiscing elit' KO
+	expected : "_dipiscing Elit" - got false
+capitalize - 'null' KO
+	expected : "" - got false
+capitalize - 'Object' KO
+	expected : "" - got false
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' KO
+	expected : "ToggleCaseIsTheCoolest" - got false
+camelCase - 'toggleCase is the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got false
+camelCase - 'ToggleCase is the 3oolest' KO
+	expected : "TogglecaseIsThe3oolest" - got false
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	expected : "Togglecaseisthecoolest" - got false
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got false
+camelCase - ' toggleCase' KO
+	expected : "Togglecase" - got false
+camelCase - 'null' KO
+	expected : "" - got false
+camelCase - 'Object' KO
+	expected : "" - got false
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' KO
+	expected : "toggle_case_is_the_coolest" - got false
+snake_case - 'toggleCase is the coolest' KO
+	expected : "togglecase_is_the_coolest" - got false
+snake_case - 'ToggleCase is the 3oolest' KO
+	expected : "togglecase_is_the_3oolest" - got false
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	expected : "togglecaseisthecool3st" - got false
+snake_case - 'ToggleCase is_the coolest' KO
+	expected : "togglecase_is_the_coolest" - got false
+snake_case - ' toggleCase' KO
+	expected : "_togglecase" - got false
+snake_case - 'null' KO
+	expected : "" - got false
+snake_case - 'Object' KO
+	expected : "" - got false
+
+Checking leet
+leet - 'anaconda' KO
+	expected : "4n4c0nd4" - got false
+leet - 'leet' KO
+	expected : "l33t" - got false
+leet - 'yoda' KO
+	expected : "70d4" - got false
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got false
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got false
+leet - ' ' KO
+	expected : " " - got false
+leet - 'null' KO
+	expected : "" - got false
+leet - 'Object' KO
+	expected : "" - got false
+
+Checking verlan
+verlan - 'anaconda' KO
+	expected : "adnocana" - got false
+verlan - 'kayak' KO
+	expected : "kayak" - got false
+verlan - 'yoda m Luke' KO
+	expected : "adoy m ekuL" - got false
+verlan - '70da m L(_)k3' KO
+	expected : "ad07 m 3k)_(L" - got false
+verlan - ' ' KO
+	expected : " " - got false
+verlan - 'null' KO
+	expected : "" - got false
+verlan - 'Object' KO
+	expected : "" - got false
+
+Checking yoda
+yoda - 'anaconda' KO
+	expected : "anaconda" - got false
+yoda - 'yoda m Luke' KO
+	expected : "Luke m yoda" - got false
+yoda - 'Inverser la position des mots d’une phrase' KO
+	expected : "phrase d’une mots des position la Inverser" - got false
+yoda - ' ' KO
+	expected : " " - got false
+yoda - 'null' KO
+	expected : "" - got false
+yoda - 'Object' KO
+	expected : "" - got false
+
+Checking vig
+vig - 'un mot' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got false
+vig - 'un mot avec MAJ' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got false
+vig - 'une phrase longue' KO
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got false
+vig - ' ' KO
+	expected : " " - got false
+vig - 'null' KO
+	expected : "" - got false
+vig - 'Object' KO
+	expected : "" - got false
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	expected : "dog" - got false
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got false
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got false
+prop_access - 'object null' KO
+	expected : test not exist - got null
+prop_access - 'path null' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got false

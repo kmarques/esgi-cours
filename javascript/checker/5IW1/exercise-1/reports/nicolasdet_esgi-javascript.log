@@ -1,0 +1,143 @@
+
+
+Checking ucfirst
+ucfirst - 'test' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+ucfirst - ' test' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+ucfirst - 'Test' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+ucfirst - 'TEST' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+ucfirst - 'null' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+ucfirst - 'Object' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+
+Checking capitalize
+capitalize - 'test' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+capitalize - ' test' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+capitalize - 'ipsum DOLOR' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+capitalize - 'null' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+capitalize - 'Object' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+camelCase - 'toggleCase is the coolest' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+camelCase - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+camelCase - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+camelCase - ' toggleCase' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+camelCase - 'null' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+camelCase - 'Object' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+snake_case - 'toggleCase is the coolest' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+snake_case - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+snake_case - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+snake_case - ' toggleCase' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+snake_case - 'null' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+snake_case - 'Object' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+
+Checking leet
+leet - 'anaconda' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+leet - 'leet' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+leet - 'yoda' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+leet - 'evaluation' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+leet - 'mon travail' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+leet - ' ' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+leet - 'null' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+leet - 'Object' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+
+Checking verlan
+verlan - 'anaconda' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+verlan - 'kayak' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+verlan - 'yoda m Luke' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+verlan - '70da m L(_)k3' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+verlan - ' ' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+verlan - 'null' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+verlan - 'Object' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+
+Checking yoda
+yoda - 'anaconda' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+yoda - 'yoda m Luke' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+yoda - 'Inverser la position des mots d’une phrase' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+yoda - ' ' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+yoda - 'null' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+yoda - 'Object' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+
+Checking vig
+vig - 'un mot' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+vig - 'un mot avec MAJ' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+vig - 'une phrase longue' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+vig - ' ' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+vig - 'null' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+vig - 'Object' KO
+	Unexpected behaviour : Custom error - Il faut passer un String en parametre
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : Custom error - Il faut passer quelque chose en parametre
+prop_access - 'path exist - value object' KO
+	Unexpected behaviour : Custom error - Il faut passer quelque chose en parametre
+prop_access - 'path not exist' KO
+	Unexpected behaviour : Custom error - Il faut passer quelque chose en parametre
+prop_access - 'path empty' KO
+	Unexpected behaviour : Custom error - Il faut passer quelque chose en parametre
+prop_access - 'object null' KO
+	Unexpected behaviour : Custom error - Il faut passer quelque chose en parametre
+prop_access - 'path null' KO
+	Unexpected behaviour : Custom error - Il faut passer quelque chose en parametre

@@ -1,0 +1,143 @@
+
+
+Checking ucfirst
+ucfirst - 'test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
+ucfirst - ' test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
+ucfirst - 'Test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
+ucfirst - 'TEST' KO
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
+
+Checking capitalize
+capitalize - 'test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+capitalize - 'ipsum DOLOR' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+camelCase - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+camelCase - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+camelCase - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+camelCase - ' toggleCase' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+snake_case - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+snake_case - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+snake_case - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+snake_case - ' toggleCase' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+
+Checking leet
+leet - 'anaconda' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
+leet - 'leet' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
+leet - 'yoda' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
+leet - 'evaluation' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
+leet - 'mon travail' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
+leet - ' ' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
+
+Checking verlan
+verlan - 'anaconda' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+verlan - 'kayak' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+verlan - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+verlan - '70da m L(_)k3' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+verlan - ' ' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+
+Checking yoda
+yoda - 'anaconda' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+yoda - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+yoda - 'Inverser la position des mots d’une phrase' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+yoda - ' ' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+
+Checking vig
+vig - 'un mot' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "_"
+vig - 'un mot avec MAJ' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "_"
+vig - 'une phrase longue' KO
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "_"
+vig - ' ' KO
+	expected : " " - got "_"
+vig - 'null' KO
+	expected : "" - got "_"
+vig - 'Object' KO
+	expected : "" - got "_"
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+prop_access - 'path exist - value object' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+prop_access - 'path not exist' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+prop_access - 'path empty' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined

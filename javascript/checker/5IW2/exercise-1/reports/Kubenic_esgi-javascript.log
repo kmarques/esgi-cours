@@ -1,0 +1,104 @@
+
+
+Checking ucfirst
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
+ucfirst - 'null' OK
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - phrase.charAt is not a function
+
+Checking capitalize
+capitalize - 'test' OK
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' KO
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
+capitalize - 'null' OK
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - phrase.split is not a function
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
+camelCase - 'ToggleCase is the 3oolest' KO
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+camelCase - ' toggleCase' KO
+	expected : "Togglecase" - got "ToggleCase"
+camelCase - 'null' OK
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - phrase.split is not a function
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
+snake_case - 'null' OK
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - phrase.toLowerCase is not a function
+
+Checking leet
+leet - 'anaconda' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
+leet - 'null' OK
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - phrase.replace is not a function
+
+Checking verlan
+verlan - 'anaconda' KO
+	expected : "adnocana" - got "adnocana "
+verlan - 'kayak' KO
+	expected : "kayak" - got "kayak "
+verlan - 'yoda m Luke' KO
+	expected : "adoy m ekuL" - got "adoy m ekuL "
+verlan - '70da m L(_)k3' KO
+	expected : "ad07 m 3k)_(L" - got "ad07 m 3k)_(L "
+verlan - ' ' KO
+	expected : " " - got "  "
+verlan - 'null' OK
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - phrase.split is not a function
+
+Checking yoda
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
+yoda - 'null' OK
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - phrase.split is not a function
+
+Checking vig
+vig - 'un mot' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "rntzcoestztukioenecledenk"
+vig - 'un mot avec MAJ' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "rntz onjti ltif necledenk"
+vig - 'une phrase longue' KO
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "tzm bdgqgx jcde bdar xwzcju atyd pgq za uqcf wqicekxdzb dedz lunt sok s prf rgosq cz ptih"
+vig - ' ' OK
+vig - 'null' OK
+vig - 'Object' OK
+
+Checking prop_access
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' OK
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of null
+prop_access - 'path null' OK

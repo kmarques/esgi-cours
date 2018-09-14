@@ -1,0 +1,16 @@
+Invalid script: SyntaxError: Unexpected token :
+/Users/karl/projects/ESGI/javascript/checker/5IW1/exercise-2/scripts/Yoann-Vie_esgi-javascript.js:83
+    prop2: 'text',
+         ^
+
+SyntaxError: Unexpected token :
+    at new Script (vm.js:51:7)
+    at createScript (vm.js:136:10)
+    at Object.runInThisContext (vm.js:197:10)
+    at Module._compile (module.js:613:28)
+    at Object.Module._extensions..js (module.js:660:10)
+    at Module.load (module.js:561:32)
+    at tryModuleLoad (module.js:501:12)
+    at Function.Module._load (module.js:493:3)
+    at Module.require (module.js:593:17)
+    at require (internal/module.js:11:18)
