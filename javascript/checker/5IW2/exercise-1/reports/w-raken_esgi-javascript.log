@@ -1,143 +1,108 @@
 
 
 Checking ucfirst
-ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - Cannot read property 'slice' of undefined
-ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - Cannot read property 'slice' of undefined
-ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - Cannot read property 'slice' of undefined
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
 ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - Cannot read property 'slice' of undefined
+	expected : "TEST" - got "Test"
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'slice' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'slice' of null
 ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'slice' of undefined
+	Unexpected behaviour : TypeError - str.slice is not a function
 
 Checking capitalize
-capitalize - 'test' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-capitalize - ' test' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-capitalize - 'ipsum DOLOR' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-capitalize - 'sit 8met consectetur' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-capitalize - '_dipiscing elit' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+capitalize - 'test' OK
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-camelCase - ' toggleCase' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - ' toggleCase' OK
 camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "toggle_case_is_the_coolest" - got "toggle_case is the coolest"
 snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "togglecase_is_the_coolest" - got "togglecase_is the coolest"
 snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "togglecase_is_the_3oolest" - got "togglecase_is the 3oolest"
+snake_case - 'ToggleCaseIsTheCool3st' OK
 snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "togglecase_is_the_coolest" - got "togglecase_is_the coolest"
+snake_case - ' toggleCase' OK
 snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking leet
-leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
-leet - 'leet' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
-leet - 'yoda' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
-leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
-leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
-leet - ' ' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
+leet - 'anaconda' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
 leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 leet - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of undefined
+	Unexpected behaviour : TypeError - str.replace is not a function
 
 Checking verlan
-verlan - 'anaconda' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-verlan - 'kayak' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-verlan - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-verlan - ' ' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' OK
+verlan - '70da m L(_)k3' OK
+verlan - ' ' OK
 verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 verlan - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking yoda
-yoda - 'anaconda' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-yoda - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-yoda - 'Inverser la position des mots d’une phrase' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-yoda - ' ' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
 yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 yoda - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking vig
-vig - 'un mot' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
-vig - 'un mot avec MAJ' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+vig - 'un mot' OK
+vig - 'un mot avec MAJ' OK
 vig - 'une phrase longue' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "hnaprueulxqrsproflknqxiohmrduenoieqtkewqsylrnprsrnzibhgcygdftfucgeqndhwv"
 vig - ' ' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+	expected : " " - got ""
 vig - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of null
 vig - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+	Unexpected behaviour : TypeError - str1.toUpperCase is not a function
 
 Checking prop_access
-prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
 prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
-prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' OK
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of null
 prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null

@@ -6,20 +6,22 @@ ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property '0' of null
-ucfirst - 'Object' OK
+	expected : "" - got undefined
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - str.charAt is not a function
 
 Checking capitalize
 capitalize - 'test' OK
-capitalize - ' test' OK
+capitalize - ' test' KO
+	expected : " Test" - got "function Error() { [native code] } Test"
 capitalize - 'ipsum DOLOR' KO
 	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	expected : "" - got undefined
 capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - word.split is not a function
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
@@ -32,45 +34,40 @@ camelCase - 'ToggleCaseIsTheCoolest' KO
 camelCase - 'ToggleCase is_the coolest' KO
 	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "ToggleCase"
+	expected : "Togglecase" - got "functionError(){[nativecode]}ToggleCase"
 camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	expected : "" - got undefined
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - word.split is not a function
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got "hello-world"
-snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "hello-world"
-snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "hello-world"
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got "hello-world"
-snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "hello-world"
-snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "hello-world"
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
 snake_case - 'null' KO
-	expected : "" - got "hello-world"
+	expected : "" - got undefined
 snake_case - 'Object' KO
-	expected : "" - got "hello-world"
+	Unexpected behaviour : TypeError - str.toLowerCase is not a function
 
 Checking leet
-leet - 'anaconda' OK
+leet - 'anaconda' KO
+	expected : "4n4c0nd4" - got "anaconda"
 leet - 'leet' KO
-	expected : "l33t" - got "l37"
+	expected : "l33t" - got "leet"
 leet - 'yoda' KO
-	expected : "70d4" - got "y0d4"
+	expected : "70d4" - got "yoda"
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4lu4710n"
+	expected : "3v4l(_)4t10n" - got "evaluation"
 leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "m0n 7r4v41l"
+	expected : "m0n tr4v41l" - got "mon travail"
 leet - ' ' OK
 leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 leet - 'Object' KO
-	Unexpected behaviour : TypeError - word.replace is not a function
+	expected : "" - got {"foo":"data"}
 
 Checking verlan
 verlan - 'anaconda' KO
@@ -89,17 +86,18 @@ verlan - 'Object' KO
 	expected : "" - got undefined
 
 Checking yoda
-yoda - 'anaconda' OK
+yoda - 'anaconda' KO
+	expected : "anaconda" - got undefined
 yoda - 'yoda m Luke' KO
-	expected : "Luke m yoda" - got "Lukemyoda"
+	expected : "Luke m yoda" - got undefined
 yoda - 'Inverser la position des mots d’une phrase' KO
-	expected : "phrase d’une mots des position la Inverser" - got "phrased’unemotsdespositionlaInverser"
+	expected : "phrase d’une mots des position la Inverser" - got undefined
 yoda - ' ' KO
-	expected : " " - got ""
+	expected : " " - got undefined
 yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	expected : "" - got undefined
 yoda - 'Object' KO
-	Unexpected behaviour : TypeError - word.split is not a function
+	expected : "" - got undefined
 
 Checking vig
 vig - 'un mot' KO

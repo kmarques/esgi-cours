@@ -1,88 +1,76 @@
 
 
 Checking ucfirst
-ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
-ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
-ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
-ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of null
 ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
+	Unexpected behaviour : TypeError - string.charAt is not a function
 
 Checking capitalize
 capitalize - 'test' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "Test" - got "Test "
 capitalize - ' test' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : " Test" - got " Test "
 capitalize - 'ipsum DOLOR' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR "
 capitalize - 'sit 8met consectetur' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "Sit 8met Consectetur" - got "Sit 8met Consectetur "
 capitalize - '_dipiscing elit' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "_dipiscing Elit" - got "_dipiscing Elit "
 capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "ToggleCaseIsTheCoolest" - got "ToggleCase Is The Coolest "
 camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs The Coolest "
 camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIs The 3oolest "
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_the Coolest "
 camelCase - ' toggleCase' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "Togglecase" - got "ToggleCase "
 camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	expected : "toggle_case_is_the_coolest" - got "toggle_case is the coolest"
 snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	expected : "togglecase_is_the_coolest" - got "togglecase_is the coolest"
 snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	expected : "togglecase_is_the_3oolest" - got "togglecase_is the 3oolest"
+snake_case - 'ToggleCaseIsTheCool3st' OK
 snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
-snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	expected : "togglecase_is_the_coolest" - got "togglecase_is_the coolest"
+snake_case - ' toggleCase' OK
 snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
 snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	Unexpected behaviour : TypeError - string.toLowerCase is not a function
 
 Checking leet
-leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
-leet - 'leet' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
-leet - 'yoda' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+leet - 'anaconda' OK
+leet - 'leet' OK
+leet - 'yoda' OK
 leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
-leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
-leet - ' ' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	expected : "3v4l(_)4t10n" - got "3v4l_4t10n"
+leet - 'mon travail' OK
+leet - ' ' OK
 leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' KO
@@ -102,17 +90,17 @@ verlan - 'Object' KO
 
 Checking yoda
 yoda - 'anaconda' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "anaconda" - got "anaconda "
 yoda - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "Luke m yoda" - got "Luke m yoda "
 yoda - 'Inverser la position des mots d’une phrase' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : "phrase d’une mots des position la Inverser" - got "phrase d’une mots des position la Inverser "
 yoda - ' ' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	expected : " " - got "  "
 yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 yoda - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking vig
 vig - 'un mot' KO
@@ -130,14 +118,14 @@ vig - 'Object' KO
 
 Checking prop_access
 prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	Unexpected behaviour : TypeError - "prop_access" not implemented

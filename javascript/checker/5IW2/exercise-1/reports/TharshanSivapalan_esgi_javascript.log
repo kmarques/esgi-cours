@@ -40,21 +40,21 @@ camelCase - 'Object' KO
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - 'null' KO
-	expected : "" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - 'Object' KO
-	expected : "" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 
 Checking leet
 leet - 'anaconda' OK

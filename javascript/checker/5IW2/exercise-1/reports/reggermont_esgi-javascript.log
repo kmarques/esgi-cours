@@ -2,8 +2,7 @@
 
 Checking ucfirst
 ucfirst - 'test' OK
-ucfirst - ' test' KO
-	expected : " test" - got " Test"
+ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
 ucfirst - 'null' OK
@@ -14,26 +13,23 @@ capitalize - 'test' OK
 capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' KO
 	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
-capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "Sit 8Met Consectetur"
-capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got "_Dipiscing Elit"
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "toggleCaseIsTheCoolest"
+camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "toggleCaseIsTheCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "toggleCaseIsThe3Oolest"
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "toggleCaseIsTheCoolest"
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "toggleCaseIs_TheCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "toggleCase"
+	expected : "Togglecase" - got "ToggleCase"
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
@@ -51,8 +47,7 @@ Checking leet
 leet - 'anaconda' OK
 leet - 'leet' OK
 leet - 'yoda' OK
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4lu4t10n"
+leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
@@ -62,9 +57,9 @@ Checking verlan
 verlan - 'anaconda' OK
 verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
-verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "ad07 m L(_)3k"
-verlan - ' ' OK
+verlan - '70da m L(_)k3' OK
+verlan - ' ' KO
+	expected : " " - got ""
 verlan - 'null' OK
 verlan - 'Object' OK
 
@@ -77,20 +72,26 @@ yoda - 'null' OK
 yoda - 'Object' OK
 
 Checking vig
-vig - 'un mot' OK
-vig - 'un mot avec MAJ' OK
+vig - 'un mot' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
+vig - 'un mot avec MAJ' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
 vig - 'une phrase longue' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "hn prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv"
-vig - ' ' OK
-vig - 'null' OK
-vig - 'Object' OK
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got undefined
+vig - ' ' KO
+	expected : " " - got undefined
+vig - 'null' KO
+	expected : "" - got undefined
+vig - 'Object' KO
+	expected : "" - got undefined
 
 Checking prop_access
 prop_access - 'path exist - value string' OK
-prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got "animal.type not exist"
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' OK
 prop_access - 'object null' KO
-	expected : test not exist - got null
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of null
 prop_access - 'path null' OK

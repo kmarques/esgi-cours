@@ -8,59 +8,51 @@ ucfirst - 'TEST' OK
 ucfirst - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'charAt' of null
 ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - string.charAt is not a function
+	Unexpected behaviour : TypeError - text.charAt is not a function
 
 Checking capitalize
-capitalize - 'test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'test' OK
 capitalize - ' test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 capitalize - 'ipsum DOLOR' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+	expected : "Ipsum Dolor" - got "Ipsum,Dolor"
 capitalize - 'sit 8met consectetur' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+	expected : "Sit 8met Consectetur" - got "Sit,8met,Consectetur"
 capitalize - '_dipiscing elit' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+	expected : "_dipiscing Elit" - got "_dipiscing,Elit"
 capitalize - 'null' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+	Unexpected behaviour : TypeError - text.replace is not a function
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "ToggleCaseIsTheCoolest" - got "Toggle,Case,Is,The,Coolest"
 camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "TogglecaseIsTheCoolest" - got "Togglecase,Is,The,Coolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "TogglecaseIsThe3oolest" - got "Togglecase,Is,The,3oolest"
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "TogglecaseIsTheCoolest" - got "Togglecase,Is_the,Coolest"
 camelCase - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 camelCase - 'null' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	Unexpected behaviour : TypeError - text.replace is not a function
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
 snake_case - 'null' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	Unexpected behaviour : TypeError - text.replace is not a function
 
 Checking leet
 leet - 'anaconda' KO
