@@ -1,6 +1,6 @@
-Invalid script: ReferenceError: type_check_v1 is not defined
-ReferenceError: type_check_v1 is not defined
-    at Object.<anonymous> (/5IW2/exercise-2/scripts/AxelE_esgi-javascript.js:78:25)
+Invalid script: ReferenceError: type_check is not defined
+ReferenceError: type_check is not defined
+    at Object.<anonymous> (/5IW2/exercise-2/scripts/Deeph87_esgi-javascript.js:109:22)
     at Module._compile (module.js:649:30)
     at Object.Module._extensions..js (module.js:660:10)
     at Module.load (module.js:561:32)

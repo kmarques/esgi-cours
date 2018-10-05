@@ -1,73 +1,88 @@
 
 
 Checking ucfirst
-ucfirst - 'test' OK
-ucfirst - ' test' OK
-ucfirst - 'Test' OK
-ucfirst - 'TEST' OK
+ucfirst - 'test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
+ucfirst - ' test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
+ucfirst - 'Test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
+ucfirst - 'TEST' KO
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
 ucfirst - 'null' KO
-	expected : "" - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
 ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - str.charAt is not a function
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of undefined
 
 Checking capitalize
-capitalize - 'test' OK
+capitalize - 'test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 capitalize - ' test' KO
-	expected : " Test" - got "function Error() { [native code] } Test"
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 capitalize - 'null' KO
-	expected : "" - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - str.split is not a function
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "functionError(){[nativecode]}ToggleCase"
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 camelCase - 'null' KO
-	expected : "" - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - str.split is not a function
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' OK
-snake_case - 'toggleCase is the coolest' OK
-snake_case - 'ToggleCase is the 3oolest' OK
-snake_case - 'ToggleCaseIsTheCool3st' OK
-snake_case - 'ToggleCase is_the coolest' OK
-snake_case - ' toggleCase' OK
+snake_case - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+snake_case - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+snake_case - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+snake_case - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+snake_case - ' toggleCase' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
 snake_case - 'null' KO
-	expected : "" - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
 snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - str.toLowerCase is not a function
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
 
 Checking leet
 leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got "anaconda"
+	expected : "4n4c0nd4" - got undefined
 leet - 'leet' KO
-	expected : "l33t" - got "leet"
+	expected : "l33t" - got undefined
 leet - 'yoda' KO
-	expected : "70d4" - got "yoda"
+	expected : "70d4" - got undefined
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "evaluation"
+	expected : "3v4l(_)4t10n" - got undefined
 leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "mon travail"
-leet - ' ' OK
+	expected : "m0n tr4v41l" - got undefined
+leet - ' ' KO
+	expected : " " - got undefined
 leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+	expected : "" - got undefined
 leet - 'Object' KO
-	expected : "" - got {"foo":"data"}
+	expected : "" - got undefined
 
 Checking verlan
 verlan - 'anaconda' KO

@@ -1,0 +1,125 @@
+
+
+Checking ucfirst
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'ucfirst' of null
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+
+Checking capitalize
+capitalize - 'test' OK
+capitalize - ' test' KO
+	expected : " Test" - got " test  test"
+capitalize - 'ipsum DOLOR' KO
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR Ipsum DOLOR"
+capitalize - 'sit 8met consectetur' KO
+	expected : "Sit 8met Consectetur" - got "Sit 8met consectetur Sit 8met consectetur Sit 8met consectetur"
+capitalize - '_dipiscing elit' KO
+	expected : "_dipiscing Elit" - got "_dipiscing elit _dipiscing elit"
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'capitalize' of null
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' KO
+	expected : "ToggleCaseIsTheCoolest" - got "TogglecaseisthecoolestTogglecaseisthecoolestTogglecaseisthecoolestTogglecaseisthecoolestTogglecaseisthecoolest"
+camelCase - 'toggleCase is the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseisthecoolestToggleCaseisthecoolestToggleCaseisthecoolestToggleCaseisthecoolest"
+camelCase - 'ToggleCase is the 3oolest' KO
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseisthe3oolestToggleCaseisthe3oolestToggleCaseisthe3oolestToggleCaseisthe3oolest"
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseis_thecoolestToggleCaseis_thecoolestToggleCaseis_thecoolest"
+camelCase - ' toggleCase' KO
+	expected : "Togglecase" - got "toggleCasetoggleCase"
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of null
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'snake_case' of null
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+
+Checking leet
+leet - 'anaconda' KO
+	expected : "4n4c0nd4" - got "a not existna not existc not existo not existnda not exist"
+leet - 'leet' KO
+	expected : "l33t" - got "le not existe not existt"
+leet - 'yoda' KO
+	expected : "70d4" - got "yo not existda not exist"
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "e not existva not existlua not existtio not existn"
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got "mo not existn tr not exista not existva not existil"
+leet - ' ' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'leet' of null
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+
+Checking verlan
+verlan - 'anaconda' KO
+	expected : "adnocana" - got "adnocana "
+verlan - 'kayak' KO
+	expected : "kayak" - got "kayak "
+verlan - 'yoda m Luke' KO
+	expected : "adoy m ekuL" - got "adoy m ekuL "
+verlan - '70da m L(_)k3' KO
+	expected : "ad07 m 3k)_(L" - got "ad07 m 3k)_(L "
+verlan - ' ' OK
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'verlan' of null
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+
+Checking yoda
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'yoda' of null
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+
+Checking vig
+vig - 'un mot' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "mmycqomwycyaycommuiiukumy"
+vig - 'un mot avec MAJ' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "mmyc wnrxn osot heekujbdr"
+vig - 'une phrase longue' KO
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "amu oikdei jqjv jvdx oerfre lsoi psu hi ugan zainsksjmf emek jghd hzu w urs yovjd iz wdgs"
+vig - ' ' OK
+vig - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'vig' of null
+vig - 'Object' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : TypeError - properties.split is not a function
+prop_access - 'path exist - value object' KO
+	Unexpected behaviour : TypeError - properties.split is not a function
+prop_access - 'path not exist' KO
+	Unexpected behaviour : TypeError - properties.split is not a function
+prop_access - 'path empty' KO
+	Unexpected behaviour : TypeError - properties.split is not a function
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'prop_access' of null
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - properties.split is not a function

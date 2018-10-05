@@ -4,15 +4,15 @@ Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
-ucfirst - 'TEST' OK
+ucfirst - 'TEST' KO
+	expected : "TEST" - got "Test"
 ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' OK
 capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
@@ -20,16 +20,12 @@ capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
-camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
-camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
-camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "ToggleCase"
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
@@ -47,24 +43,18 @@ Checking leet
 leet - 'anaconda' OK
 leet - 'leet' OK
 leet - 'yoda' OK
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4l_4t10n"
+leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' KO
-	expected : "adnocana" - got undefined
-verlan - 'kayak' KO
-	expected : "kayak" - got undefined
-verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got undefined
-verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got undefined
-verlan - ' ' KO
-	expected : " " - got undefined
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' OK
+verlan - '70da m L(_)k3' OK
+verlan - ' ' OK
 verlan - 'null' OK
 verlan - 'Object' OK
 

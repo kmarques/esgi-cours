@@ -50,21 +50,21 @@ camelCase - 'Object' KO
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 
 Checking leet
 leet - 'anaconda' KO
@@ -116,17 +116,17 @@ yoda - 'Object' KO
 
 Checking vig
 vig - 'un mot' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
 vig - 'un mot avec MAJ' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
 vig - 'une phrase longue' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got undefined
 vig - ' ' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	expected : " " - got undefined
 vig - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	expected : "" - got undefined
 vig - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+	expected : "" - got undefined
 
 Checking prop_access
 prop_access - 'path exist - value string' KO

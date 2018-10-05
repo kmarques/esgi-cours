@@ -24,7 +24,7 @@ camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIstheCoolest"
 camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
@@ -49,11 +49,9 @@ snake_case - 'Object' KO
 
 Checking leet
 leet - 'anaconda' OK
-leet - 'leet' KO
-	expected : "l33t" - got "l3t"
+leet - 'leet' OK
 leet - 'yoda' OK
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4l(-)4t10n"
+leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
@@ -62,10 +60,8 @@ leet - 'Object' OK
 Checking verlan
 verlan - 'anaconda' OK
 verlan - 'kayak' OK
-verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got "ekuL m adoy"
-verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
+verlan - 'yoda m Luke' OK
+verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
 verlan - 'null' OK
 verlan - 'Object' OK
@@ -95,10 +91,10 @@ vig - 'Object' KO
 Checking prop_access
 prop_access - 'path exist - value string' OK
 prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got undefined
+	expected : {"name":"dog"} - got "animal.type not exist"
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' OK
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'test' of null
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of null
 prop_access - 'path null' OK

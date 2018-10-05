@@ -40,19 +40,13 @@ snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' OK
-leet - 'leet' KO
-	expected : "l33t" - got "l37"
-leet - 'yoda' KO
-	expected : "70d4" - got "y0d4"
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4lu4710n"
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "m0n 7r4v41l"
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
 leet - ' ' OK
-leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -60,20 +54,16 @@ verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
-verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-verlan - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+verlan - 'null' OK
+verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' OK
 yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
-yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-yoda - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+yoda - 'null' OK
+yoda - 'Object' OK
 
 Checking vig
 vig - 'un mot' KO

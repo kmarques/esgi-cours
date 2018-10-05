@@ -6,9 +6,9 @@ ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of null
 ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+	Unexpected behaviour : TypeError - string.charAt is not a function
 
 Checking capitalize
 capitalize - 'test' OK
@@ -20,7 +20,7 @@ capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - text.split is not a function
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
@@ -37,33 +37,40 @@ camelCase - ' toggleCase' KO
 camelCase - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - text.split is not a function
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' OK
-snake_case - 'toggleCase is the coolest' OK
-snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'toggle case is the coolest' KO
+	expected : "toggle_case_is_the_coolest" - got "toggle-case-is-the-coolest"
+snake_case - 'toggleCase is the coolest' KO
+	expected : "togglecase_is_the_coolest" - got "togglecase-is-the-coolest"
+snake_case - 'ToggleCase is the 3oolest' KO
+	expected : "togglecase_is_the_3oolest" - got "togglecase-is-the-3oolest"
 snake_case - 'ToggleCaseIsTheCool3st' OK
-snake_case - 'ToggleCase is_the coolest' OK
-snake_case - ' toggleCase' OK
+snake_case - 'ToggleCase is_the coolest' KO
+	expected : "togglecase_is_the_coolest" - got "togglecase-is_the-coolest"
+snake_case - ' toggleCase' KO
+	expected : "_togglecase" - got "-togglecase"
 snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - text.toLowerCase is not a function
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking leet
 leet - 'anaconda' OK
-leet - 'leet' OK
+leet - 'leet' KO
+	expected : "l33t" - got "l37"
 leet - 'yoda' KO
 	expected : "70d4" - got "y0d4"
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4lu4t10n"
-leet - 'mon travail' OK
+	expected : "3v4l(_)4t10n" - got "3v4lu4710n"
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got "m0n 7r4v41l"
 leet - ' ' OK
 leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 leet - 'Object' KO
-	Unexpected behaviour : TypeError - text.toLowerCase is not a function
+	Unexpected behaviour : TypeError - string.replace is not a function
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -74,7 +81,7 @@ verlan - ' ' OK
 verlan - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 verlan - 'Object' KO
-	Unexpected behaviour : TypeError - text.split is not a function
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking yoda
 yoda - 'anaconda' OK
@@ -84,26 +91,32 @@ yoda - ' ' OK
 yoda - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 yoda - 'Object' KO
-	Unexpected behaviour : TypeError - text.split is not a function
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking vig
-vig - 'un mot' OK
-vig - 'un mot avec MAJ' OK
-vig - 'une phrase longue' OK
-vig - ' ' OK
+vig - 'un mot' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
+vig - 'un mot avec MAJ' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
+vig - 'une phrase longue' KO
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got undefined
+vig - ' ' KO
+	expected : " " - got undefined
 vig - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of null
+	expected : "" - got undefined
 vig - 'Object' KO
-	Unexpected behaviour : TypeError - text.toUpperCase is not a function
+	expected : "" - got undefined
 
 Checking prop_access
-prop_access - 'path exist - value string' OK
-prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value string' KO
+	expected : "dog" - got undefined
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got undefined
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
 	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'test' of null
+	expected : test not exist - got null
 prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
