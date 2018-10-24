@@ -2,12 +2,20 @@
 
 ## Règles
 
-- Sujet libre soumis à validation
-	- sujet proposé: Créer un mini-react
-		- Gestion 
 - 3 personnes par groupes maximum
 - Groupement libre
 - Soumission sur Github 1 lien/groupe: github.com/user/esgi-javascript/project
+- Sujet libre soumis à validation
+	- sujet proposé: Créer un mini-react
+		- Gestion du routage
+		- Validation des propriétés passées au composant
+		- Algorithme => se rapproche de l'algo de l'exercice *HereWeGo!*
+			- Chaque composant hérite d'un object `Component` ayant une méthode `display(newProps)`
+			- display appelle la méthode `shouldUpdate()` du composant courant => compare newProps avec les oldProps
+			- si shouldUpdate
+				- appelle la fonction `render` du composant
+				- si `render` invoque d'autres composants, le composant courant appelle la fonction `display(compProps)` des sous-composants
+			- le résultat de `display` est ajouté au DOM sous le noeud parent
 
 ## Objectif
 
