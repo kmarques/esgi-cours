@@ -7,7 +7,7 @@
 		- Gestion 
 - 3 personnes par groupes maximum
 - Groupement libre
-- Soumission sur Github: github.com/user/esgi-javascript/project
+- Soumission sur Github 1 lien/groupe: github.com/user/esgi-javascript/project
 
 ## Objectif
 
