@@ -1,0 +1,12 @@
+Invalid script: ReferenceError: prop_access is not defined
+ReferenceError: prop_access is not defined
+    at Object.<anonymous> (/4IW2/exercise-1/scripts/EnzoHuynh_esgi-javascript.js:64:23)
+    at Module._compile (module.js:649:30)
+    at Object.Module._extensions..js (module.js:660:10)
+    at Module.load (module.js:561:32)
+    at tryModuleLoad (module.js:501:12)
+    at Function.Module._load (module.js:493:3)
+    at Module.require (module.js:593:17)
+    at require (internal/module.js:11:18)
+    at startTest (/checker.js:61:25)
+    at processScript (/checker.js:139:5)
