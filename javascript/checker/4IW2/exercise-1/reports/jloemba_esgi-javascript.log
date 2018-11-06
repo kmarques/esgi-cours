@@ -58,18 +58,16 @@ snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - param.split is not a function
 
 Checking leet
-leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got "undefinedundefinedundefinedundefinedundefinedundefinedundefinedundefined"
+leet - 'anaconda' OK
 leet - 'leet' KO
-	expected : "l33t" - got "undefinedundefinedundefinedundefined"
+	expected : "l33t" - got "1337"
 leet - 'yoda' KO
-	expected : "70d4" - got "undefinedundefinedundefinedundefined"
+	expected : "70d4" - got "y0d4"
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "undefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefined"
+	expected : "3v4l(_)4t10n" - got "3v41u47i0n"
 leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "undefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefinedundefined"
-leet - ' ' KO
-	expected : " " - got "undefined"
+	expected : "m0n tr4v41l" - got "m0n 7r4v4i1"
+leet - ' ' OK
 leet - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'length' of null
 leet - 'Object' OK
