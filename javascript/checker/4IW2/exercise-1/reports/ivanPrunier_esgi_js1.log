@@ -84,10 +84,9 @@ vig - 'Object' KO
 	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking prop_access
-prop_access - 'path exist - value string' KO
-	Unexpected behaviour : ReferenceError - output is not defined
+prop_access - 'path exist - value string' OK
 prop_access - 'path exist - value object' KO
-	Unexpected behaviour : ReferenceError - output is not defined
+	expected : {"name":"dog"} - got "dog"
 prop_access - 'path not exist' KO
 	Unexpected behaviour : undefined - undefined
 prop_access - 'path empty' KO
