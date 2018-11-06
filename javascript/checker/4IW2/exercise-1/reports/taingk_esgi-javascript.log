@@ -5,56 +5,38 @@ ucfirst - 'test' OK
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+ucfirst - 'null' OK
+ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' OK
 capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
-capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
-capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+capitalize - 'null' OK
+capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "ToggleCase Is The Coolest"
-camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs The Coolest"
-camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIs The 3oolest"
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_the Coolest"
-camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "ToggleCase"
-camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
-camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIstheCoolest"
+camelCase - ' toggleCase' OK
+camelCase - 'null' OK
+camelCase - 'Object' OK
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got "toggle_case is the coolest"
-snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "togglecase_is the coolest"
-snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "togglecase_is the 3oolest"
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
 snake_case - 'ToggleCaseIsTheCool3st' OK
-snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "togglecase_is_the coolest"
+snake_case - 'ToggleCase is_the coolest' OK
 snake_case - ' toggleCase' OK
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+snake_case - 'null' OK
+snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' OK
@@ -63,10 +45,8 @@ leet - 'yoda' OK
 leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
-leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -75,20 +55,16 @@ verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
 verlan - ' ' KO
 	expected : " " - got ""
-verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
-verlan - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+verlan - 'null' OK
+verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' OK
 yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
-yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
-yoda - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+yoda - 'null' OK
+yoda - 'Object' OK
 
 Checking vig
 vig - 'un mot' KO
@@ -116,4 +92,4 @@ prop_access - 'path empty' KO
 prop_access - 'object null' KO
 	expected : test not exist - got null
 prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+	expected : {"animal":{"type":{"name":"dog"}}} - got ""

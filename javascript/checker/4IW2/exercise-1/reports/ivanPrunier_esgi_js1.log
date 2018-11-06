@@ -19,17 +19,12 @@ capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "Toggle case is the coolest"
-camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "Togglecase is the coolest"
-camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "Togglecase is the 3oolest"
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "Togglecase isthe coolest"
-camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got " togglecase"
+camelCase - 'ToggleCase is_the coolest' OK
+camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
@@ -45,14 +40,15 @@ snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got "4nac0nda"
+	expected : "4n4c0nd4" - got "anaconda"
 leet - 'leet' KO
-	expected : "l33t" - got "l3et"
-leet - 'yoda' OK
+	expected : "l33t" - got "leet"
+leet - 'yoda' KO
+	expected : "70d4" - got "yoda"
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4l(_)ati0n"
+	expected : "3v4l(_)4t10n" - got "evaluation"
 leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "m0n tr4vail"
+	expected : "m0n tr4v41l" - got "mon travail"
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
