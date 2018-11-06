@@ -4,8 +4,7 @@ Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
-ucfirst - 'TEST' KO
-	expected : "TEST" - got "Test"
+ucfirst - 'TEST' OK
 ucfirst - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'charAt' of null
 ucfirst - 'Object' KO
@@ -17,7 +16,7 @@ capitalize - 'test' KO
 capitalize - ' test' KO
 	expected : " Test" - got " Test "
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum Dolor "
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR "
 capitalize - 'sit 8met consectetur' KO
 	expected : "Sit 8met Consectetur" - got "Sit 8met Consectetur "
 capitalize - '_dipiscing elit' KO
@@ -29,12 +28,16 @@ capitalize - 'Object' KO
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
-camelCase - 'toggleCase is the coolest' OK
-camelCase - 'ToggleCase is the 3oolest' OK
-camelCase - 'ToggleCaseIsTheCoolest' OK
+camelCase - 'toggleCase is the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
+camelCase - 'ToggleCase is the 3oolest' KO
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
-camelCase - ' toggleCase' OK
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+camelCase - ' toggleCase' KO
+	expected : "Togglecase" - got "ToggleCase"
 camelCase - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 camelCase - 'Object' KO
@@ -60,13 +63,12 @@ snake_case - 'Object' KO
 Checking leet
 leet - 'anaconda' OK
 leet - 'leet' KO
-	expected : "l33t" - got "1337"
-leet - 'yoda' KO
-	expected : "70d4" - got "y0d4"
+	expected : "l33t" - got "133t"
+leet - 'yoda' OK
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v41u47i0n"
+	expected : "3v4l(_)4t10n" - got "3v41(_)4t10n"
 leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "m0n 7r4v4i1"
+	expected : "m0n tr4v41l" - got "m0n tr4v411"
 leet - ' ' OK
 leet - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'length' of null
