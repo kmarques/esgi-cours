@@ -5,44 +5,31 @@ ucfirst - 'test' OK
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
-ucfirst - 'null' KO
-	expected : "" - got false
-ucfirst - 'Object' KO
-	expected : "" - got false
+ucfirst - 'null' OK
+ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' KO
-	expected : "Test" - got "Test "
+capitalize - 'test' OK
 capitalize - ' test' KO
-	expected : " Test" - got "false Test "
-capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR "
-capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "Sit 8met Consectetur "
-capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got "_dipiscing Elit "
+	expected : " Test" - got "Test"
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
-	expected : "" - got false
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
 capitalize - 'Object' KO
-	expected : "" - got false
+	Unexpected behaviour : TypeError - str.toLowerCase is not a function
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "toggleCaseIsTheCoolest"
-camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "togglecaseIsTheCoolest"
-camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "togglecaseIsThe3oolest"
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "togglecaseisthecoolest"
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "togglecaseIs_theCoolest"
-camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "falseTogglecase"
-camelCase - 'null' KO
-	expected : "" - got false
-camelCase - 'Object' KO
-	expected : "" - got false
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - ' toggleCase' OK
+camelCase - 'null' OK
+camelCase - 'Object' OK
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' OK
@@ -51,26 +38,18 @@ snake_case - 'ToggleCase is the 3oolest' OK
 snake_case - 'ToggleCaseIsTheCool3st' OK
 snake_case - 'ToggleCase is_the coolest' OK
 snake_case - ' toggleCase' OK
-snake_case - 'null' KO
-	expected : "" - got false
-snake_case - 'Object' KO
-	expected : "" - got false
+snake_case - 'null' OK
+snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got "4n4cond4"
+leet - 'anaconda' OK
 leet - 'leet' OK
-leet - 'yoda' KO
-	expected : "70d4" - got "7od4"
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4l(_)4t1on"
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "mon tr4v41l"
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
 leet - ' ' OK
-leet - 'null' KO
-	expected : "" - got false
-leet - 'Object' KO
-	expected : "" - got false
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' KO
