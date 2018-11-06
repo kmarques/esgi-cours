@@ -9,16 +9,18 @@ ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' OK
+capitalize - 'test' KO
+	expected : "Test" - got "Test "
 capitalize - ' test' KO
-	expected : " Test" - got "Test"
-capitalize - 'ipsum DOLOR' OK
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
-capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
-capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - str.toLowerCase is not a function
+	expected : " Test" - got " Test "
+capitalize - 'ipsum DOLOR' KO
+	expected : "Ipsum Dolor" - got "Ipsum Dolor "
+capitalize - 'sit 8met consectetur' KO
+	expected : "Sit 8met Consectetur" - got "Sit 8met Consectetur "
+capitalize - '_dipiscing elit' KO
+	expected : "_dipiscing Elit" - got "_dipiscing Elit "
+capitalize - 'null' OK
+capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
@@ -46,8 +48,10 @@ leet - 'anaconda' OK
 leet - 'leet' OK
 leet - 'yoda' OK
 leet - 'evaluation' OK
-leet - 'mon travail' OK
-leet - ' ' OK
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got "m0ntr4v41l"
+leet - ' ' KO
+	expected : " " - got ""
 leet - 'null' OK
 leet - 'Object' OK
 
