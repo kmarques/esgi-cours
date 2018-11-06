@@ -85,7 +85,7 @@ prop_access - 'path exist - value string' KO
 prop_access - 'path exist - value object' KO
 	Unexpected behaviour : ReferenceError - output is not defined
 prop_access - 'path not exist' KO
-	Unexpected behaviour : ReferenceError - output is not defined
+	Unexpected behaviour : undefined - undefined
 prop_access - 'path empty' KO
 	Unexpected behaviour : undefined - undefined
 prop_access - 'object null' KO
