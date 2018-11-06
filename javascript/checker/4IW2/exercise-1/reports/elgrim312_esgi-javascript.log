@@ -85,15 +85,14 @@ vig - 'Object' KO
 	expected : "" - got undefined
 
 Checking prop_access
-prop_access - 'path exist - value string' KO
-	expected : "dog" - got undefined
+prop_access - 'path exist - value string' OK
 prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got undefined
+	expected : {"name":"dog"} - got "dog"
 prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got null
+	Unexpected behaviour : undefined - undefined
 prop_access - 'path empty' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
+	Unexpected behaviour : undefined - undefined
 prop_access - 'object null' KO
-	expected : test not exist - got null
+	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 prop_access - 'path null' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
