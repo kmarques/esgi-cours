@@ -69,10 +69,14 @@ verlan - 'null' OK
 verlan - 'Object' OK
 
 Checking yoda
-yoda - 'anaconda' OK
-yoda - 'yoda m Luke' OK
-yoda - 'Inverser la position des mots d’une phrase' OK
-yoda - ' ' OK
+yoda - 'anaconda' KO
+	Unexpected behaviour : TypeError - str.split(...).reverse(...).join(...).reverse is not a function
+yoda - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - str.split(...).reverse(...).join(...).reverse is not a function
+yoda - 'Inverser la position des mots d’une phrase' KO
+	Unexpected behaviour : TypeError - str.split(...).reverse(...).join(...).reverse is not a function
+yoda - ' ' KO
+	Unexpected behaviour : TypeError - str.split(...).reverse(...).join(...).reverse is not a function
 yoda - 'null' OK
 yoda - 'Object' OK
 
