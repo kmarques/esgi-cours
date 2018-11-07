@@ -1,18 +1,12 @@
 
 
 Checking ucfirst
-ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
+ucfirst - 'null' OK
+ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' OK
@@ -45,16 +39,11 @@ snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got "4N4C0ND4"
-leet - 'leet' KO
-	expected : "l33t" - got "L33T"
-leet - 'yoda' KO
-	expected : "70d4" - got "70D4"
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3V4L(_)4T10N"
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "M0N TR4V41L"
+leet - 'anaconda' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK

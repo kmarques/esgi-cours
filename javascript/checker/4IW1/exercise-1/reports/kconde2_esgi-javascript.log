@@ -5,26 +5,20 @@ ucfirst - 'test' OK
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'charAt' of null
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - s.charAt is not a function
+ucfirst - 'null' OK
+ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - ' test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'test' OK
+capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'sit 8met consectetur' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - '_dipiscing elit' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
