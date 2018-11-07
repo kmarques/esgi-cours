@@ -1,30 +1,22 @@
 
 
 Checking ucfirst
-ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of null
 ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+	Unexpected behaviour : TypeError - string.charAt is not a function
 
 Checking capitalize
-capitalize - 'test' KO
-	expected : "Test" - got "test"
-capitalize - ' test' KO
-	expected : " Test" - got " test"
+capitalize - 'test' OK
+capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "ipsum dolor"
-capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "sit 8met consectetur"
-capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got "_dipiscing elit"
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'length' of null
 capitalize - 'Object' KO
