@@ -29,13 +29,18 @@ camelCase - 'null' OK
 camelCase - 'Object' OK
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' OK
-snake_case - 'toggleCase is the coolest' OK
-snake_case - 'ToggleCase is the 3oolest' OK
-snake_case - 'ToggleCaseIsTheCool3st' OK
-snake_case - 'ToggleCase is_the coolest' OK
+snake_case - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - string.trim(...).split(...).map(...).replace is not a function
+snake_case - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - string.trim(...).split(...).map(...).replace is not a function
+snake_case - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - string.trim(...).split(...).map(...).replace is not a function
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	Unexpected behaviour : TypeError - string.trim(...).split(...).map(...).replace is not a function
+snake_case - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : TypeError - string.trim(...).split(...).map(...).replace is not a function
 snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "togglecase"
+	Unexpected behaviour : TypeError - string.trim(...).split(...).map(...).replace is not a function
 snake_case - 'null' OK
 snake_case - 'Object' OK
 
