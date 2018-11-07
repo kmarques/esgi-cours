@@ -18,13 +18,13 @@ Checking capitalize
 capitalize - 'test' KO
 	expected : "Test" - got "test"
 capitalize - ' test' KO
-	expected : " Test" - got ",test"
+	expected : " Test" - got " test"
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "ipsum,dolor"
+	expected : "Ipsum Dolor" - got "ipsum dolor"
 capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "sit,8met,consectetur"
+	expected : "Sit 8met Consectetur" - got "sit 8met consectetur"
 capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got "_dipiscing,elit"
+	expected : "_dipiscing Elit" - got "_dipiscing elit"
 capitalize - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'length' of null
 capitalize - 'Object' KO
