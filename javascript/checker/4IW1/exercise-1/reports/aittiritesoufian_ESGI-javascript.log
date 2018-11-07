@@ -41,6 +41,8 @@ snake_case - 'Object' OK
 Checking leet
 leet - 'anaconda' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'anacoNDa' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'leet' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'yoda' KO
