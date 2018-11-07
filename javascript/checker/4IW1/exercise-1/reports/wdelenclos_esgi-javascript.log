@@ -11,12 +11,13 @@ ucfirst - 'Object' OK
 Checking capitalize
 capitalize - 'test' OK
 capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
-capitalize - 'null' OK
-capitalize - 'Object' OK
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
@@ -25,21 +26,29 @@ camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
 	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
-camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got " togglecase"
-camelCase - 'null' OK
-camelCase - 'Object' OK
+camelCase - ' toggleCase' OK
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' OK
-snake_case - 'toggleCase is the coolest' OK
-snake_case - 'ToggleCase is the 3oolest' OK
-snake_case - 'ToggleCaseIsTheCool3st' OK
-snake_case - 'ToggleCase is_the coolest' OK
+snake_case - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
+snake_case - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
+snake_case - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
+snake_case - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
 snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got " togglecase"
-snake_case - 'null' OK
-snake_case - 'Object' OK
+	Unexpected behaviour : TypeError - string.replace is not a function
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
 
 Checking leet
 leet - 'anaconda' KO
@@ -63,19 +72,19 @@ leet - 'Object' KO
 
 Checking verlan
 verlan - 'anaconda' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - str.reverse is not a function
 verlan - 'kayak' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - str.reverse is not a function
 verlan - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - str.reverse is not a function
 verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - str.reverse is not a function
 verlan - ' ' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - str.reverse is not a function
 verlan - 'null' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'reverse' of null
 verlan - 'Object' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - str.reverse is not a function
 
 Checking yoda
 yoda - 'anaconda' KO
