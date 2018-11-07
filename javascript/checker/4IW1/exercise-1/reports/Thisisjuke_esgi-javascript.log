@@ -1,16 +1,120 @@
-Invalid script: SyntaxError: Missing initializer in const declaration
-/4IW1/exercise-1/scripts/Thisisjuke_esgi-javascript.js:42
-exports.ucfirst = ucfirst;
-^^^^^^^
 
-SyntaxError: Missing initializer in const declaration
-    at new Script (vm.js:51:7)
-    at createScript (vm.js:136:10)
-    at Object.runInThisContext (vm.js:197:10)
-    at Module._compile (module.js:613:28)
-    at Object.Module._extensions..js (module.js:660:10)
-    at Module.load (module.js:561:32)
-    at tryModuleLoad (module.js:501:12)
-    at Function.Module._load (module.js:493:3)
-    at Module.require (module.js:593:17)
-    at require (internal/module.js:11:18)
+
+Checking ucfirst
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
+ucfirst - 'null' OK
+ucfirst - 'Object' OK
+
+Checking capitalize
+capitalize - 'test' OK
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
+capitalize - 'null' OK
+capitalize - 'Object' OK
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' KO
+	expected : "ToggleCaseIsTheCoolest" - got "togglecaseisthecoolest"
+camelCase - 'toggleCase is the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "toggleCaseisthecoolest"
+camelCase - 'ToggleCase is the 3oolest' KO
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseisthe3oolest"
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseisthecoolest"
+camelCase - ' toggleCase' KO
+	expected : "Togglecase" - got "toggleCase"
+camelCase - 'null' OK
+camelCase - 'Object' OK
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' KO
+	expected : "toggle_case_is_the_coolest" - got "toggle case is the coolest"
+snake_case - 'toggleCase is the coolest' KO
+	expected : "togglecase_is_the_coolest" - got "togglecase is the coolest"
+snake_case - 'ToggleCase is the 3oolest' KO
+	expected : "togglecase_is_the_3oolest" - got "togglecase is the 3oolest"
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' KO
+	expected : "togglecase_is_the_coolest" - got "togglecase is_the coolest"
+snake_case - ' toggleCase' KO
+	expected : "_togglecase" - got " togglecase"
+snake_case - 'null' OK
+snake_case - 'Object' OK
+
+Checking leet
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "3v4l(_)4ti0n"
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got "m0n tr4v4il"
+leet - ' ' OK
+leet - 'null' OK
+leet - 'Object' OK
+
+Checking verlan
+verlan - 'anaconda' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'kayak' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - '70da m L(_)k3' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - ' ' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+
+Checking yoda
+yoda - 'anaconda' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'Inverser la position des mots d’une phrase' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - ' ' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+
+Checking vig
+vig - 'un mot' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'un mot avec MAJ' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'une phrase longue' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - ' ' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'null' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'Object' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value object' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path not exist' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path empty' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
