@@ -5,74 +5,77 @@ ucfirst - 'test' OK
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
-ucfirst - 'null' OK
-ucfirst - 'Object' OK
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of null
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - param.charAt is not a function
 
 Checking capitalize
-capitalize - 'test' KO
-	expected : "Test" - got ""
-capitalize - ' test' KO
-	expected : " Test" - got ""
+capitalize - 'test' OK
+capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got ""
-capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got ""
-capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got ""
-capitalize - 'null' OK
-capitalize - 'Object' OK
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - param.split is not a function
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got ""
+camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got ""
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got ""
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got ""
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got ""
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got ""
-camelCase - 'null' OK
-camelCase - 'Object' OK
+	expected : "Togglecase" - got "ToggleCase"
+camelCase - 'null' KO
+	expected : "" - got undefined
+camelCase - 'Object' KO
+	expected : "" - got undefined
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got ""
+	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got ""
+	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got ""
+	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got ""
+	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got ""
+	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got ""
-snake_case - 'null' OK
-snake_case - 'Object' OK
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
 
 Checking leet
 leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got ""
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got ""
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'leet' KO
-	expected : "l33t" - got ""
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'yoda' KO
-	expected : "70d4" - got ""
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got ""
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got ""
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - ' ' KO
-	expected : " " - got ""
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+	Unexpected behaviour : TypeError - "leet" not implemented
 
 Checking verlan
 verlan - 'anaconda' KO
