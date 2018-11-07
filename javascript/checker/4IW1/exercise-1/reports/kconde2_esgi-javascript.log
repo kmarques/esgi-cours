@@ -11,8 +11,7 @@ ucfirst - 'Object' OK
 Checking capitalize
 capitalize - 'test' OK
 capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
@@ -21,58 +20,45 @@ capitalize - 'Object' KO
 	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - ' toggleCase' OK
 camelCase - 'null' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
 snake_case - 'null' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking leet
 leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'leet' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "4n4c0nd4" - got "4n4cond4"
+leet - 'leet' OK
 leet - 'yoda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "70d4" - got "7od4"
 leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "3v4l(_)4t10n" - got "3v4l(_)4t1on"
 leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - ' ' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "m0n tr4v41l" - got "mon tr4v41l"
+leet - ' ' OK
 leet - 'null' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
 leet - 'Object' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	Unexpected behaviour : TypeError - string.toLowerCase is not a function
 
 Checking verlan
 verlan - 'anaconda' KO
