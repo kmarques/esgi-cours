@@ -20,10 +20,9 @@ capitalize - 'null' KO
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "toggleCaseIsTheCoolest"
+camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "toggleCaseIsTheCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is the 3oolest' KO
 	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
 camelCase - 'ToggleCaseIsTheCoolest' KO
@@ -35,7 +34,7 @@ camelCase - ' toggleCase' KO
 camelCase - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - str.replace is not a function
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
