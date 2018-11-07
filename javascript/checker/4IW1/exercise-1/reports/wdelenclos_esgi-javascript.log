@@ -59,20 +59,17 @@ leet - 'Object' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 
 Checking verlan
-verlan - 'anaconda' KO
-	Unexpected behaviour : TypeError - str.reverse is not a function
-verlan - 'kayak' KO
-	Unexpected behaviour : TypeError - str.reverse is not a function
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
 verlan - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - str.reverse is not a function
+	expected : "adoy m ekuL" - got "ekuL m adoy"
 verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : TypeError - str.reverse is not a function
-verlan - ' ' KO
-	Unexpected behaviour : TypeError - str.reverse is not a function
+	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
+verlan - ' ' OK
 verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'reverse' of null
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 verlan - 'Object' KO
-	Unexpected behaviour : TypeError - str.reverse is not a function
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking yoda
 yoda - 'anaconda' KO
