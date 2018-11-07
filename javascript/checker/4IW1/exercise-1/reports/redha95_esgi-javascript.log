@@ -32,21 +32,21 @@ capitalize - 'Object' KO
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "ToggleCaseIsTheCoolest" - got undefined
 camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "TogglecaseIsTheCoolest" - got undefined
 camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "TogglecaseIsThe3oolest" - got undefined
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "Togglecaseisthecoolest" - got undefined
 camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "TogglecaseIsTheCoolest" - got undefined
 camelCase - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "Togglecase" - got undefined
 camelCase - 'null' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "" - got undefined
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "" - got undefined
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO

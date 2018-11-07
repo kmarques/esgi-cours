@@ -38,17 +38,13 @@ snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got "4nac0nda"
-leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got "4nac0nda"
-leet - 'leet' KO
-	expected : "l33t" - got "l3et"
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
 leet - 'yoda' OK
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4l_at10n"
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "m0n tr4va1l"
+	expected : "3v4l(_)4t10n" - got "3v4l_4t10n"
+leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
