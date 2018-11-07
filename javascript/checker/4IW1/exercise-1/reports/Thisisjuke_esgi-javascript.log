@@ -15,24 +15,20 @@ capitalize - 'test' OK
 capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
-capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
-capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - words.toLowerCase is not a function
+capitalize - '_dipiscing elit' KO
+	expected : "_dipiscing Elit" - got " Dipiscing Elit"
+capitalize - 'null' OK
+capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - 'ToggleCase is_the coolest' OK
 camelCase - ' toggleCase' OK
-camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
-camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - words.toLowerCase is not a function
+camelCase - 'null' OK
+camelCase - 'Object' OK
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
