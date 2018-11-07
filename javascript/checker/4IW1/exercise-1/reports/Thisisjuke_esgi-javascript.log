@@ -13,8 +13,7 @@ capitalize - 'test' OK
 capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got " Dipiscing Elit"
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
@@ -23,7 +22,8 @@ camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' OK
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
 camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
@@ -47,22 +47,16 @@ snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 
 Checking leet
-leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'leet' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'yoda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'anaconda' OK
+leet - 'leet' OK
+leet - 'yoda' OK
 leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "3v4l(_)4t10n" - got "3v4l(_)4ti0n"
 leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - ' ' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'null' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "m0n tr4v41l" - got "m0n tr4v4il"
+leet - ' ' OK
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' KO
