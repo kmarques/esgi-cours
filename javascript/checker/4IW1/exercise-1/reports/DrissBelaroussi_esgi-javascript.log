@@ -1,18 +1,13 @@
 
 
 Checking ucfirst
-ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' OK
