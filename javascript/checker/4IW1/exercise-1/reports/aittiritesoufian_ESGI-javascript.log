@@ -13,8 +13,7 @@ capitalize - 'test' OK
 capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got " Dipiscing Elit"
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
