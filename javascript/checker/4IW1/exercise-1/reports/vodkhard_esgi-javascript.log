@@ -2,45 +2,40 @@
 
 Checking ucfirst
 ucfirst - 'test' KO
-	expected : "Test" - got ""
-ucfirst - ' test' KO
-	expected : " test" - got ""
-ucfirst - 'Test' KO
-	expected : "Test" - got ""
-ucfirst - 'TEST' KO
-	expected : "TEST" - got ""
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property '0' of null
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of undefined
+	expected : "Test" - got "test"
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
+ucfirst - 'null' OK
+ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' KO
-	expected : "Test" - got ""
+	expected : "Test" - got "test"
 capitalize - ' test' KO
-	expected : " Test" - got ""
+	expected : " Test" - got "test"
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got " "
+	expected : "Ipsum Dolor" - got "ipsum dolor"
 capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "  "
+	expected : "Sit 8met Consectetur" - got "sit 8met consectetur"
 capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got " "
+	expected : "_dipiscing Elit" - got "_dipiscing elit"
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got ""
+	expected : "ToggleCaseIsTheCoolest" - got "togglecaseisthecoolest"
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got ""
+	expected : "TogglecaseIsTheCoolest" - got "togglecaseisthecoolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got ""
+	expected : "TogglecaseIsThe3oolest" - got "togglecaseisthe3oolest"
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got ""
+	expected : "Togglecaseisthecoolest" - got "togglecaseisthecoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got ""
+	expected : "TogglecaseIsTheCoolest" - got "togglecaseis_thecoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got ""
+	expected : "Togglecase" - got "togglecase"
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
@@ -52,30 +47,20 @@ snake_case - 'ToggleCaseIsTheCool3st' OK
 snake_case - 'ToggleCase is_the coolest' OK
 snake_case - ' toggleCase' KO
 	expected : "_togglecase" - got "togglecase"
-snake_case - 'null' KO
-	expected : "" - got false
-snake_case - 'Object' KO
-	expected : "" - got false
+snake_case - 'null' OK
+snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got ""
+leet - 'anaconda' OK
 leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got ""
-leet - 'leet' KO
-	expected : "l33t" - got ""
-leet - 'yoda' KO
-	expected : "70d4" - got ""
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got ""
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got ""
-leet - ' ' KO
-	expected : " " - got ""
-leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - string.toLowerCase is not a function
+	expected : "4n4c0ND4" - got "4n4c0nd4"
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -83,20 +68,16 @@ verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
-verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-verlan - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+verlan - 'null' OK
+verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' OK
 yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
-yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-yoda - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+yoda - 'null' OK
+yoda - 'Object' OK
 
 Checking vig
 vig - 'un mot' KO
