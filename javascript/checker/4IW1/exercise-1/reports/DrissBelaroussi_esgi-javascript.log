@@ -1,12 +1,18 @@
 
 
 Checking ucfirst
-ucfirst - 'test' OK
-ucfirst - ' test' OK
-ucfirst - 'Test' OK
-ucfirst - 'TEST' OK
-ucfirst - 'null' OK
-ucfirst - 'Object' OK
+ucfirst - 'test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - ' test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'Test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'TEST' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
 
 Checking capitalize
 capitalize - 'test' OK
@@ -14,55 +20,61 @@ capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
-capitalize - 'null' OK
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of null
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' OK
-camelCase - 'toggleCase is the coolest' OK
-camelCase - 'ToggleCase is the 3oolest' OK
-camelCase - 'ToggleCaseIsTheCoolest' OK
+camelCase - 'toggle case is the coolest' KO
+	expected : "ToggleCaseIsTheCoolest" - got "toggleCaseIsTheCoolest"
+camelCase - 'toggleCase is the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "toggleCaseIsTheCoolest"
+camelCase - 'ToggleCase is the 3oolest' KO
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
-camelCase - ' toggleCase' OK
-camelCase - 'null' OK
-camelCase - 'Object' OK
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+camelCase - ' toggleCase' KO
+	expected : "Togglecase" - got "ToggleCase"
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - str.replace is not a function
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got "Toggle_Case_Is_The_Coolest"
+	expected : "toggle_case_is_the_coolest" - got "toggle_case is the coolest"
 snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "ToggleCase_Is_The_Coolest"
+	expected : "togglecase_is_the_coolest" - got "togglecase_is the coolest"
 snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "ToggleCase_Is_The_3oolest"
+	expected : "togglecase_is_the_3oolest" - got "togglecase_is the _oolest"
 snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
+	expected : "togglecaseisthecool3st" - got "togglecaseisthecool_st"
 snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "ToggleCase_Is_the_Coolest"
-snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "_ToggleCase"
-snake_case - 'null' OK
-snake_case - 'Object' OK
+	expected : "togglecase_is_the_coolest" - got "togglecase_is_the coolest"
+snake_case - ' toggleCase' OK
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - str.toLowerCase is not a function
 
 Checking leet
-leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'anaconda' OK
 leet - 'anacoNDa' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "4n4c0ND4" - got "4n4c0nd4"
 leet - 'leet' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "l33t" - got "1337"
 leet - 'yoda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "70d4" - got "y0d4"
 leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "3v4l(_)4t10n" - got "3v41u47i0n"
 leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - ' ' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "m0n tr4v41l" - got "m0n 7r4v4i1"
+leet - ' ' OK
 leet - 'null' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' KO
