@@ -14,10 +14,8 @@ capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
-capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
+capitalize - 'null' OK
+capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
@@ -25,30 +23,20 @@ camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIstheCoolest"
 camelCase - ' toggleCase' OK
-camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
+camelCase - 'null' OK
+camelCase - 'Object' OK
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
-snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
-snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
-snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
-snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
+snake_case - 'null' OK
+snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' KO

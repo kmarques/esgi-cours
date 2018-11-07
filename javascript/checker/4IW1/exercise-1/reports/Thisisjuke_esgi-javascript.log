@@ -27,7 +27,7 @@ camelCase - 'ToggleCase is the 3oolest' KO
 camelCase - 'ToggleCaseIsTheCoolest' KO
 	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseis_thecoolest"
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseisthecoolest"
 camelCase - ' toggleCase' KO
 	expected : "Togglecase" - got "toggleCase"
 camelCase - 'null' OK
