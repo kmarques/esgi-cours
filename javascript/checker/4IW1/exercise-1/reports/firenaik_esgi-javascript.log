@@ -1,18 +1,13 @@
 
 
 Checking ucfirst
-ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' OK
@@ -23,8 +18,7 @@ capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-capitalize - 'Object' KO
-	expected : "" - got {"foo":"data"}
+capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
@@ -40,8 +34,7 @@ camelCase - ' toggleCase' KO
 	expected : "Togglecase" - got "ToggleCase"
 camelCase - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-camelCase - 'Object' KO
-	expected : "" - got {"foo":"data"}
+camelCase - 'Object' OK
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' OK
@@ -52,8 +45,7 @@ snake_case - 'ToggleCase is_the coolest' OK
 snake_case - ' toggleCase' OK
 snake_case - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-snake_case - 'Object' KO
-	expected : "" - got {"foo":"data"}
+snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' OK
@@ -65,8 +57,7 @@ leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-leet - 'Object' KO
-	expected : "" - got {"foo":"data"}
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -78,8 +69,7 @@ verlan - '70da m L(_)k3' KO
 verlan - ' ' OK
 verlan - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-verlan - 'Object' KO
-	expected : "" - got {"foo":"data"}
+verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' OK
@@ -88,8 +78,7 @@ yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
 yoda - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-yoda - 'Object' KO
-	expected : "" - got {"foo":"data"}
+yoda - 'Object' OK
 
 Checking vig
 vig - 'un mot' KO
