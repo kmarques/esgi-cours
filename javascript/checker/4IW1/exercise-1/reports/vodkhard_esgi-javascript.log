@@ -2,44 +2,44 @@
 
 Checking ucfirst
 ucfirst - 'test' OK
-ucfirst - ' test' OK
+ucfirst - ' test' KO
+	expected : " test" - got "Ttest"
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property '0' of null
+	expected : "" - got false
 ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+	expected : "" - got false
 
 Checking capitalize
 capitalize - 'test' OK
 capitalize - ' test' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+	expected : " Test" - got "Test"
 capitalize - 'ipsum DOLOR' KO
 	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	expected : "" - got false
 capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+	expected : "" - got false
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "Toggle,Case,Is,The,Coolest"
+camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCase,Is,The,Coolest"
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCase,Is,The,3oolest"
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
 camelCase - 'ToggleCaseIsTheCoolest' KO
 	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCase,Is_the,Coolest"
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+	expected : "Togglecase" - got "ToggleCase"
 camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	expected : "" - got false
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+	expected : "" - got false
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' OK
@@ -47,11 +47,12 @@ snake_case - 'toggleCase is the coolest' OK
 snake_case - 'ToggleCase is the 3oolest' OK
 snake_case - 'ToggleCaseIsTheCool3st' OK
 snake_case - 'ToggleCase is_the coolest' OK
-snake_case - ' toggleCase' OK
+snake_case - ' toggleCase' KO
+	expected : "_togglecase" - got "togglecase"
 snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	expected : "" - got false
 snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+	expected : "" - got false
 
 Checking leet
 leet - 'anaconda' OK
@@ -88,17 +89,16 @@ yoda - 'Object' KO
 
 Checking vig
 vig - 'un mot' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "anticonstitutionnellement"
 vig - 'un mot avec MAJ' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "antiConstiTutioNnellement"
 vig - 'une phrase longue' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got undefined
-vig - ' ' KO
-	expected : " " - got undefined
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test"
+vig - ' ' OK
 vig - 'null' KO
-	expected : "" - got undefined
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 vig - 'Object' KO
-	expected : "" - got undefined
+	expected : "" - got {"foo":"data"}
 
 Checking prop_access
 prop_access - 'path exist - value string' OK
