@@ -2,17 +2,17 @@
 
 Checking ucfirst
 ucfirst - 'test' KO
-	Unexpected behaviour : ReferenceError - string is not defined
+	expected : "Test" - got undefined
 ucfirst - ' test' KO
-	Unexpected behaviour : ReferenceError - string is not defined
+	expected : " test" - got undefined
 ucfirst - 'Test' KO
-	Unexpected behaviour : ReferenceError - string is not defined
+	expected : "Test" - got undefined
 ucfirst - 'TEST' KO
-	Unexpected behaviour : ReferenceError - string is not defined
+	expected : "TEST" - got undefined
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'charAt' of null
+	expected : "" - got undefined
 ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - helloworld.charAt is not a function
+	expected : "" - got undefined
 
 Checking capitalize
 capitalize - 'test' KO
