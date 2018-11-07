@@ -19,17 +19,16 @@ capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "togglecaseisthecoolest"
+	expected : "ToggleCaseIsTheCoolest" - got "Toggle Case Is The Coolest"
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "toggleCaseisthecoolest"
+	expected : "TogglecaseIsTheCoolest" - got "Togglecase Is The Coolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseisthe3oolest"
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+	expected : "TogglecaseIsThe3oolest" - got "Togglecase Is The 3oolest"
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseisthecoolest"
+	expected : "TogglecaseIsTheCoolest" - got "Togglecase Is_the Coolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "toggleCase"
+	expected : "Togglecase" - got " Togglecase"
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
@@ -37,14 +36,15 @@ Checking snake_case
 snake_case - 'toggle case is the coolest' KO
 	expected : "toggle_case_is_the_coolest" - got "toggle case is the coolest"
 snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "togglecase is the coolest"
+	expected : "togglecase_is_the_coolest" - got "toggle_case is the coolest"
 snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "togglecase is the 3oolest"
-snake_case - 'ToggleCaseIsTheCool3st' OK
+	expected : "togglecase_is_the_3oolest" - got "toggle_case is the 3oolest"
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	expected : "togglecaseisthecool3st" - got "toggle_case_is_the_cool3st"
 snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "togglecase is_the coolest"
+	expected : "togglecase_is_the_coolest" - got "toggle_case is_the coolest"
 snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got " togglecase"
+	expected : "_togglecase" - got " toggle_case"
 snake_case - 'null' OK
 snake_case - 'Object' OK
 
