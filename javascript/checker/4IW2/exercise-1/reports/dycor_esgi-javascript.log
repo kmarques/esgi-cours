@@ -43,16 +43,11 @@ snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got "anaconda"
-leet - 'leet' KO
-	expected : "l33t" - got "leet"
-leet - 'yoda' KO
-	expected : "70d4" - got "yoda"
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "evaluation"
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "mon travail"
+leet - 'anaconda' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
@@ -69,14 +64,10 @@ verlan - 'null' OK
 verlan - 'Object' OK
 
 Checking yoda
-yoda - 'anaconda' KO
-	Unexpected behaviour : TypeError - str.split(...).reverse(...).join(...).reverse is not a function
-yoda - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - str.split(...).reverse(...).join(...).reverse is not a function
-yoda - 'Inverser la position des mots d’une phrase' KO
-	Unexpected behaviour : TypeError - str.split(...).reverse(...).join(...).reverse is not a function
-yoda - ' ' KO
-	Unexpected behaviour : TypeError - str.split(...).reverse(...).join(...).reverse is not a function
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
 yoda - 'null' OK
 yoda - 'Object' OK
 
