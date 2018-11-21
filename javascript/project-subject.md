@@ -46,7 +46,7 @@ Contenu index.html:
     <html>
 	    <head>
 		    ...
-		    <script type="module" src="./main.js"/>
+		    <script type="module" src="./main.js"></script>
 	    </head>
 	    <body>
 		    <div id="root"></div>
