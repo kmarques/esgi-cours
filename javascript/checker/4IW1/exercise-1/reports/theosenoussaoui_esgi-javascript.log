@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -107,6 +108,8 @@ prop_access - 'path exist - value string' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path exist - value object' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path not exist' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path empty' KO
@@ -115,3 +118,4 @@ prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
+

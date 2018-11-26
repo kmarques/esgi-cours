@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -22,8 +23,7 @@ camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIstheCoolest"
+camelCase - 'ToggleCase is_the coolest' OK
 camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
@@ -40,6 +40,7 @@ snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' OK
+leet - 'anacoNDa' OK
 leet - 'leet' OK
 leet - 'yoda' OK
 leet - 'evaluation' OK
@@ -49,34 +50,23 @@ leet - 'null' OK
 leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'kayak' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
 verlan - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	expected : "adoy m ekuL" - got "ekuL m adoy"
 verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - ' ' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'null' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'Object' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
+verlan - ' ' OK
+verlan - 'null' OK
+verlan - 'Object' OK
 
 Checking yoda
-yoda - 'anaconda' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'Inverser la position des mots d’une phrase' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - ' ' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'null' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'Object' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
+yoda - 'null' OK
+yoda - 'Object' OK
 
 Checking vig
 vig - 'un mot' KO
@@ -97,6 +87,8 @@ prop_access - 'path exist - value string' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path exist - value object' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path not exist' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path empty' KO
@@ -105,3 +97,4 @@ prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
+

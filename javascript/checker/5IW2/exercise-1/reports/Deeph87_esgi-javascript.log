@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -49,6 +50,7 @@ snake_case - 'Object' KO
 
 Checking leet
 leet - 'anaconda' OK
+leet - 'anacoNDa' OK
 leet - 'leet' OK
 leet - 'yoda' OK
 leet - 'evaluation' OK
@@ -92,9 +94,12 @@ Checking prop_access
 prop_access - 'path exist - value string' OK
 prop_access - 'path exist - value object' KO
 	expected : {"name":"dog"} - got "animal.type not exist"
+prop_access - 'path exist - value array' KO
+	expected : {"name":"cat"} - got "animals.1.type not exist"
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' OK
 prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of null
 prop_access - 'path null' OK
+

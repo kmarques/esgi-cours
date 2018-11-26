@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -42,6 +43,8 @@ snake_case - 'Object' OK
 Checking leet
 leet - 'anaconda' KO
 	expected : "4n4c0nd4" - got "4n4cond4"
+leet - 'anacoNDa' KO
+	expected : "4n4c0ND4" - got "4n4coND4"
 leet - 'leet' OK
 leet - 'yoda' KO
 	expected : "70d4" - got "7od4"
@@ -88,6 +91,7 @@ vig - 'Object' KO
 Checking prop_access
 prop_access - 'path exist - value string' OK
 prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
 prop_access - 'path not exist' OK
 prop_access - 'path empty' KO
 	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
@@ -95,3 +99,4 @@ prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+

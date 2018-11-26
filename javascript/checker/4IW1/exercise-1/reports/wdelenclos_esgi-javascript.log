@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -38,44 +39,49 @@ snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' OK
-leet - 'anacoNDa' OK
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
-leet - ' ' OK
-leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - str.split is not a function
+leet - 'anaconda' KO
+	expected : "4n4c0nd4" - got ""
+leet - 'anacoNDa' KO
+	expected : "4n4c0ND4" - got ""
+leet - 'leet' KO
+	expected : "l33t" - got ""
+leet - 'yoda' KO
+	expected : "70d4" - got ""
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got ""
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got ""
+leet - ' ' KO
+	expected : " " - got ""
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' OK
-verlan - 'kayak' OK
+verlan - 'anaconda' KO
+	expected : "adnocana" - got " adnocana"
+verlan - 'kayak' KO
+	expected : "kayak" - got " kayak"
 verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got "ekuL m adoy"
+	expected : "adoy m ekuL" - got " adoy m ekuL"
 verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
-verlan - ' ' OK
+	expected : "ad07 m 3k)_(L" - got " ad07 m 3k)_(L"
+verlan - ' ' KO
+	expected : " " - got "  "
 verlan - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 verlan - 'Object' KO
 	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking yoda
-yoda - 'anaconda' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'Inverser la position des mots d’une phrase' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+	expected : " " - got ""
 yoda - 'null' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 yoda - 'Object' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking vig
 vig - 'un mot' KO
@@ -96,6 +102,8 @@ prop_access - 'path exist - value string' KO
 	expected : "dog" - got undefined
 prop_access - 'path exist - value object' KO
 	expected : {"name":"dog"} - got undefined
+prop_access - 'path exist - value array' KO
+	expected : {"name":"cat"} - got undefined
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
@@ -104,3 +112,4 @@ prop_access - 'object null' KO
 	expected : test not exist - got null
 prop_access - 'path null' KO
 	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
+

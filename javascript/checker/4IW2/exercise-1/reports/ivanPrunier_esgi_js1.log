@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -40,6 +41,7 @@ snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' OK
+leet - 'anacoNDa' OK
 leet - 'leet' OK
 leet - 'yoda' OK
 leet - 'evaluation' OK
@@ -84,6 +86,8 @@ prop_access - 'path exist - value string' KO
 	Unexpected behaviour : ReferenceError - output is not defined
 prop_access - 'path exist - value object' KO
 	Unexpected behaviour : ReferenceError - output is not defined
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : ReferenceError - output is not defined
 prop_access - 'path not exist' KO
 	Unexpected behaviour : undefined - undefined
 prop_access - 'path empty' KO
@@ -92,3 +96,4 @@ prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+

@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -42,42 +43,29 @@ leet - 'anaconda' OK
 leet - 'anacoNDa' OK
 leet - 'leet' OK
 leet - 'yoda' OK
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4l_4t10n"
+leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'kayak' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - ' ' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'null' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'Object' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	expected : "ad07 m 3k)_(L" - got "ad07 m (L 3k)"
+verlan - ' ' OK
+verlan - 'null' OK
+verlan - 'Object' OK
 
 Checking yoda
-yoda - 'anaconda' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'Inverser la position des mots d’une phrase' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - ' ' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'null' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'Object' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
+yoda - 'null' OK
+yoda - 'Object' OK
 
 Checking vig
 vig - 'un mot' KO
@@ -98,6 +86,8 @@ prop_access - 'path exist - value string' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path exist - value object' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path not exist' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path empty' KO
@@ -106,3 +96,4 @@ prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
+

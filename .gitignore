@@ -1,4 +1,7 @@
 checker.js
+executor.js
+docker-compose.yml
 **/datasets
 **/config
 **/exercise-*/scripts/*
+javascript/examples/

@@ -1,0 +1,109 @@
+Loading script...
+
+Starting tests...
+Checking ucfirst
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
+ucfirst - 'null' OK
+ucfirst - 'Object' OK
+
+Checking capitalize
+capitalize - 'test' OK
+capitalize - ' test' KO
+	expected : " Test" - got "Test"
+capitalize - 'ipsum DOLOR' KO
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
+capitalize - 'null' OK
+capitalize - 'Object' OK
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
+camelCase - 'ToggleCase is the 3oolest' KO
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+camelCase - ' toggleCase' KO
+	expected : "Togglecase" - got "ToggleCase"
+camelCase - 'null' OK
+camelCase - 'Object' OK
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - ' toggleCase' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+
+Checking leet
+leet - 'anaconda' KO
+	expected : "4n4c0nd4" - got "4nac0nda"
+leet - 'anacoNDa' KO
+	expected : "4n4c0ND4" - got "4nac0nda"
+leet - 'leet' KO
+	expected : "l33t" - got "l3et"
+leet - 'yoda' OK
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "3v4l(_)ati0n"
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got "m0n tr4vail"
+leet - ' ' OK
+leet - 'null' OK
+leet - 'Object' OK
+
+Checking verlan
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' KO
+	expected : "adoy m ekuL" - got "ekuL m adoy"
+verlan - '70da m L(_)k3' KO
+	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
+verlan - ' ' OK
+verlan - 'null' OK
+verlan - 'Object' OK
+
+Checking yoda
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' KO
+	expected : " " - got ""
+yoda - 'null' OK
+yoda - 'Object' OK
+
+Checking vig
+vig - 'un mot' OK
+vig - 'un mot avec MAJ' OK
+vig - 'une phrase longue' OK
+vig - ' ' OK
+vig - 'null' OK
+vig - 'Object' OK
+
+Checking prop_access
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
+prop_access - 'path not exist' OK
+prop_access - 'path empty' OK
+prop_access - 'object null' KO
+	expected : test not exist - got null not exist
+prop_access - 'path null' OK
+

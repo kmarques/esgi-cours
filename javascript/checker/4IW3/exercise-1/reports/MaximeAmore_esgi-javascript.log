@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -13,8 +14,7 @@ ucfirst - 'Object' KO
 Checking capitalize
 capitalize - 'test' OK
 capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
@@ -23,18 +23,13 @@ capitalize - 'Object' KO
 	Unexpected behaviour : TypeError - s.split is not a function
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "TOGGLECASEISTHECOOLEST"
-camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TOGGLECASEISTHECOOLEST"
-camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "TOGGLECASEISTHE3OOLEST"
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "TOGGLECASEISTHECOOLEST"
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TOGGLECASEIS_THECOOLEST"
-camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "TOGGLECASE"
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - ' toggleCase' OK
 camelCase - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 camelCase - 'Object' KO
@@ -55,6 +50,8 @@ snake_case - 'Object' KO
 Checking leet
 leet - 'anaconda' KO
 	Unexpected behaviour : TypeError - obj is not iterable
+leet - 'anacoNDa' KO
+	Unexpected behaviour : TypeError - obj is not iterable
 leet - 'leet' KO
 	Unexpected behaviour : TypeError - obj is not iterable
 leet - 'yoda' KO
@@ -72,33 +69,29 @@ leet - 'Object' KO
 
 Checking verlan
 verlan - 'anaconda' KO
-	Unexpected behaviour : ReferenceError - t is not defined
+	Unexpected behaviour : TypeError - element.reverse is not a function
 verlan - 'kayak' KO
-	Unexpected behaviour : ReferenceError - t is not defined
+	Unexpected behaviour : TypeError - element.reverse is not a function
 verlan - 'yoda m Luke' KO
-	Unexpected behaviour : ReferenceError - t is not defined
+	Unexpected behaviour : TypeError - element.reverse is not a function
 verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : ReferenceError - t is not defined
+	Unexpected behaviour : TypeError - element.reverse is not a function
 verlan - ' ' KO
-	Unexpected behaviour : ReferenceError - t is not defined
+	Unexpected behaviour : TypeError - element.reverse is not a function
 verlan - 'null' KO
-	Unexpected behaviour : ReferenceError - t is not defined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 verlan - 'Object' KO
-	Unexpected behaviour : ReferenceError - t is not defined
+	Unexpected behaviour : TypeError - s.split is not a function
 
 Checking yoda
-yoda - 'anaconda' KO
-	expected : "anaconda" - got undefined
-yoda - 'yoda m Luke' KO
-	expected : "Luke m yoda" - got undefined
-yoda - 'Inverser la position des mots d’une phrase' KO
-	expected : "phrase d’une mots des position la Inverser" - got undefined
-yoda - ' ' KO
-	expected : " " - got undefined
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
 yoda - 'null' KO
-	expected : "" - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 yoda - 'Object' KO
-	expected : "" - got undefined
+	Unexpected behaviour : TypeError - s.split is not a function
 
 Checking vig
 vig - 'un mot' KO
@@ -116,14 +109,17 @@ vig - 'Object' KO
 
 Checking prop_access
 prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : ReferenceError - array is not defined
 prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : ReferenceError - array is not defined
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : ReferenceError - array is not defined
 prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : ReferenceError - array is not defined
 prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : ReferenceError - array is not defined
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : ReferenceError - array is not defined
 prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+

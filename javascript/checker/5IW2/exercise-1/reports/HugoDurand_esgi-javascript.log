@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -61,6 +62,8 @@ snake_case - 'Object' KO
 Checking leet
 leet - 'anaconda' KO
 	expected : "4n4c0nd4" - got "anaconda"
+leet - 'anacoNDa' KO
+	expected : "4n4c0ND4" - got "anacoNDa"
 leet - 'leet' KO
 	expected : "l33t" - got "leet"
 leet - 'yoda' KO
@@ -114,9 +117,12 @@ prop_access - 'path exist - value string' KO
 	expected : "dog" - got {"animal":{"type":{"name":"dog"}}}
 prop_access - 'path exist - value object' KO
 	expected : {"name":"dog"} - got {"animal":{"type":{"name":"dog"}}}
+prop_access - 'path exist - value array' KO
+	expected : {"name":"cat"} - got {"animals":[{"type":{"name":"dog"}},{"type":{"name":"cat"}}]}
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' OK
 prop_access - 'object null' KO
 	expected : test not exist - got null
 prop_access - 'path null' OK
+

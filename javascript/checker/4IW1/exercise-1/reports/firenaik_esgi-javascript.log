@@ -1,109 +1,13 @@
-
-
-Checking ucfirst
-ucfirst - 'test' OK
-ucfirst - ' test' OK
-ucfirst - 'Test' OK
-ucfirst - 'TEST' OK
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-ucfirst - 'Object' OK
-
-Checking capitalize
-capitalize - 'test' OK
-capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
-capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-capitalize - 'Object' OK
-
-Checking camelCase
-camelCase - 'toggle case is the coolest' OK
-camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
-camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
-camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
-camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "ToggleCase"
-camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-camelCase - 'Object' OK
-
-Checking snake_case
-snake_case - 'toggle case is the coolest' OK
-snake_case - 'toggleCase is the coolest' OK
-snake_case - 'ToggleCase is the 3oolest' OK
-snake_case - 'ToggleCaseIsTheCool3st' OK
-snake_case - 'ToggleCase is_the coolest' OK
-snake_case - ' toggleCase' OK
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-snake_case - 'Object' OK
-
-Checking leet
-leet - 'anaconda' OK
-leet - 'anacoNDa' OK
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
-leet - ' ' OK
-leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-leet - 'Object' OK
-
-Checking verlan
-verlan - 'anaconda' OK
-verlan - 'kayak' OK
-verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got "ekuL m adoy"
-verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
-verlan - ' ' OK
-verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-verlan - 'Object' OK
-
-Checking yoda
-yoda - 'anaconda' OK
-yoda - 'yoda m Luke' OK
-yoda - 'Inverser la position des mots d’une phrase' OK
-yoda - ' ' OK
-yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-yoda - 'Object' OK
-
-Checking vig
-vig - 'un mot' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'un mot avec MAJ' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'une phrase longue' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - ' ' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'null' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'Object' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-
-Checking prop_access
-prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+Loading script...
+Invalid script: TypeError: word.reverse is not a function
+TypeError: word.reverse is not a function
+    at str.split.map.word (/4IW1/exercise-1/scripts/firenaik_esgi-javascript.js:44:47)
+    at Array.map (<anonymous>)
+    at verlan (/4IW1/exercise-1/scripts/firenaik_esgi-javascript.js:44:30)
+    at Object.<anonymous> (/4IW1/exercise-1/scripts/firenaik_esgi-javascript.js:58:13)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)

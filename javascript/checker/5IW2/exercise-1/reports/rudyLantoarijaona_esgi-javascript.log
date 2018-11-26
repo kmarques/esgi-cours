@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -40,24 +41,25 @@ camelCase - 'Object' KO
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - 'null' KO
-	expected : "" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 snake_case - 'Object' KO
-	expected : "" - got "hello-world"
+	Unexpected behaviour : ReferenceError - string is not defined
 
 Checking leet
 leet - 'anaconda' OK
+leet - 'anacoNDa' OK
 leet - 'leet' KO
 	expected : "l33t" - got "l37"
 leet - 'yoda' KO
@@ -120,6 +122,8 @@ prop_access - 'path exist - value string' KO
 	expected : "dog" - got undefined
 prop_access - 'path exist - value object' KO
 	expected : {"name":"dog"} - got undefined
+prop_access - 'path exist - value array' KO
+	expected : {"name":"cat"} - got undefined
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
@@ -128,3 +132,4 @@ prop_access - 'object null' KO
 	expected : test not exist - got null
 prop_access - 'path null' KO
 	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
+

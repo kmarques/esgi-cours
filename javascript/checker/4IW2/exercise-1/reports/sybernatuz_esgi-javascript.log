@@ -1,0 +1,109 @@
+Loading script...
+
+Starting tests...
+Checking ucfirst
+ucfirst - 'test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - ' test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'Test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'TEST' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+
+Checking capitalize
+capitalize - 'test' OK
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
+capitalize - 'null' OK
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - string.toLowerCase is not a function
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - ' toggleCase' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
+snake_case - 'null' OK
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - string.toLowerCase is not a function
+
+Checking leet
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
+leet - 'null' OK
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - string.split is not a function
+
+Checking verlan
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' OK
+verlan - '70da m L(_)k3' OK
+verlan - ' ' OK
+verlan - 'null' OK
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - string.split is not a function
+
+Checking yoda
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
+yoda - 'null' OK
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - string.split is not a function
+
+Checking vig
+vig - 'un mot' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "FBHNQCSGHNHIYWCSBSQZSRSBY"
+vig - 'un mot avec MAJ' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "FBHNQCSGHNHIYWCSBSQZSRSBY"
+vig - 'une phrase longue' KO
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "HNA:ZKVCZI9GRAS*GRAS*OSPNYD-MWIC-QQI*QI<CITG:WBCBLQMOQX<YMDA:ZIBR:YAB=G<LWS-JQSDR:QN*WIUA"
+vig - ' ' KO
+	expected : " " - got "3"
+vig - 'null' OK
+vig - 'Object' OK
+
+Checking prop_access
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
+prop_access - 'path not exist' OK
+prop_access - 'path empty' OK
+prop_access - 'object null' KO
+	expected : test not exist - got null
+prop_access - 'path null' OK
+

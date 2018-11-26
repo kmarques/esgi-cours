@@ -1,39 +1,49 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
-ucfirst - 'test' OK
-ucfirst - ' test' OK
-ucfirst - 'Test' OK
-ucfirst - 'TEST' OK
+ucfirst - 'test' KO
+	Unexpected behaviour : TypeError - this.charAt is not a function
+ucfirst - ' test' KO
+	Unexpected behaviour : TypeError - this.charAt is not a function
+ucfirst - 'Test' KO
+	Unexpected behaviour : TypeError - this.charAt is not a function
+ucfirst - 'TEST' KO
+	Unexpected behaviour : TypeError - this.charAt is not a function
 ucfirst - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'ucfirst' of null
 ucfirst - 'Object' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
 
 Checking capitalize
-capitalize - 'test' OK
-capitalize - ' test' OK
+capitalize - 'test' KO
+	Unexpected behaviour : TypeError - this.split is not a function
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - this.split is not a function
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
+	Unexpected behaviour : TypeError - this.split is not a function
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : TypeError - this.split is not a function
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : TypeError - this.split is not a function
 capitalize - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'capitalize' of null
 capitalize - 'Object' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - this.split is not a function
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
+	Unexpected behaviour : TypeError - this.split is not a function
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
+	Unexpected behaviour : TypeError - this.split is not a function
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+	Unexpected behaviour : TypeError - this.split is not a function
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+	Unexpected behaviour : TypeError - this.split is not a function
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "ToggleCase"
+	Unexpected behaviour : TypeError - this.split is not a function
 camelCase - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of null
 camelCase - 'Object' KO
@@ -41,53 +51,67 @@ camelCase - 'Object' KO
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got "toggle-case-is-the-coolest"
+	Unexpected behaviour : TypeError - this.split is not a function
 snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "togglecase-is-the-coolest"
+	Unexpected behaviour : TypeError - this.split is not a function
 snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "togglecase-is-the-3oolest"
-snake_case - 'ToggleCaseIsTheCool3st' OK
+	Unexpected behaviour : TypeError - this.split is not a function
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	Unexpected behaviour : TypeError - this.split is not a function
 snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "togglecase-is_the-coolest"
+	Unexpected behaviour : TypeError - this.split is not a function
 snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "-togglecase"
+	Unexpected behaviour : TypeError - this.split is not a function
 snake_case - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'snake_case' of null
 snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 
 Checking leet
-leet - 'anaconda' OK
+leet - 'anaconda' KO
+	Unexpected behaviour : TypeError - this.replace is not a function
+leet - 'anacoNDa' KO
+	Unexpected behaviour : TypeError - this.replace is not a function
 leet - 'leet' KO
-	expected : "l33t" - got "l37"
+	Unexpected behaviour : TypeError - this.replace is not a function
 leet - 'yoda' KO
-	expected : "70d4" - got "y0d4"
+	Unexpected behaviour : TypeError - this.replace is not a function
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4lu4710n"
+	Unexpected behaviour : TypeError - this.replace is not a function
 leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "m0n 7r4v41l"
-leet - ' ' OK
+	Unexpected behaviour : TypeError - this.replace is not a function
+leet - ' ' KO
+	Unexpected behaviour : TypeError - this.replace is not a function
 leet - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'leet' of null
 leet - 'Object' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 
 Checking verlan
-verlan - 'anaconda' OK
-verlan - 'kayak' OK
-verlan - 'yoda m Luke' OK
-verlan - '70da m L(_)k3' OK
-verlan - ' ' OK
+verlan - 'anaconda' KO
+	Unexpected behaviour : TypeError - this.split is not a function
+verlan - 'kayak' KO
+	Unexpected behaviour : TypeError - this.split is not a function
+verlan - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - this.split is not a function
+verlan - '70da m L(_)k3' KO
+	Unexpected behaviour : TypeError - this.split is not a function
+verlan - ' ' KO
+	Unexpected behaviour : TypeError - this.split is not a function
 verlan - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'verlan' of null
 verlan - 'Object' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 
 Checking yoda
-yoda - 'anaconda' OK
-yoda - 'yoda m Luke' OK
-yoda - 'Inverser la position des mots d’une phrase' OK
-yoda - ' ' OK
+yoda - 'anaconda' KO
+	Unexpected behaviour : TypeError - this.split is not a function
+yoda - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - this.split is not a function
+yoda - 'Inverser la position des mots d’une phrase' KO
+	Unexpected behaviour : TypeError - this.split is not a function
+yoda - ' ' KO
+	Unexpected behaviour : TypeError - this.split is not a function
 yoda - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'yoda' of null
 yoda - 'Object' KO
@@ -112,6 +136,8 @@ prop_access - 'path exist - value string' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path exist - value object' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path not exist' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path empty' KO
@@ -120,3 +146,4 @@ prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'prop_access' of null
 prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
+

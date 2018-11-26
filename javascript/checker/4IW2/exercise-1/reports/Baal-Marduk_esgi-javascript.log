@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
 ucfirst - 'test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
@@ -50,6 +51,7 @@ snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' OK
+leet - 'anacoNDa' OK
 leet - 'leet' OK
 leet - 'yoda' OK
 leet - 'evaluation' OK
@@ -109,6 +111,8 @@ prop_access - 'path exist - value string' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path exist - value object' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path not exist' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path empty' KO
@@ -117,3 +121,4 @@ prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - "prop_access" not implemented
+

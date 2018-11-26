@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking type_check_v1
 type_check_v1 - 'number' OK
 type_check_v1 - 'StringNotNumber' OK
@@ -11,7 +12,8 @@ type_check_v1 - 'undefined' KO
 type_check_v1 - 'string' OK
 type_check_v1 - 'array' KO
 	expected : true - got false
-type_check_v1 - 'function' OK
+type_check_v1 - 'function' KO
+	expected : true - got false
 type_check_v1 - 'arrayNotObject' KO
 	expected : false - got true
 
@@ -37,3 +39,4 @@ type_check - 'objectNotMatch' KO
 	expected : false - got undefined
 type_check - 'objectSuperMatch' KO
 	expected : true - got undefined
+

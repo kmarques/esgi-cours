@@ -1,14 +1,12 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
-ucfirst - 'test' KO
-	expected : "Test" - got false
-ucfirst - ' test' KO
-	expected : " test" - got false
-ucfirst - 'Test' KO
-	expected : "Test" - got false
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
 ucfirst - 'TEST' KO
-	expected : "TEST" - got false
+	expected : "TEST" - got "Test"
 ucfirst - 'null' KO
 	expected : "" - got false
 ucfirst - 'Object' KO
@@ -16,51 +14,46 @@ ucfirst - 'Object' KO
 
 Checking capitalize
 capitalize - 'test' KO
-	expected : "Test" - got false
+	expected : "Test" - got "TEST"
 capitalize - ' test' KO
-	expected : " Test" - got false
+	expected : " Test" - got " TEST"
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got false
+	expected : "Ipsum Dolor" - got "IPSUM DOLOR"
 capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got false
+	expected : "Sit 8met Consectetur" - got "SIT 8MET CONSECTETUR"
 capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got false
+	expected : "_dipiscing Elit" - got "_DIPISCING ELIT"
 capitalize - 'null' KO
 	expected : "" - got false
 capitalize - 'Object' KO
 	expected : "" - got false
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got false
-camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got false
-camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got false
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got false
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got false
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got false
+	expected : "Togglecase" - got "falseTogglecase"
 camelCase - 'null' KO
 	expected : "" - got false
 camelCase - 'Object' KO
 	expected : "" - got false
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got false
+snake_case - 'toggle case is the coolest' OK
 snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got false
+	expected : "togglecase_is_the_coolest" - got "toggleCase_is_the_coolest"
 snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got false
+	expected : "togglecase_is_the_3oolest" - got "ToggleCase_is_the_3oolest"
 snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got false
+	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
 snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got false
+	expected : "togglecase_is_the_coolest" - got "ToggleCase_is_the_coolest"
 snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got false
+	expected : "_togglecase" - got "_toggleCase"
 snake_case - 'null' KO
 	expected : "" - got false
 snake_case - 'Object' KO
@@ -69,6 +62,8 @@ snake_case - 'Object' KO
 Checking leet
 leet - 'anaconda' KO
 	expected : "4n4c0nd4" - got false
+leet - 'anacoNDa' KO
+	expected : "4n4c0ND4" - got false
 leet - 'leet' KO
 	expected : "l33t" - got false
 leet - 'yoda' KO
@@ -85,30 +80,23 @@ leet - 'Object' KO
 	expected : "" - got false
 
 Checking verlan
-verlan - 'anaconda' KO
-	expected : "adnocana" - got false
-verlan - 'kayak' KO
-	expected : "kayak" - got false
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
 verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got false
+	expected : "adoy m ekuL" - got "ekuL m adoy"
 verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got false
-verlan - ' ' KO
-	expected : " " - got false
+	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
+verlan - ' ' OK
 verlan - 'null' KO
 	expected : "" - got false
 verlan - 'Object' KO
 	expected : "" - got false
 
 Checking yoda
-yoda - 'anaconda' KO
-	expected : "anaconda" - got false
-yoda - 'yoda m Luke' KO
-	expected : "Luke m yoda" - got false
-yoda - 'Inverser la position des mots d’une phrase' KO
-	expected : "phrase d’une mots des position la Inverser" - got false
-yoda - ' ' KO
-	expected : " " - got false
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
 yoda - 'null' KO
 	expected : "" - got false
 yoda - 'Object' KO
@@ -116,23 +104,22 @@ yoda - 'Object' KO
 
 Checking vig
 vig - 'un mot' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got false
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "FBHNQCSGHNHIYWCSBSQZSRSBY"
 vig - 'un mot avec MAJ' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got false
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "FBHNQCSGHNHIYWCSBSQZSRSBY"
 vig - 'une phrase longue' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got false
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "HNAZKVCZIGRASGRASOSPNYDMWICQQIQICITGWBCBLQMOQXYMDAZIBRYABGLWSJQSDRQNWIUA"
 vig - ' ' KO
-	expected : " " - got false
+	expected : " " - got ""
 vig - 'null' KO
 	expected : "" - got false
 vig - 'Object' KO
 	expected : "" - got false
 
 Checking prop_access
-prop_access - 'path exist - value string' KO
-	expected : "dog" - got false
-prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got false
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
@@ -141,3 +128,4 @@ prop_access - 'object null' KO
 	expected : test not exist - got null
 prop_access - 'path null' KO
 	expected : {"animal":{"type":{"name":"dog"}}} - got false
+

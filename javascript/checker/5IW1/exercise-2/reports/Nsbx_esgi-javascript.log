@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking type_check_v1
 type_check_v1 - 'number' KO
 	Unexpected behaviour : TypeError - "type_check_v1" not implemented
@@ -51,3 +52,4 @@ type_check - 'objectNotMatch' KO
 	expected : false - got undefined
 type_check - 'objectSuperMatch' KO
 	expected : true - got undefined
+

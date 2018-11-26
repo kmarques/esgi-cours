@@ -1,5 +1,6 @@
+Loading script...
 
-
+Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -58,6 +59,8 @@ snake_case - 'Object' KO
 
 Checking leet
 leet - 'anaconda' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'anacoNDa' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'leet' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
@@ -120,14 +123,17 @@ vig - 'Object' KO
 
 Checking prop_access
 prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : "dog" - got undefined
 prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"name":"dog"} - got undefined
+prop_access - 'path exist - value array' KO
+	expected : {"name":"cat"} - got undefined
 prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"animal":{"type":{"name":"dog"}}} - got " doesn't exist."
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+

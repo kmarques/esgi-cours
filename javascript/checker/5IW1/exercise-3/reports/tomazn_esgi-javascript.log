@@ -1,0 +1,149 @@
+Loading script...
+
+Starting tests...
+Checking ucfirst
+ucfirst - 'test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - ' test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'Test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'TEST' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'ucfirst' of null
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+
+Checking capitalize
+capitalize - 'test' KO
+	expected : "Test" - got "[object Global]"
+capitalize - ' test' KO
+	expected : " Test" - got "[object Global]"
+capitalize - 'ipsum DOLOR' KO
+	expected : "Ipsum Dolor" - got "[object Global]"
+capitalize - 'sit 8met consectetur' KO
+	expected : "Sit 8met Consectetur" - got "[object Global]"
+capitalize - '_dipiscing elit' KO
+	expected : "_dipiscing Elit" - got "[object Global]"
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'capitalize' of null
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' KO
+	expected : "ToggleCaseIsTheCoolest" - got "[objectGlobal]"
+camelCase - 'toggleCase is the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "[objectGlobal]"
+camelCase - 'ToggleCase is the 3oolest' KO
+	expected : "TogglecaseIsThe3oolest" - got "[objectGlobal]"
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	expected : "Togglecaseisthecoolest" - got "[objectGlobal]"
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "[objectGlobal]"
+camelCase - ' toggleCase' KO
+	expected : "Togglecase" - got "[objectGlobal]"
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of null
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' KO
+	expected : "toggle_case_is_the_coolest" - got "[object_global]"
+snake_case - 'toggleCase is the coolest' KO
+	expected : "togglecase_is_the_coolest" - got "[object_global]"
+snake_case - 'ToggleCase is the 3oolest' KO
+	expected : "togglecase_is_the_3oolest" - got "[object_global]"
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	expected : "togglecaseisthecool3st" - got "[object_global]"
+snake_case - 'ToggleCase is_the coolest' KO
+	expected : "togglecase_is_the_coolest" - got "[object_global]"
+snake_case - ' toggleCase' KO
+	expected : "_togglecase" - got "[object_global]"
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'snake_case' of null
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+
+Checking leet
+leet - 'anaconda' KO
+	expected : "4n4c0nd4" - got "[0bj3ct gl0b4l]"
+leet - 'anacoNDa' KO
+	expected : "4n4c0ND4" - got "[0bj3ct gl0b4l]"
+leet - 'leet' KO
+	expected : "l33t" - got "[0bj3ct gl0b4l]"
+leet - 'yoda' KO
+	expected : "70d4" - got "[0bj3ct gl0b4l]"
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "[0bj3ct gl0b4l]"
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got "[0bj3ct gl0b4l]"
+leet - ' ' KO
+	expected : " " - got "[0bj3ct gl0b4l]"
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'leet' of null
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+
+Checking verlan
+verlan - 'anaconda' KO
+	expected : "adnocana" - got "tcejbo[ ]labolg"
+verlan - 'kayak' KO
+	expected : "kayak" - got "tcejbo[ ]labolg"
+verlan - 'yoda m Luke' KO
+	expected : "adoy m ekuL" - got "tcejbo[ ]labolg"
+verlan - '70da m L(_)k3' KO
+	expected : "ad07 m 3k)_(L" - got "tcejbo[ ]labolg"
+verlan - ' ' KO
+	expected : " " - got "tcejbo[ ]labolg"
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'verlan' of null
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+
+Checking yoda
+yoda - 'anaconda' KO
+	expected : "anaconda" - got "global] [object"
+yoda - 'yoda m Luke' KO
+	expected : "Luke m yoda" - got "global] [object"
+yoda - 'Inverser la position des mots d’une phrase' KO
+	expected : "phrase d’une mots des position la Inverser" - got "global] [object"
+yoda - ' ' KO
+	expected : " " - got "global] [object"
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'yoda' of null
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+
+Checking vig
+vig - 'un mot' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'un mot avec MAJ' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'une phrase longue' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - ' ' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'vig' of null
+vig - 'Object' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value object' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path not exist' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path empty' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'prop_access' of null
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+
