@@ -2,25 +2,24 @@ Loading script...
 
 Starting tests...
 Checking type_check_v1
-type_check_v1 - 'number' OK
+type_check_v1 - 'number' KO
+	expected : true - got false
 type_check_v1 - 'StringNotNumber' KO
-	Unexpected behaviour : ReferenceError - isArray is not defined
-type_check_v1 - 'BooleanNotNumber' KO
-	Unexpected behaviour : ReferenceError - isArray is not defined
-type_check_v1 - 'object' OK
-type_check_v1 - 'null' KO
-	Unexpected behaviour : ReferenceError - isArray is not defined
-type_check_v1 - 'nullNotObject' KO
 	expected : false - got true
+type_check_v1 - 'BooleanNotNumber' OK
+type_check_v1 - 'object' KO
+	expected : true - got false
+type_check_v1 - 'null' KO
+	expected : true - got false
+type_check_v1 - 'nullNotObject' OK
 type_check_v1 - 'undefined' KO
-	Unexpected behaviour : ReferenceError - isArray is not defined
+	expected : true - got false
 type_check_v1 - 'string' OK
 type_check_v1 - 'array' KO
-	Unexpected behaviour : ReferenceError - isArray is not defined
+	expected : true - got false
 type_check_v1 - 'function' KO
-	Unexpected behaviour : ReferenceError - isArray is not defined
-type_check_v1 - 'arrayNotObject' KO
-	expected : false - got true
+	expected : true - got false
+type_check_v1 - 'arrayNotObject' OK
 
 Checking type_check_v2
 type_check_v2 - 'number' KO
