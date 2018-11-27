@@ -81,20 +81,3 @@ vig - 'une phrase longue' KO
 vig - ' ' OK
 vig - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-vig - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
-
-Checking prop_access
-prop_access - 'path exist - value string' KO
-	expected : "dog" - got {"animal":{"type":{"name":"dog"}}}
-prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got {"animal":{"type":{"name":"dog"}}}
-prop_access - 'path exist - value array' KO
-	expected : {"name":"cat"} - got {"animals":[{"type":{"name":"dog"}},{"type":{"name":"cat"}}]}
-prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got null
-prop_access - 'path empty' OK
-prop_access - 'object null' KO
-	expected : test not exist - got null
-prop_access - 'path null' OK
-
