@@ -13,8 +13,7 @@ type_check_v1 - 'nullNotObject' KO
 type_check_v1 - 'undefined' KO
 	expected : true - got false
 type_check_v1 - 'string' OK
-type_check_v1 - 'array' KO
-	Unexpected behaviour : ReferenceError - ar1 is not defined
+type_check_v1 - 'array' OK
 type_check_v1 - 'function' KO
 	expected : true - got false
 type_check_v1 - 'arrayNotObject' KO
