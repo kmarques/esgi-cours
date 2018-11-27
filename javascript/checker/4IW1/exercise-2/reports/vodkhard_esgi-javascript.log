@@ -21,8 +21,7 @@ type_check_v2 - 'number' OK
 type_check_v2 - 'numberNotValue' OK
 type_check_v2 - 'numberNotObject' OK
 type_check_v2 - 'stringEnum' OK
-type_check_v2 - 'objectMatch' KO
-	expected : true - got false
+type_check_v2 - 'objectMatch' OK
 type_check_v2 - 'objectNotMatch' OK
 
 Checking type_check
