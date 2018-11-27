@@ -10,13 +10,16 @@ ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' OK
+capitalize - 'test' KO
+	expected : "Test" - got ""
 capitalize - ' test' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+	expected : " Test" - got ""
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
+	expected : "Ipsum Dolor" - got ""
+capitalize - 'sit 8met consectetur' KO
+	expected : "Sit 8met Consectetur" - got ""
+capitalize - '_dipiscing elit' KO
+	expected : "_dipiscing Elit" - got ""
 capitalize - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 capitalize - 'Object' KO
