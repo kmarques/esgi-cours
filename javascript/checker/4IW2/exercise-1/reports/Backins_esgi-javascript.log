@@ -38,3 +38,63 @@ snake_case - ' toggleCase' OK
 snake_case - 'null' OK
 snake_case - 'Object' OK
 
+Checking leet
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
+leet - 'null' OK
+leet - 'Object' OK
+
+Checking verlan
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' KO
+	expected : "adoy m ekuL" - got "ekuL m adoy"
+verlan - '70da m L(_)k3' KO
+	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
+verlan - ' ' OK
+verlan - 'null' OK
+verlan - 'Object' OK
+
+Checking yoda
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
+yoda - 'null' OK
+yoda - 'Object' OK
+
+Checking vig
+vig - 'un mot' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'un mot avec MAJ' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'une phrase longue' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - ' ' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'null' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'Object' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value object' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path not exist' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path empty' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+

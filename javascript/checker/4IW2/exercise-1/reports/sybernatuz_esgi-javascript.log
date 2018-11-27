@@ -81,3 +81,29 @@ yoda - 'anaconda' OK
 yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
+yoda - 'null' OK
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - string.split is not a function
+
+Checking vig
+vig - 'un mot' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "FBHNQCSGHNHIYWCSBSQZSRSBY"
+vig - 'un mot avec MAJ' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "FBHNQCSGHNHIYWCSBSQZSRSBY"
+vig - 'une phrase longue' KO
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "HNA:ZKVCZI9GRAS*GRAS*OSPNYD-MWIC-QQI*QI<CITG:WBCBLQMOQX<YMDA:ZIBR:YAB=G<LWS-JQSDR:QN*WIUA"
+vig - ' ' KO
+	expected : " " - got "3"
+vig - 'null' OK
+vig - 'Object' OK
+
+Checking prop_access
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
+prop_access - 'path not exist' OK
+prop_access - 'path empty' OK
+prop_access - 'object null' KO
+	expected : test not exist - got null
+prop_access - 'path null' OK
+
