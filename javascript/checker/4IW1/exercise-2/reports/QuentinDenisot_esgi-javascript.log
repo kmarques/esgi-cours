@@ -18,17 +18,17 @@ type_check_v1 - 'arrayNotObject' OK
 
 Checking type_check_v2
 type_check_v2 - 'number' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	expected : true - got undefined
 type_check_v2 - 'numberNotValue' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	expected : false - got undefined
 type_check_v2 - 'numberNotObject' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	expected : false - got undefined
 type_check_v2 - 'stringEnum' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	expected : false - got undefined
 type_check_v2 - 'objectMatch' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	expected : true - got undefined
 type_check_v2 - 'objectNotMatch' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	expected : false - got undefined
 
 Checking type_check
 type_check - 'number' KO
