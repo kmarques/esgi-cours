@@ -17,7 +17,8 @@ type_check_v1 - 'function' KO
 type_check_v1 - 'arrayNotObject' OK
 
 Checking type_check_v2
-type_check_v2 - 'number' OK
+type_check_v2 - 'number' KO
+	expected : true - got false
 type_check_v2 - 'numberNotValue' OK
 type_check_v2 - 'numberNotObject' OK
 type_check_v2 - 'stringEnum' OK
