@@ -105,13 +105,13 @@ verlan - 'Object' KO
 
 Checking yoda
 yoda - 'anaconda' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+	expected : "anaconda" - got ""
 yoda - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+	expected : "Luke m yoda" - got ""
 yoda - 'Inverser la position des mots d’une phrase' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+	expected : "phrase d’une mots des position la Inverser" - got ""
 yoda - ' ' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+	expected : " " - got ""
 yoda - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'yoda' of null
 yoda - 'Object' KO
