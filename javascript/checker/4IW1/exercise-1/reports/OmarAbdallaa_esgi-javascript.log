@@ -79,19 +79,16 @@ leet - 'Object' KO
 
 Checking verlan
 verlan - 'anaconda' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	expected : "adnocana" - got "a n a c o n d a"
 verlan - 'kayak' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	expected : "kayak" - got "k a y a k"
 verlan - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	expected : "adoy m ekuL" - got "y o d a   m   L u k e"
 verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - ' ' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'null' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'Object' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	expected : "ad07 m 3k)_(L" - got "7 0 d a   m   L ( _ ) k 3"
+verlan - ' ' OK
+verlan - 'null' OK
+verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' KO
@@ -128,7 +125,7 @@ prop_access - 'path exist - value array' OK
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got "existe pas"
+	expected : {"animal":{"type":{"name":"dog"}}} - got "not exist"
 prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 prop_access - 'path null' OK
