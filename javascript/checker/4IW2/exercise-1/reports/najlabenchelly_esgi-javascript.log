@@ -116,18 +116,15 @@ vig - 'Object - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
-prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
 prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 
