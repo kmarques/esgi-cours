@@ -17,18 +17,13 @@ type_check_v1 - 'function' KO
 type_check_v1 - 'arrayNotObject' OK
 
 Checking type_check_v2
-type_check_v2 - 'number' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
-type_check_v2 - 'numberNotValue' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
-type_check_v2 - 'numberNotObject' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
-type_check_v2 - 'stringEnum' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
-type_check_v2 - 'objectMatch' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+type_check_v2 - 'number' OK
+type_check_v2 - 'numberNotValue' OK
+type_check_v2 - 'numberNotObject' OK
+type_check_v2 - 'stringEnum' OK
+type_check_v2 - 'objectMatch' OK
 type_check_v2 - 'objectNotMatch' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	expected : false - got true
 
 Checking type_check
 type_check - 'number' KO
