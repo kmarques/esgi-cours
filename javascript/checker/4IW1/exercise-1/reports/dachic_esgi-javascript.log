@@ -52,3 +52,5 @@ leet - 'evaluation' KO
 	expected : "3v4l(_)4t10n" - got undefined
 leet - 'mon travail' KO
 	expected : "m0n tr4v41l" - got undefined
+leet - ' ' KO
+	expected : " " - got undefined
