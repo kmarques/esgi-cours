@@ -1,7 +1,7 @@
 Loading script...
 Invalid script: ReferenceError: myobj is not defined
 ReferenceError: myobj is not defined
-    at Object.<anonymous> (/4IW2/exercise-3/scripts/elgrim312_esgi-javascript.js:22:13)
+    at Object.<anonymous> (/4IW2/exercise-3/scripts/elgrim312_esgi-javascript.js:87:13)
     at Module._compile (internal/modules/cjs/loader.js:688:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
     at Module.load (internal/modules/cjs/loader.js:598:32)
