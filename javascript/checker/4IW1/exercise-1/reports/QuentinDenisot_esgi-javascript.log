@@ -54,20 +54,13 @@ snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - myString.split is not a function
 
 Checking leet
-leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got ["anaconda"]
-leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got ["anacoNDa"]
-leet - 'leet' KO
-	expected : "l33t" - got ["leet"]
-leet - 'yoda' KO
-	expected : "70d4" - got ["yoda"]
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got ["evaluation"]
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got ["mon","travail"]
-leet - ' ' KO
-	expected : " " - got ["",""]
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
 leet - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 leet - 'Object' KO
@@ -119,17 +112,15 @@ vig - 'Object' KO
 
 Checking prop_access
 prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : "dog" - got ["animal","type","name"]
 prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"name":"dog"} - got ["animal","type"]
 prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"name":"cat"} - got ["animals","1","type"]
 prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' OK
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : test not exist - got null
+prop_access - 'path null' OK
 
