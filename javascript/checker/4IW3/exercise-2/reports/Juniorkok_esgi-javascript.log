@@ -1,0 +1,13 @@
+Loading script...
+Invalid script: ReferenceError: type_check is not defined
+ReferenceError: type_check is not defined
+    at Object.<anonymous> (/4IW3/exercise-2/scripts/Juniorkok_esgi-javascript.js:34:29)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at startTest (/executor.js:41:21)
+    at process.on (/executor.js:114:9)
