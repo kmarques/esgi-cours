@@ -6,8 +6,10 @@ ucfirst - 'test' OK
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
-ucfirst - 'null' OK
-ucfirst - 'Object' OK
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of null
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - string.charAt is not a function
 
 Checking capitalize
 capitalize - 'test' OK
@@ -15,8 +17,10 @@ capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
-capitalize - 'null' OK
-capitalize - 'Object' OK
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - string.toLowerCase is not a function
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
@@ -24,10 +28,12 @@ camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIstheCoolest"
 camelCase - ' toggleCase' OK
-camelCase - 'null' OK
-camelCase - 'Object' OK
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' OK
@@ -36,8 +42,10 @@ snake_case - 'ToggleCase is the 3oolest' OK
 snake_case - 'ToggleCaseIsTheCool3st' OK
 snake_case - 'ToggleCase is_the coolest' OK
 snake_case - ' toggleCase' OK
-snake_case - 'null' OK
-snake_case - 'Object' OK
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - string.toLowerCase is not a function
 
 Checking leet
 leet - 'anaconda' OK
@@ -47,8 +55,10 @@ leet - 'yoda' OK
 leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
-leet - 'null' OK
-leet - 'Object' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -56,16 +66,20 @@ verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
-verlan - 'null' OK
-verlan - 'Object' OK
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking yoda
 yoda - 'anaconda' OK
 yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
-yoda - 'null' OK
-yoda - 'Object' OK
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking vig
 vig - 'un mot' KO
@@ -80,13 +94,18 @@ vig - 'null' OK
 vig - 'Object' OK
 
 Checking prop_access
-prop_access - 'path exist - value string' OK
-prop_access - 'path exist - value object' OK
-prop_access - 'path exist - value array' OK
-prop_access - 'path not exist' OK
-prop_access - 'path empty' OK
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+prop_access - 'path exist - value object' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+prop_access - 'path not exist' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+prop_access - 'path empty' KO
+	Unexpected behaviour : ReferenceError - string is not defined
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of null
+	Unexpected behaviour : ReferenceError - string is not defined
 prop_access - 'path null' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got ""
+	Unexpected behaviour : ReferenceError - string is not defined
 

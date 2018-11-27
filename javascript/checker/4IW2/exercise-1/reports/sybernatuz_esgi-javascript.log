@@ -10,32 +10,22 @@ ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' KO
-	Unexpected behaviour : ReferenceError - uc_first is not defined
-capitalize - ' test' KO
-	Unexpected behaviour : ReferenceError - uc_first is not defined
-capitalize - 'ipsum DOLOR' KO
-	Unexpected behaviour : ReferenceError - uc_first is not defined
-capitalize - 'sit 8met consectetur' KO
-	Unexpected behaviour : ReferenceError - uc_first is not defined
-capitalize - '_dipiscing elit' KO
-	Unexpected behaviour : ReferenceError - uc_first is not defined
+capitalize - 'test' OK
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : ReferenceError - uc_first is not defined
-camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : ReferenceError - uc_first is not defined
-camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : ReferenceError - uc_first is not defined
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : ReferenceError - uc_first is not defined
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : ReferenceError - uc_first is not defined
-camelCase - ' toggleCase' KO
-	Unexpected behaviour : ReferenceError - uc_first is not defined
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
