@@ -22,7 +22,7 @@ type_check_v1 - 'arrayNotObject' KO
 
 Checking type_check_v2
 type_check_v2 - 'number' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	Unexpected behaviour : TypeError - Cannot read property 'indexOf' of undefined
 type_check_v2 - 'numberNotValue' OK
 type_check_v2 - 'numberNotObject' OK
 type_check_v2 - 'stringEnum' OK
@@ -32,17 +32,17 @@ type_check_v2 - 'objectNotMatch' OK
 
 Checking type_check
 type_check - 'number' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'forEach' of undefined
 type_check - 'numberNotValue' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'forEach' of undefined
 type_check - 'numberNotObject' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'forEach' of undefined
 type_check - 'stringEnum' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'forEach' of undefined
 type_check - 'objectMatch' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'forEach' of undefined
 type_check - 'objectNotMatch' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'forEach' of undefined
 type_check - 'objectSuperMatch' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	Unexpected behaviour : TypeError - obj.properties.forEach is not a function
 
