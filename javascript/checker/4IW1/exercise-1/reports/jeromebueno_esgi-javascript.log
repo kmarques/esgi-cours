@@ -22,14 +22,11 @@ capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
-camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
-camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
 camelCase - ' toggleCase' KO
 	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 camelCase - 'null' OK
@@ -37,21 +34,19 @@ camelCase - 'Object' OK
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	expected : "toggle_case_is_the_coolest" - got "Toggle_Case_Is_The_Coolest"
 snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	expected : "togglecase_is_the_coolest" - got "ToggleCase_Is_The_Coolest"
 snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	expected : "togglecase_is_the_3oolest" - got "ToggleCase_Is_The_3oolest"
 snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
 snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	expected : "togglecase_is_the_coolest" - got "ToggleCase_Is_the_Coolest"
 snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+snake_case - 'null' OK
+snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' OK
@@ -67,20 +62,17 @@ leet - 'Object' KO
 	Unexpected behaviour : TypeError - value.split is not a function
 
 Checking verlan
-verlan - 'anaconda' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'kayak' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
 verlan - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	expected : "adoy m ekuL" - got "ekuL m adoy"
 verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - ' ' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
+verlan - ' ' OK
 verlan - 'null' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 verlan - 'Object' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - value.split is not a function
 
 Checking yoda
 yoda - 'anaconda' KO
@@ -111,18 +103,14 @@ vig - 'Object' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
-prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
 prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' OK
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 

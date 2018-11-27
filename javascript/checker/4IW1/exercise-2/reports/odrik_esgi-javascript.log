@@ -19,18 +19,14 @@ type_check_v1 - 'arrayNotObject' KO
 	expected : false - got true
 
 Checking type_check_v2
-type_check_v2 - 'number' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
-type_check_v2 - 'numberNotValue' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
-type_check_v2 - 'numberNotObject' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+type_check_v2 - 'number' OK
+type_check_v2 - 'numberNotValue' OK
+type_check_v2 - 'numberNotObject' OK
 type_check_v2 - 'stringEnum' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	Unexpected behaviour : ReferenceError - checkArray is not defined
 type_check_v2 - 'objectMatch' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
-type_check_v2 - 'objectNotMatch' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	expected : true - got false
+type_check_v2 - 'objectNotMatch' OK
 
 Checking type_check
 type_check - 'number' KO
