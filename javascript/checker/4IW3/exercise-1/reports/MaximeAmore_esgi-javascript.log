@@ -27,13 +27,12 @@ camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - 'ToggleCase is_the coolest' OK
 camelCase - ' toggleCase' OK
 camelCase - 'null' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - s.split is not a function
+	Unexpected behaviour : TypeError - s.replace is not a function
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' OK
@@ -49,23 +48,22 @@ snake_case - 'Object' KO
 
 Checking leet
 leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - obj is not iterable
+	expected : "4n4c0nd4" - got "undefinedndundefundefinednedfinednacundefinednda"
 leet - 'anacoNDa' KO
-	Unexpected behaviour : TypeError - obj is not iterable
+	expected : "4n4c0ND4" - got "undefinedndundefundefinednedfinednacundefinedNDa"
 leet - 'leet' KO
-	Unexpected behaviour : TypeError - obj is not iterable
+	expected : "l33t" - got "lundefinedndefundefinednedet"
 leet - 'yoda' KO
-	Unexpected behaviour : TypeError - obj is not iterable
+	expected : "70d4" - got "undefinedundefinedndefineddundundefundefinednedfined"
 leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - obj is not iterable
+	expected : "3v4l(_)4t10n" - got "undefinedndefundefinednedvundefinedluatiundefinedn"
 leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - obj is not iterable
-leet - ' ' KO
-	Unexpected behaviour : TypeError - obj is not iterable
+	expected : "m0n tr4v41l" - got "mundefinedndefinedn trundundefundefinednedfinedvail"
+leet - ' ' OK
 leet - 'null' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 leet - 'Object' KO
-	Unexpected behaviour : TypeError - obj is not iterable
+	Unexpected behaviour : TypeError - w.replace is not a function
 
 Checking verlan
 verlan - 'anaconda' KO

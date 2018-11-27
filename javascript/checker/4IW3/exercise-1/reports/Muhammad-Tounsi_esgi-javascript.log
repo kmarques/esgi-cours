@@ -2,18 +2,14 @@ Loading script...
 
 Starting tests...
 Checking ucfirst
-ucfirst - 'test' KO
-	expected : "Test" - got undefined
-ucfirst - ' test' KO
-	expected : " test" - got undefined
-ucfirst - 'Test' KO
-	expected : "Test" - got undefined
-ucfirst - 'TEST' KO
-	expected : "TEST" - got undefined
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+	Unexpected behaviour : TypeError - Cannot read property '0' of null
 ucfirst - 'Object' KO
-	expected : "" - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 
 Checking capitalize
 capitalize - 'test' OK
