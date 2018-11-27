@@ -72,3 +72,57 @@ verlan - 'anaconda' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'kayak' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - '70da m L(_)k3' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - ' ' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+
+Checking yoda
+yoda - 'anaconda' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'Inverser la position des mots d’une phrase' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - ' ' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+
+Checking vig
+vig - 'un mot' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'un mot avec MAJ' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'une phrase longue' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - ' ' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'null' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'Object' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+
+Checking prop_access
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got "dog"
+prop_access - 'path exist - value array' KO
+	expected : {"name":"cat"} - got "dog"
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got dog
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got "dog"
+prop_access - 'object null' KO
+	expected : test not exist - got null
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+
