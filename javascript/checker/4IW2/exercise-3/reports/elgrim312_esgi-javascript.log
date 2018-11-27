@@ -129,3 +129,10 @@ prop_access - 'path exist - value array' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
 prop_access - 'path not exist' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+prop_access - 'path empty' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'prop_access' of null
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of undefined
+
