@@ -113,16 +113,3 @@ vig - 'Object' KO
 
 Checking prop_access
 prop_access - 'path exist - value string' OK
-prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got "dog"
-prop_access - 'path exist - value array' KO
-	expected : {"name":"cat"} - got "dog"
-prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got dog
-prop_access - 'path empty' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got "dog"
-prop_access - 'object null' KO
-	expected : test not exist - got null
-prop_access - 'path null' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got {"name":"dog"}
-
