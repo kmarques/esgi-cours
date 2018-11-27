@@ -14,8 +14,7 @@ type_check_v1 - 'string' OK
 type_check_v1 - 'array' OK
 type_check_v1 - 'function' KO
 	expected : true - got false
-type_check_v1 - 'arrayNotObject' KO
-	expected : false - got true
+type_check_v1 - 'arrayNotObject' OK
 
 Checking type_check_v2
 type_check_v2 - 'number' KO
