@@ -76,24 +76,3 @@ vig - 'une phrase longue' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 vig - ' ' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'null' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'Object' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-
-Checking prop_access
-prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-
