@@ -78,3 +78,19 @@ leet - 'yoda' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'evaluation' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'mon travail' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - ' ' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'null' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+
+Checking verlan
+verlan - 'anaconda' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'kayak' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented

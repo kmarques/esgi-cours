@@ -57,33 +57,3 @@ verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
 verlan - 'null' OK
 verlan - 'Object' OK
-
-Checking yoda
-yoda - 'anaconda' OK
-yoda - 'yoda m Luke' OK
-yoda - 'Inverser la position des mots d’une phrase' OK
-yoda - ' ' OK
-yoda - 'null' OK
-yoda - 'Object' OK
-
-Checking vig
-vig - 'un mot' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "yuagjvlzagabrpvluljslklur"
-vig - 'un mot avec MAJ' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "yuagJvlzagAbrpvLuljslklur"
-vig - 'une phrase longue' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "agtMsdovsbLzktlWzktlWhligrwZfpbvZjjbWjbOvbmzMpuvuejfhjqOrfwtMsbukMrtuPzOeplZcjlwkMjgWpbnt"
-vig - ' ' KO
-	expected : " " - got "F"
-vig - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-vig - 'Object' OK
-
-Checking prop_access
-prop_access - 'path exist - value string' OK
-prop_access - 'path exist - value object' OK
-prop_access - 'path exist - value array' OK
-prop_access - 'path not exist' OK
-prop_access - 'path empty' OK
-prop_access - 'object null' OK
-prop_access - 'path null' OK
