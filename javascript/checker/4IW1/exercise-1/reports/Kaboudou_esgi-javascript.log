@@ -124,5 +124,5 @@ prop_access - 'path empty' KO
 prop_access - 'object null' KO
 	expected : test not exist - got null
 prop_access - 'path null' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got "dog"
+	expected : {"animal":{"type":{"name":"dog"}}} - got {"name":"dog"}
 
