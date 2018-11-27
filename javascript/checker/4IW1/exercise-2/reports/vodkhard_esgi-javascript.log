@@ -19,8 +19,7 @@ type_check_v1 - 'arrayNotObject' OK
 Checking type_check_v2
 type_check_v2 - 'number' OK
 type_check_v2 - 'numberNotValue' OK
-type_check_v2 - 'numberNotObject' KO
-	expected : false - got true
+type_check_v2 - 'numberNotObject' OK
 type_check_v2 - 'stringEnum' OK
 type_check_v2 - 'objectMatch' KO
 	expected : true - got false
