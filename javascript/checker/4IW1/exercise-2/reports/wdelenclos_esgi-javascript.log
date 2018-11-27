@@ -14,7 +14,7 @@ type_check_v1 - 'undefined' KO
 type_check_v1 - 'string' OK
 type_check_v1 - 'array' OK
 type_check_v1 - 'function' KO
-	expected : true - got false
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 type_check_v1 - 'arrayNotObject' KO
 	expected : false - got true
 
