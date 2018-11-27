@@ -1,7 +1,7 @@
 Loading script...
-Invalid script: ReferenceError: camelCase is not defined
-ReferenceError: camelCase is not defined
-    at Object.<anonymous> (/4IW1/exercise-1/scripts/Kivabien_esgi-javascript.js:95:28)
+Invalid script: ReferenceError: camelize is not defined
+ReferenceError: camelize is not defined
+    at Object.<anonymous> (/4IW1/exercise-1/scripts/Kivabien_esgi-javascript.js:42:10)
     at Module._compile (internal/modules/cjs/loader.js:688:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
     at Module.load (internal/modules/cjs/loader.js:598:32)
