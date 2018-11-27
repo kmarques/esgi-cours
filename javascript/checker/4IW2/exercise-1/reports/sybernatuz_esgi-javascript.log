@@ -2,46 +2,42 @@ Loading script...
 
 Starting tests...
 Checking ucfirst
-ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
+ucfirst - 'null' OK
+ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' OK
-capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' OK
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
+capitalize - 'test' KO
+	Unexpected behaviour : ReferenceError - uc_first is not defined
+capitalize - ' test' KO
+	Unexpected behaviour : ReferenceError - uc_first is not defined
+capitalize - 'ipsum DOLOR' KO
+	Unexpected behaviour : ReferenceError - uc_first is not defined
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : ReferenceError - uc_first is not defined
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : ReferenceError - uc_first is not defined
 capitalize - 'null' OK
-capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - string.toLowerCase is not a function
+capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	Unexpected behaviour : ReferenceError - uc_first is not defined
 camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	Unexpected behaviour : ReferenceError - uc_first is not defined
 camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	Unexpected behaviour : ReferenceError - uc_first is not defined
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	Unexpected behaviour : ReferenceError - uc_first is not defined
 camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	Unexpected behaviour : ReferenceError - uc_first is not defined
 camelCase - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'null' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	Unexpected behaviour : ReferenceError - uc_first is not defined
+camelCase - 'null' OK
+camelCase - 'Object' OK
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' OK
@@ -51,8 +47,7 @@ snake_case - 'ToggleCaseIsTheCool3st' OK
 snake_case - 'ToggleCase is_the coolest' OK
 snake_case - ' toggleCase' OK
 snake_case - 'null' OK
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - string.toLowerCase is not a function
+snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' OK
@@ -63,8 +58,7 @@ leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -73,8 +67,7 @@ verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
 verlan - 'null' OK
-verlan - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' OK
@@ -82,8 +75,7 @@ yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
 yoda - 'null' OK
-yoda - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+yoda - 'Object' OK
 
 Checking vig
 vig - 'un mot' KO
