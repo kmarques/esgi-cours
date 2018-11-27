@@ -3,13 +3,13 @@ Loading script...
 Starting tests...
 Checking ucfirst
 ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - this.charAt is not a function
+	Unexpected behaviour : TypeError - this.valueOf(...).charAt is not a function
 ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - this.charAt is not a function
+	Unexpected behaviour : TypeError - this.valueOf(...).charAt is not a function
 ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - this.charAt is not a function
+	Unexpected behaviour : TypeError - this.valueOf(...).charAt is not a function
 ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - this.charAt is not a function
+	Unexpected behaviour : TypeError - this.valueOf(...).charAt is not a function
 ucfirst - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'ucfirst' of null
 ucfirst - 'Object' KO
