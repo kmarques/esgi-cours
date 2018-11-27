@@ -2,17 +2,14 @@ Loading script...
 
 Starting tests...
 Checking ucfirst
-ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
 ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+	expected : "TEST" - got "Test"
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'substr' of null
 ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+	Unexpected behaviour : TypeError - mot.substr is not a function
 
 Checking capitalize
