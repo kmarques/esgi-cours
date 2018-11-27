@@ -8,16 +8,18 @@ type_check_v1 - 'StringNotNumber' KO
 	expected : false - got true
 type_check_v1 - 'BooleanNotNumber' OK
 type_check_v1 - 'object' KO
-	expected : true - got false
-type_check_v1 - 'null' OK
+	Unexpected behaviour : TypeError - Right-hand side of 'instanceof' is not an object
+type_check_v1 - 'null' KO
+	Unexpected behaviour : TypeError - Right-hand side of 'instanceof' is not an object
 type_check_v1 - 'undefined' KO
-	expected : true - got false
+	Unexpected behaviour : TypeError - Right-hand side of 'instanceof' is not an object
 type_check_v1 - 'string' OK
 type_check_v1 - 'array' KO
-	expected : true - got false
+	Unexpected behaviour : TypeError - Right-hand side of 'instanceof' is not an object
 type_check_v1 - 'function' KO
-	expected : true - got false
-type_check_v1 - 'arrayNotObject' OK
+	Unexpected behaviour : TypeError - Right-hand side of 'instanceof' is not an object
+type_check_v1 - 'arrayNotObject' KO
+	Unexpected behaviour : TypeError - Right-hand side of 'instanceof' is not an object
 
 Checking type_check_v2
 type_check_v2 - 'number' KO

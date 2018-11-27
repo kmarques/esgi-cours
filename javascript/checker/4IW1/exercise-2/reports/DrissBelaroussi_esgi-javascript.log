@@ -9,12 +9,12 @@ type_check_v1 - 'object' OK
 type_check_v1 - 'null' KO
 	expected : false - got true
 type_check_v1 - 'undefined' KO
-	expected : true - got false
+	expected : true - got undefined
 type_check_v1 - 'string' OK
 type_check_v1 - 'array' KO
 	expected : true - got false
 type_check_v1 - 'function' KO
-	expected : true - got false
+	expected : true - got undefined
 type_check_v1 - 'arrayNotObject' KO
 	expected : false - got true
 
