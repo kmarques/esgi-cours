@@ -46,3 +46,75 @@ snake_case - 'ToggleCase is_the coolest' KO
 	expected : "togglecase_is_the_coolest" - got "togglecase-is_the-coolest"
 snake_case - ' toggleCase' KO
 	expected : "_togglecase" - got "-togglecase"
+snake_case - 'null' OK
+snake_case - 'Object' OK
+
+Checking leet
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
+leet - 'null' OK
+leet - 'Object' OK
+
+Checking verlan
+verlan - 'anaconda' KO
+	expected : "adnocana" - got "adnocan"
+verlan - 'kayak' KO
+	expected : "kayak" - got "kaya"
+verlan - 'yoda m Luke' KO
+	expected : "adoy m ekuL" - got "ekuL m ado"
+verlan - '70da m L(_)k3' KO
+	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad0"
+verlan - ' ' KO
+	expected : " " - got ""
+verlan - 'null' OK
+verlan - 'Object' OK
+
+Checking yoda
+yoda - 'anaconda' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'Inverser la position des mots d’une phrase' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - ' ' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+
+Checking vig
+vig - 'anticonstitutionnellement - foo' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'antiConstiTutioNnellement - foo' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - ' - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'null - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'Object - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	expected : "dog" - got ""
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got ""
+prop_access - 'path exist - value array' KO
+	expected : {"name":"cat"} - got ""
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got ""
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of null
+prop_access - 'path null' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got ""
+
