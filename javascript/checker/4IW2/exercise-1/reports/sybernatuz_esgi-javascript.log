@@ -84,6 +84,6 @@ prop_access - 'path exist - value array' OK
 prop_access - 'path not exist' OK
 prop_access - 'path empty' OK
 prop_access - 'object null' KO
-	expected : test not exist - got null
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of null
 prop_access - 'path null' OK
 
