@@ -7,7 +7,7 @@ ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'substring' of null
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 ucfirst - 'Object' KO
 	Unexpected behaviour : TypeError - s.substring is not a function
 
@@ -18,7 +18,7 @@ capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 capitalize - 'Object' KO
 	Unexpected behaviour : TypeError - s.split is not a function
 
@@ -31,7 +31,7 @@ camelCase - 'ToggleCase is_the coolest' KO
 	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
 camelCase - ' toggleCase' OK
 camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 camelCase - 'Object' KO
 	Unexpected behaviour : TypeError - s.split is not a function
 
@@ -43,7 +43,7 @@ snake_case - 'ToggleCaseIsTheCool3st' OK
 snake_case - 'ToggleCase is_the coolest' OK
 snake_case - ' toggleCase' OK
 snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - s.split is not a function
 
@@ -63,7 +63,7 @@ leet - 'mon travail' KO
 leet - ' ' KO
 	Unexpected behaviour : TypeError - obj is not iterable
 leet - 'null' KO
-	Unexpected behaviour : TypeError - obj is not iterable
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 leet - 'Object' KO
 	Unexpected behaviour : TypeError - obj is not iterable
 
@@ -79,7 +79,7 @@ verlan - '70da m L(_)k3' KO
 verlan - ' ' KO
 	Unexpected behaviour : TypeError - element.reverse is not a function
 verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 verlan - 'Object' KO
 	Unexpected behaviour : TypeError - s.split is not a function
 
@@ -89,7 +89,7 @@ yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
 yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 yoda - 'Object' KO
 	Unexpected behaviour : TypeError - s.split is not a function
 
@@ -117,9 +117,9 @@ prop_access - 'path exist - value array' KO
 prop_access - 'path not exist' KO
 	Unexpected behaviour : ReferenceError - array is not defined
 prop_access - 'path empty' KO
-	Unexpected behaviour : ReferenceError - array is not defined
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 prop_access - 'object null' KO
 	Unexpected behaviour : ReferenceError - array is not defined
 prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 
