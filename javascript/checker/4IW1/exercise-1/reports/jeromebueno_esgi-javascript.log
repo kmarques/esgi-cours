@@ -103,14 +103,3 @@ vig - 'Object' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
-prop_access - 'path exist - value string' OK
-prop_access - 'path exist - value object' OK
-prop_access - 'path exist - value array' OK
-prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got null
-prop_access - 'path empty' OK
-prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'test' of null
-prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-
