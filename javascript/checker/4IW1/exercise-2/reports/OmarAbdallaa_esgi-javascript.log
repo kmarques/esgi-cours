@@ -33,8 +33,7 @@ type_check - 'number' KO
 	expected : true - got undefined
 type_check - 'numberNotValue' KO
 	expected : false - got undefined
-type_check - 'numberNotObject' KO
-	expected : false - got undefined
+type_check - 'numberNotObject' OK
 type_check - 'stringEnum' KO
 	expected : false - got undefined
 type_check - 'objectMatch' KO
