@@ -7,14 +7,13 @@ type_check_v1 - 'StringNotNumber' OK
 type_check_v1 - 'BooleanNotNumber' OK
 type_check_v1 - 'object' OK
 type_check_v1 - 'null' OK
-type_check_v1 - 'nullNotObject' KO
-	expected : false - got true
+type_check_v1 - 'nullNotObject' OK
 type_check_v1 - 'undefined' KO
-	Unexpected behaviour : TypeError - Cannot read property 'constructor' of null
+	expected : true - got false
 type_check_v1 - 'string' OK
 type_check_v1 - 'array' OK
 type_check_v1 - 'function' KO
-	Unexpected behaviour : TypeError - Cannot read property 'constructor' of null
+	expected : true - got false
 type_check_v1 - 'arrayNotObject' KO
 	expected : false - got true
 
