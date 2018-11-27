@@ -6,22 +6,20 @@ ucfirst - 'test' OK
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
-ucfirst - 'null' KO
-	expected : "" - got "Object"
-ucfirst - 'Object' KO
-	expected : "" - got "Object"
+ucfirst - 'null' OK
+ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' KO
-	expected : "Test" - got "Test "
+	expected : "Test" - got ""
 capitalize - ' test' KO
-	expected : " Test" - got " Test "
+	expected : " Test" - got "Test "
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR "
+	expected : "Ipsum Dolor" - got "DOLOR "
 capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "Sit 8met Consectetur "
+	expected : "Sit 8met Consectetur" - got "8met Consectetur "
 capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got "_dipiscing Elit "
+	expected : "_dipiscing Elit" - got "Elit "
 capitalize - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 capitalize - 'Object' KO
