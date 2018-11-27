@@ -53,3 +53,64 @@ leet - 'anaconda' OK
 leet - 'anacoNDa' OK
 leet - 'leet' OK
 leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - value.split is not a function
+
+Checking verlan
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' KO
+	expected : "adoy m ekuL" - got "ekuL m adoy"
+verlan - '70da m L(_)k3' KO
+	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
+verlan - ' ' OK
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - value.split is not a function
+
+Checking yoda
+yoda - 'anaconda' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'Inverser la position des mots d’une phrase' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - ' ' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+
+Checking vig
+vig - 'un mot' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'un mot avec MAJ' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'une phrase longue' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - ' ' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'null' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'Object' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+
+Checking prop_access
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' OK
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'test' of null
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+

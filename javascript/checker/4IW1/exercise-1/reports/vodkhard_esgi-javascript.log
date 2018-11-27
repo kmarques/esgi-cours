@@ -79,3 +79,26 @@ yoda - ' ' OK
 yoda - 'null' OK
 yoda - 'Object' OK
 
+Checking vig
+vig - 'un mot' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "anticonstitutionnellement"
+vig - 'un mot avec MAJ' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "antiConstiTutioNnellement"
+vig - 'une phrase longue' KO
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test"
+vig - ' ' OK
+vig - 'null' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+vig - 'Object' KO
+	expected : "" - got {"foo":"data"}
+
+Checking prop_access
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
+prop_access - 'path not exist' OK
+prop_access - 'path empty' OK
+prop_access - 'object null' KO
+	expected : test not exist - got null not exist
+prop_access - 'path null' OK
+
