@@ -84,14 +84,10 @@ verlan - 'Object' KO
 	expected : "" - got undefined
 
 Checking yoda
-yoda - 'anaconda' KO
-	expected : "anaconda" - got "anaconda "
-yoda - 'yoda m Luke' KO
-	expected : "Luke m yoda" - got "Luke m yoda "
-yoda - 'Inverser la position des mots d’une phrase' KO
-	expected : "phrase d’une mots des position la Inverser" - got "phrase d’une mots des position la Inverser "
-yoda - ' ' KO
-	expected : " " - got "  "
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
 yoda - 'null' OK
 yoda - 'Object' OK
 
