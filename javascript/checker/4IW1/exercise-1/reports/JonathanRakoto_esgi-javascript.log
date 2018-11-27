@@ -51,17 +51,22 @@ snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' OK
-leet - 'anacoNDa' OK
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
-leet - ' ' OK
-leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-leet - 'Object' KO
-	expected : "" - got {"foo":"data"}
+leet - 'anaconda' KO
+	expected : "4n4c0nd4" - got ""
+leet - 'anacoNDa' KO
+	expected : "4n4c0ND4" - got ""
+leet - 'leet' KO
+	expected : "l33t" - got ""
+leet - 'yoda' KO
+	expected : "70d4" - got ""
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got ""
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got ""
+leet - ' ' KO
+	expected : " " - got ""
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' KO
