@@ -60,3 +60,27 @@ snake_case - 'null' KO
 snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 
+Checking leet
+leet - 'anaconda' KO
+	expected : "4n4c0nd4" - got "anaconda"
+leet - 'anacoNDa' KO
+	expected : "4n4c0ND4" - got "anacoNDa"
+leet - 'leet' KO
+	expected : "l33t" - got "leet"
+leet - 'yoda' KO
+	expected : "70d4" - got "yoda"
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "evaluation"
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got "mon travail"
+leet - ' ' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - chr.toLowerCase is not a function
+
+Checking verlan
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' KO
+	expected : "adoy m ekuL" - got "ekuL m adoy"

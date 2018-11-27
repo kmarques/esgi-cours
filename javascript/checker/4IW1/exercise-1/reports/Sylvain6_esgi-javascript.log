@@ -62,3 +62,15 @@ snake_case - 'Object' KO
 Checking leet
 leet - 'anaconda' OK
 leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
+
+Checking verlan
+verlan - 'anaconda' OK
