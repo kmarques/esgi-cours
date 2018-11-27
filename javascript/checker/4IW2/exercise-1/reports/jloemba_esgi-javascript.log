@@ -7,9 +7,9 @@ ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
 ucfirst - 'null' KO
-	expected : "" - got undefined
+	expected : "" - got "Object"
 ucfirst - 'Object' KO
-	expected : "" - got "Null"
+	expected : "" - got "Object"
 
 Checking capitalize
 capitalize - 'test' KO
