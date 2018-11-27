@@ -17,18 +17,14 @@ type_check_v1 - 'function' KO
 type_check_v1 - 'arrayNotObject' OK
 
 Checking type_check_v2
-type_check_v2 - 'number' KO
-	expected : true - got undefined
-type_check_v2 - 'numberNotValue' KO
-	expected : false - got undefined
+type_check_v2 - 'number' OK
+type_check_v2 - 'numberNotValue' OK
 type_check_v2 - 'numberNotObject' KO
-	expected : false - got undefined
-type_check_v2 - 'stringEnum' KO
-	expected : false - got undefined
+	expected : false - got true
+type_check_v2 - 'stringEnum' OK
 type_check_v2 - 'objectMatch' KO
-	expected : true - got undefined
-type_check_v2 - 'objectNotMatch' KO
-	expected : false - got undefined
+	expected : true - got false
+type_check_v2 - 'objectNotMatch' OK
 
 Checking type_check
 type_check - 'number' KO
