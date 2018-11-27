@@ -40,6 +40,5 @@ type_check - 'objectMatch' KO
 	expected : true - got undefined
 type_check - 'objectNotMatch' KO
 	expected : false - got undefined
-type_check - 'objectSuperMatch' KO
-	expected : true - got false
+type_check - 'objectSuperMatch' OK
 
