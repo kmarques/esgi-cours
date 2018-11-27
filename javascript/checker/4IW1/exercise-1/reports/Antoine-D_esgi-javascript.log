@@ -10,16 +10,13 @@ ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' KO
-	expected : "Test" - got "Test "
+capitalize - 'test' OK
 capitalize - ' test' KO
 	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR "
-capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "Sit 8met Consectetur "
-capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got "_dipiscing Elit "
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
