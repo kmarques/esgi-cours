@@ -8,8 +8,7 @@ type_check_v1 - 'BooleanNotNumber' OK
 type_check_v1 - 'object' OK
 type_check_v1 - 'null' KO
 	expected : true - got false
-type_check_v1 - 'nullNotObject' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+type_check_v1 - 'nullNotObject' OK
 type_check_v1 - 'undefined' KO
 	expected : true - got false
 type_check_v1 - 'string' OK
