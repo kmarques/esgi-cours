@@ -44,16 +44,11 @@ camelCase - 'Object' KO
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' OK
-snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "toggleCase_is_the_coolest"
-snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "ToggleCase_is_the_3oolest"
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
-snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "ToggleCase_is_the_coolest"
-snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "_toggleCase"
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
 snake_case - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 snake_case - 'Object' KO
