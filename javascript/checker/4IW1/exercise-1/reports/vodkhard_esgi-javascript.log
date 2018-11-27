@@ -2,7 +2,8 @@ Loading script...
 
 Starting tests...
 Checking ucfirst
-ucfirst - 'test' OK
+ucfirst - 'test' KO
+	expected : "Test" - got "test"
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
@@ -10,22 +11,32 @@ ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' OK
+capitalize - 'test' KO
+	expected : "Test" - got "test"
 capitalize - ' test' KO
-	expected : " Test" - got "Test"
-capitalize - 'ipsum DOLOR' OK
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
+	expected : " Test" - got " test"
+capitalize - 'ipsum DOLOR' KO
+	expected : "Ipsum Dolor" - got "ipsum dolor"
+capitalize - 'sit 8met consectetur' KO
+	expected : "Sit 8met Consectetur" - got "sit 8met consectetur"
+capitalize - '_dipiscing elit' KO
+	expected : "_dipiscing Elit" - got "_dipiscing elit"
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' OK
-camelCase - 'toggleCase is the coolest' OK
-camelCase - 'ToggleCase is the 3oolest' OK
-camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' OK
-camelCase - ' toggleCase' OK
+camelCase - 'toggle case is the coolest' KO
+	expected : "ToggleCaseIsTheCoolest" - got "togglecaseisthecoolest"
+camelCase - 'toggleCase is the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "togglecaseisthecoolest"
+camelCase - 'ToggleCase is the 3oolest' KO
+	expected : "TogglecaseIsThe3oolest" - got "togglecaseisthe3oolest"
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	expected : "Togglecaseisthecoolest" - got "togglecaseisthecoolest"
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "togglecaseisthecoolest"
+camelCase - ' toggleCase' KO
+	expected : "Togglecase" - got "togglecase"
 camelCase - 'null' OK
 camelCase - 'Object' OK
 

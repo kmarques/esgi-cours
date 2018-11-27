@@ -12,76 +12,70 @@ ucfirst - 'Object' KO
 	Unexpected behaviour : TypeError - string.charAt is not a function
 
 Checking capitalize
-capitalize - 'test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - ' test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'ipsum DOLOR' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'sit 8met consectetur' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - '_dipiscing elit' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'test' OK
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
+	Unexpected behaviour : TypeError - str.replace is not a function
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "ToggleCaseIsTheCoolest" - got undefined
 camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "TogglecaseIsTheCoolest" - got undefined
 camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "TogglecaseIsThe3oolest" - got undefined
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "Togglecaseisthecoolest" - got undefined
 camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "TogglecaseIsTheCoolest" - got undefined
 camelCase - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "Togglecase" - got undefined
 camelCase - 'null' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	Unexpected behaviour : TypeError - str.replace is not a function
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'toggle case is the coolest' OK
 snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	expected : "togglecase_is_the_coolest" - got "toggleCase_is_the_coolest"
 snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	expected : "togglecase_is_the_3oolest" - got "ToggleCase_is_the_3oolest"
 snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
 snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	expected : "togglecase_is_the_coolest" - got "ToggleCase_is_the_coolest"
 snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	expected : "_togglecase" - got "_toggleCase"
 snake_case - 'null' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	Unexpected behaviour : TypeError - str.replace is not a function
 
 Checking leet
 leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "4n4c0nd4" - got undefined
 leet - 'anacoNDa' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "4n4c0ND4" - got undefined
 leet - 'leet' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "l33t" - got undefined
 leet - 'yoda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "70d4" - got undefined
 leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "3v4l(_)4t10n" - got undefined
 leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "m0n tr4v41l" - got undefined
 leet - ' ' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : " " - got undefined
 leet - 'null' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "" - got undefined
 leet - 'Object' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "" - got undefined
 
 Checking verlan
 verlan - 'anaconda' KO
