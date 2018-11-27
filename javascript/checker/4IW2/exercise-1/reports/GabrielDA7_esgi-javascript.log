@@ -23,8 +23,7 @@ camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIstheCoolest"
+camelCase - 'ToggleCase is_the coolest' OK
 camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
@@ -69,13 +68,13 @@ yoda - 'Object' OK
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "\u0000FBHNQCSGHNHIYWCSBSQZSRSBY"
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "\u0000fbhnqcsghnhiywcsbsqzsrsby"
 vig - 'antiConstiTutioNnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "\u0000FBHNQCSGHNHIYWCSBSQZSRSBY"
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "\u0000fbhnqcsghnhiywcsbsqzsrsby"
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "\u0000HNA:ZKVCZI9GRAS*GRAS*OSPNYD-MWIC-QQI*QI<CITG:WBCBLQMOQX<YMDA:ZIBR:YAB=G<LWS-JQSDR:QN*WIUA"
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "\u0000hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv"
 vig - ' - test' KO
-	expected : " " - got "\u00003"
+	expected : " " - got "\u0000 "
 vig - 'null - test' OK
 vig - 'Object - test' OK
 

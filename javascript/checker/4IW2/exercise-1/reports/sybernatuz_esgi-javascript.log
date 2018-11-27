@@ -71,9 +71,8 @@ Checking vig
 vig - 'anticonstitutionnellement - foo' OK
 vig - 'antiConstiTutioNnellement - foo' OK
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "hna:zkvczi9gras*gras*ospnyd-mwic-qqi*qi<citg:wbcblqmoqx<ymda:zibr:yab=g<lws-jqsdr:qn*wiua"
-vig - ' - test' KO
-	expected : " " - got "3"
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "hna zkvczi gras gras ospnyd mwic qqi qi citg wbcblqmoqx ymda zibr yab g lws jqsdr qn wiua"
+vig - ' - test' OK
 vig - 'null - test' OK
 vig - 'Object - test' OK
 
@@ -83,7 +82,6 @@ prop_access - 'path exist - value object' OK
 prop_access - 'path exist - value array' OK
 prop_access - 'path not exist' OK
 prop_access - 'path empty' OK
-prop_access - 'object null' KO
-	expected : test not exist - got object not exist
+prop_access - 'object null' OK
 prop_access - 'path null' OK
 

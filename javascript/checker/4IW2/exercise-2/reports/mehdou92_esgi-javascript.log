@@ -7,24 +7,31 @@ type_check_v1 - 'StringNotNumber' OK
 type_check_v1 - 'BooleanNotNumber' OK
 type_check_v1 - 'object' OK
 type_check_v1 - 'null' OK
-type_check_v1 - 'nullNotObject' OK
+type_check_v1 - 'nullNotObject' KO
+	expected : false - got true
 type_check_v1 - 'undefined' KO
 	expected : true - got false
 type_check_v1 - 'string' OK
-type_check_v1 - 'array' OK
+type_check_v1 - 'array' KO
+	expected : true - got undefined
 type_check_v1 - 'function' KO
-	expected : true - got false
-type_check_v1 - 'arrayNotObject' OK
+	expected : true - got undefined
+type_check_v1 - 'arrayNotObject' KO
+	expected : false - got true
 
 Checking type_check_v2
 type_check_v2 - 'number' KO
-	expected : true - got false
-type_check_v2 - 'numberNotValue' OK
-type_check_v2 - 'numberNotObject' OK
-type_check_v2 - 'stringEnum' OK
+	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+type_check_v2 - 'numberNotValue' KO
+	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+type_check_v2 - 'numberNotObject' KO
+	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+type_check_v2 - 'stringEnum' KO
+	Unexpected behaviour : TypeError - "type_check_v2" not implemented
 type_check_v2 - 'objectMatch' KO
-	expected : true - got false
-type_check_v2 - 'objectNotMatch' OK
+	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+type_check_v2 - 'objectNotMatch' KO
+	Unexpected behaviour : TypeError - "type_check_v2" not implemented
 
 Checking type_check
 type_check - 'number' KO
