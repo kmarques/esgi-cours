@@ -40,8 +40,7 @@ snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' OK
-leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got "4n4c0nd4"
+leet - 'anacoNDa' OK
 leet - 'leet' OK
 leet - 'yoda' OK
 leet - 'evaluation' OK
