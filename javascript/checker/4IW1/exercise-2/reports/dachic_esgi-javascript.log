@@ -11,6 +11,8 @@ type_check_v1 - 'object' KO
 	Unexpected behaviour : TypeError - Right-hand side of 'instanceof' is not an object
 type_check_v1 - 'null' KO
 	Unexpected behaviour : TypeError - Right-hand side of 'instanceof' is not an object
+type_check_v1 - 'nullNotObject' KO
+	Unexpected behaviour : TypeError - Right-hand side of 'instanceof' is not an object
 type_check_v1 - 'undefined' KO
 	Unexpected behaviour : TypeError - Right-hand side of 'instanceof' is not an object
 type_check_v1 - 'string' OK

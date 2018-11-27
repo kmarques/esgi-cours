@@ -12,6 +12,8 @@ type_check_v1 - 'object' KO
 	Unexpected behaviour : ReferenceError - getType is not defined
 type_check_v1 - 'null' KO
 	Unexpected behaviour : ReferenceError - getType is not defined
+type_check_v1 - 'nullNotObject' KO
+	Unexpected behaviour : ReferenceError - getType is not defined
 type_check_v1 - 'undefined' KO
 	Unexpected behaviour : ReferenceError - getType is not defined
 type_check_v1 - 'string' KO
