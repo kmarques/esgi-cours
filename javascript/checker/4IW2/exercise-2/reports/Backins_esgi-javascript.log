@@ -2,22 +2,28 @@ Loading script...
 
 Starting tests...
 Checking type_check_v1
-type_check_v1 - 'number' OK
-type_check_v1 - 'StringNotNumber' OK
+type_check_v1 - 'number' KO
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
+type_check_v1 - 'StringNotNumber' KO
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 type_check_v1 - 'BooleanNotNumber' KO
-	expected : false - got true
-type_check_v1 - 'object' OK
-type_check_v1 - 'null' OK
-type_check_v1 - 'nullNotObject' OK
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
+type_check_v1 - 'object' KO
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
+type_check_v1 - 'null' KO
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
+type_check_v1 - 'nullNotObject' KO
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 type_check_v1 - 'undefined' KO
-	expected : true - got false
-type_check_v1 - 'string' OK
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
+type_check_v1 - 'string' KO
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 type_check_v1 - 'array' KO
-	expected : true - got false
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 type_check_v1 - 'function' KO
-	expected : true - got false
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 type_check_v1 - 'arrayNotObject' KO
-	expected : false - got true
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 
 Checking type_check_v2
 type_check_v2 - 'number' KO
