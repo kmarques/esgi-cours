@@ -73,12 +73,12 @@ yoda - 'null' OK
 yoda - 'Object' OK
 
 Checking vig
-vig - 'un mot' OK
-vig - 'un mot avec MAJ' OK
-vig - 'une phrase longue' OK
-vig - ' ' OK
-vig - 'null' OK
-vig - 'Object' OK
+vig - 'anticonstitutionnellement - foo' OK
+vig - 'antiConstiTutioNnellement - foo' OK
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' OK
+vig - ' - test' OK
+vig - 'null - test' OK
+vig - 'Object - test' OK
 
 Checking prop_access
 prop_access - 'path exist - value string' OK

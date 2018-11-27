@@ -90,17 +90,17 @@ yoda - 'Object' KO
 	expected : "" - got undefined
 
 Checking vig
-vig - 'un mot' KO
+vig - 'anticonstitutionnellement - foo' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'un mot avec MAJ' KO
+vig - 'antiConstiTutioNnellement - foo' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'une phrase longue' KO
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - ' ' KO
+vig - ' - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'null' KO
+vig - 'null - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'Object' KO
+vig - 'Object - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access

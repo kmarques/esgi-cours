@@ -88,16 +88,16 @@ yoda - 'Object' KO
 	Unexpected behaviour : TypeError - string.split is not a function
 
 Checking vig
-vig - 'un mot' OK
-vig - 'un mot avec MAJ' KO
+vig - 'anticonstitutionnellement - foo' OK
+vig - 'antiConstiTutioNnellement - foo' KO
 	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "fbhnncsghnniywcebsqzsrsby"
-vig - 'une phrase longue' KO
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
 	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "hnaundefinedzkvcziygrasjgrasjospnydmmwicmqqijqibcitgundefinedwbcblqmoqxbymdaundefinedzibrundefinedyabcgblwsmjqsdrundefinedqnjwiua"
-vig - ' ' KO
+vig - ' - test' KO
 	expected : " " - got "s"
-vig - 'null' KO
+vig - 'null - test' KO
 	Unexpected behaviour : TypeError - Cannot read property 'length' of null
-vig - 'Object' OK
+vig - 'Object - test' OK
 
 Checking prop_access
 prop_access - 'path exist - value string' KO
