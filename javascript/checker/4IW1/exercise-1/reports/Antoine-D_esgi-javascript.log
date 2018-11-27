@@ -66,19 +66,17 @@ leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' KO
-	expected : "adnocana" - got undefined
+	expected : "adnocana" - got "adnocana "
 verlan - 'kayak' KO
-	expected : "kayak" - got undefined
+	expected : "kayak" - got "kayak "
 verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got undefined
+	expected : "adoy m ekuL" - got "adoy m ekuL "
 verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got undefined
+	expected : "ad07 m 3k)_(L" - got "ad07 m 3k)_(L "
 verlan - ' ' KO
-	expected : " " - got undefined
-verlan - 'null' KO
-	expected : "" - got undefined
-verlan - 'Object' KO
-	expected : "" - got undefined
+	expected : " " - got "  "
+verlan - 'null' OK
+verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' OK
