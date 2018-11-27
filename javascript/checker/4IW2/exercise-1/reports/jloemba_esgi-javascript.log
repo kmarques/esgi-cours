@@ -9,7 +9,7 @@ ucfirst - 'TEST' OK
 ucfirst - 'null' KO
 	expected : "" - got undefined
 ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - param.charAt is not a function
+	expected : "" - got "Null"
 
 Checking capitalize
 capitalize - 'test' KO
