@@ -87,15 +87,16 @@ vig - 'Object - test' KO
 	expected : "" - got undefined
 
 Checking prop_access
-prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : ReferenceError - output is not defined
 prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got "dog"
+	Unexpected behaviour : ReferenceError - output is not defined
 prop_access - 'path exist - value array' KO
-	expected : {"name":"cat"} - got "dog"
+	Unexpected behaviour : ReferenceError - output is not defined
 prop_access - 'path not exist' KO
-	Unexpected behaviour : undefined - undefined
+	Unexpected behaviour : ReferenceError - output is not defined
 prop_access - 'path empty' KO
-	Unexpected behaviour : undefined - undefined
+	Unexpected behaviour : ReferenceError - output is not defined
 prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 prop_access - 'path null' KO
