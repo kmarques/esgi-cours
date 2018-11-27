@@ -3,17 +3,19 @@ Loading script...
 Starting tests...
 Checking type_check_v1
 type_check_v1 - 'number' OK
-type_check_v1 - 'StringNotNumber' KO
+type_check_v1 - 'StringNotNumber' OK
+type_check_v1 - 'BooleanNotNumber' KO
 	expected : false - got true
-type_check_v1 - 'BooleanNotNumber' OK
 type_check_v1 - 'object' OK
 type_check_v1 - 'null' OK
-type_check_v1 - 'nullNotObject' KO
-	expected : false - got true
-type_check_v1 - 'undefined' OK
+type_check_v1 - 'nullNotObject' OK
+type_check_v1 - 'undefined' KO
+	expected : true - got false
 type_check_v1 - 'string' OK
-type_check_v1 - 'array' OK
-type_check_v1 - 'function' OK
+type_check_v1 - 'array' KO
+	expected : true - got false
+type_check_v1 - 'function' KO
+	expected : true - got false
 type_check_v1 - 'arrayNotObject' KO
 	expected : false - got true
 
