@@ -65,16 +65,14 @@ leet - 'null' OK
 leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' KO
-	expected : "adnocana" - got "adnocana "
-verlan - 'kayak' KO
-	expected : "kayak" - got "kayak "
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
 verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got "adoy m ekuL "
+	expected : "adoy m ekuL" - got "adoymekuL"
 verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "ad07 m 3k)_(L "
+	expected : "ad07 m 3k)_(L" - got "ad07m3k)_(L"
 verlan - ' ' KO
-	expected : " " - got "  "
+	expected : " " - got ""
 verlan - 'null' OK
 verlan - 'Object' OK
 
