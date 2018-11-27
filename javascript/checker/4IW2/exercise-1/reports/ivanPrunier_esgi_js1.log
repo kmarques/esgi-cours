@@ -89,9 +89,9 @@ prop_access - 'path exist - value object' KO
 prop_access - 'path exist - value array' KO
 	Unexpected behaviour : ReferenceError - output is not defined
 prop_access - 'path not exist' KO
-	Unexpected behaviour : undefined - undefined
+	Unexpected behaviour : ReferenceError - output is not defined
 prop_access - 'path empty' KO
-	Unexpected behaviour : undefined - undefined
+	Unexpected behaviour : ReferenceError - output is not defined
 prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 prop_access - 'path null' KO
