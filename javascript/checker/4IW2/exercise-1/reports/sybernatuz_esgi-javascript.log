@@ -68,12 +68,10 @@ yoda - 'null' OK
 yoda - 'Object' OK
 
 Checking vig
-vig - 'anticonstitutionnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "FBHNQCSGHNHIYWCSBSQZSRSBY"
-vig - 'antiConstiTutioNnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "FBHNQCSGHNHIYWCSBSQZSRSBY"
+vig - 'anticonstitutionnellement - foo' OK
+vig - 'antiConstiTutioNnellement - foo' OK
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "HNA:ZKVCZI9GRAS*GRAS*OSPNYD-MWIC-QQI*QI<CITG:WBCBLQMOQX<YMDA:ZIBR:YAB=G<LWS-JQSDR:QN*WIUA"
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "hna:zkvczi9gras*gras*ospnyd-mwic-qqi*qi<citg:wbcblqmoqx<ymda:zibr:yab=g<lws-jqsdr:qn*wiua"
 vig - ' - test' KO
 	expected : " " - got "3"
 vig - 'null - test' OK
