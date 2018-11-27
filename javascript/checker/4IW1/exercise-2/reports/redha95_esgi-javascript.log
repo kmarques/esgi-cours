@@ -6,8 +6,7 @@ type_check_v1 - 'number' OK
 type_check_v1 - 'StringNotNumber' OK
 type_check_v1 - 'BooleanNotNumber' OK
 type_check_v1 - 'object' OK
-type_check_v1 - 'null' KO
-	expected : true - got false
+type_check_v1 - 'null' OK
 type_check_v1 - 'nullNotObject' KO
 	expected : false - got true
 type_check_v1 - 'undefined' KO

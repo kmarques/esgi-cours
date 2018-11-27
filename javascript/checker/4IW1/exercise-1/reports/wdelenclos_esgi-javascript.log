@@ -98,3 +98,7 @@ vig - 'Object' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
+prop_access - 'path exist - value string' KO
+	expected : "dog" - got undefined
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got undefined
