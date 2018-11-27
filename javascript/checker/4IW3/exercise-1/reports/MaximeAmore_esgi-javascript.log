@@ -107,17 +107,17 @@ vig - 'Object - test' KO
 
 Checking prop_access
 prop_access - 'path exist - value string' KO
-	Unexpected behaviour : ReferenceError - array is not defined
+	expected : "dog" - got "not exist"
 prop_access - 'path exist - value object' KO
-	Unexpected behaviour : ReferenceError - array is not defined
+	expected : {"name":"dog"} - got "not exist"
 prop_access - 'path exist - value array' KO
-	Unexpected behaviour : ReferenceError - array is not defined
+	expected : {"name":"cat"} - got "not exist"
 prop_access - 'path not exist' KO
-	Unexpected behaviour : ReferenceError - array is not defined
+	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 prop_access - 'object null' KO
-	Unexpected behaviour : ReferenceError - array is not defined
+	Unexpected behaviour : TypeError - Cannot read property 'undefined' of null
 prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 

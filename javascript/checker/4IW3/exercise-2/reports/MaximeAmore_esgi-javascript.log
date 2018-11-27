@@ -32,17 +32,17 @@ type_check_v2 - 'objectNotMatch' OK
 
 Checking type_check
 type_check - 'number' KO
-	Unexpected behaviour : TypeError - Cannot read property 'forEach' of undefined
+	Unexpected behaviour : TypeError - obj.forEach is not a function
 type_check - 'numberNotValue' KO
-	Unexpected behaviour : TypeError - Cannot read property 'forEach' of undefined
+	Unexpected behaviour : TypeError - obj.forEach is not a function
 type_check - 'numberNotObject' KO
-	Unexpected behaviour : TypeError - Cannot read property 'forEach' of undefined
+	Unexpected behaviour : TypeError - obj.forEach is not a function
 type_check - 'stringEnum' KO
-	Unexpected behaviour : TypeError - Cannot read property 'forEach' of undefined
+	Unexpected behaviour : TypeError - obj.forEach is not a function
 type_check - 'objectMatch' KO
-	Unexpected behaviour : TypeError - Cannot read property 'forEach' of undefined
+	Unexpected behaviour : TypeError - obj.forEach is not a function
 type_check - 'objectNotMatch' KO
-	Unexpected behaviour : TypeError - Cannot read property 'forEach' of undefined
+	Unexpected behaviour : TypeError - obj.forEach is not a function
 type_check - 'objectSuperMatch' KO
-	Unexpected behaviour : TypeError - obj.properties.forEach is not a function
+	Unexpected behaviour : TypeError - obj.forEach is not a function
 
