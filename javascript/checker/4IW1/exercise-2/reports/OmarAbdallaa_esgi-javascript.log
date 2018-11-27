@@ -24,8 +24,7 @@ type_check_v2 - 'number' KO
 	expected : true - got undefined
 type_check_v2 - 'numberNotValue' KO
 	expected : false - got undefined
-type_check_v2 - 'numberNotObject' KO
-	expected : false - got undefined
+type_check_v2 - 'numberNotObject' OK
 type_check_v2 - 'stringEnum' KO
 	expected : false - got undefined
 type_check_v2 - 'objectMatch' KO
