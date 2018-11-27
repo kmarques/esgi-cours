@@ -10,4 +10,4 @@ ReferenceError: prop_access is not defined
     at Module.require (internal/modules/cjs/loader.js:636:17)
     at require (internal/modules/cjs/helpers.js:20:18)
     at startTest (/executor.js:41:21)
-    at process.on (/executor.js:117:9)
+    at process.on (/executor.js:114:9)
