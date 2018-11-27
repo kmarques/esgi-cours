@@ -1,1 +1,17 @@
 Loading script...
+
+Starting tests...
+Checking ucfirst
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'charAt' of null
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - str.charAt is not a function
+
+Checking capitalize
+capitalize - 'test' OK
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
