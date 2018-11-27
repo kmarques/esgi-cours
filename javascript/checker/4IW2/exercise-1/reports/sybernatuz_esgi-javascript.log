@@ -68,16 +68,16 @@ yoda - 'null' OK
 yoda - 'Object' OK
 
 Checking vig
-vig - 'un mot' KO
+vig - 'anticonstitutionnellement - foo' KO
 	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "FBHNQCSGHNHIYWCSBSQZSRSBY"
-vig - 'un mot avec MAJ' KO
+vig - 'antiConstiTutioNnellement - foo' KO
 	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "FBHNQCSGHNHIYWCSBSQZSRSBY"
-vig - 'une phrase longue' KO
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
 	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "HNA:ZKVCZI9GRAS*GRAS*OSPNYD-MWIC-QQI*QI<CITG:WBCBLQMOQX<YMDA:ZIBR:YAB=G<LWS-JQSDR:QN*WIUA"
-vig - ' ' KO
+vig - ' - test' KO
 	expected : " " - got "3"
-vig - 'null' OK
-vig - 'Object' OK
+vig - 'null - test' OK
+vig - 'Object - test' OK
 
 Checking prop_access
 prop_access - 'path exist - value string' OK
