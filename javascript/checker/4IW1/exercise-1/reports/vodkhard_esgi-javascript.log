@@ -80,16 +80,16 @@ yoda - 'null' OK
 yoda - 'Object' OK
 
 Checking vig
-vig - 'un mot' KO
+vig - 'anticonstitutionnellement - foo' KO
 	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "anticonstitutionnellement"
-vig - 'un mot avec MAJ' KO
+vig - 'antiConstiTutioNnellement - foo' KO
 	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "antiConstiTutioNnellement"
-vig - 'une phrase longue' KO
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
 	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test"
-vig - ' ' OK
-vig - 'null' KO
+vig - ' - test' OK
+vig - 'null - test' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
-vig - 'Object' KO
+vig - 'Object - test' KO
 	expected : "" - got {"foo":"data"}
 
 Checking prop_access

@@ -6,7 +6,8 @@ type_check_v1 - 'number' OK
 type_check_v1 - 'StringNotNumber' KO
 	expected : false - got true
 type_check_v1 - 'BooleanNotNumber' OK
-type_check_v1 - 'object' OK
+type_check_v1 - 'object' KO
+	expected : true - got undefined
 type_check_v1 - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'constructor' of null
 type_check_v1 - 'nullNotObject' OK
@@ -17,7 +18,7 @@ type_check_v1 - 'array' OK
 type_check_v1 - 'function' KO
 	Unexpected behaviour : TypeError - Cannot read property 'constructor' of null
 type_check_v1 - 'arrayNotObject' KO
-	expected : false - got true
+	expected : false - got undefined
 
 Checking type_check_v2
 type_check_v2 - 'number' OK
@@ -31,17 +32,17 @@ type_check_v2 - 'objectNotMatch' OK
 
 Checking type_check
 type_check - 'number' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	expected : true - got undefined
 type_check - 'numberNotValue' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	expected : false - got undefined
 type_check - 'numberNotObject' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	expected : false - got undefined
 type_check - 'stringEnum' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	expected : false - got undefined
 type_check - 'objectMatch' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	expected : true - got undefined
 type_check - 'objectNotMatch' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	expected : false - got undefined
 type_check - 'objectSuperMatch' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	expected : true - got undefined
 

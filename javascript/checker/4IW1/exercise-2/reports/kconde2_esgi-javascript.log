@@ -26,17 +26,17 @@ type_check_v2 - 'objectNotMatch' OK
 
 Checking type_check
 type_check - 'number' KO
-	expected : true - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of undefined
 type_check - 'numberNotValue' KO
-	expected : false - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of undefined
 type_check - 'numberNotObject' KO
-	expected : false - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of undefined
 type_check - 'stringEnum' KO
-	expected : false - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of undefined
 type_check - 'objectMatch' KO
-	expected : true - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of undefined
 type_check - 'objectNotMatch' KO
-	expected : false - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of undefined
 type_check - 'objectSuperMatch' KO
-	expected : true - got undefined
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of undefined
 

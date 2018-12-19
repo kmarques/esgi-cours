@@ -23,59 +23,40 @@ capitalize - 'Object' KO
 	Unexpected behaviour : TypeError - str.replace is not a function
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got undefined
+camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got undefined
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got undefined
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got undefined
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got undefined
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got undefined
-camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - str.replace is not a function
+	expected : "Togglecase" - got "ToggleCase"
+camelCase - 'null' OK
+camelCase - 'Object' OK
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' OK
-snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "toggleCase_is_the_coolest"
-snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "ToggleCase_is_the_3oolest"
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
-snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "ToggleCase_is_the_coolest"
-snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "_toggleCase"
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - str.replace is not a function
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
+snake_case - 'null' OK
+snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got undefined
-leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got undefined
-leet - 'leet' KO
-	expected : "l33t" - got undefined
-leet - 'yoda' KO
-	expected : "70d4" - got undefined
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got undefined
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got undefined
-leet - ' ' KO
-	expected : " " - got undefined
-leet - 'null' KO
-	expected : "" - got undefined
-leet - 'Object' KO
-	expected : "" - got undefined
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' KO
@@ -104,17 +85,17 @@ yoda - 'Object' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 
 Checking vig
-vig - 'un mot' KO
+vig - 'anticonstitutionnellement - foo' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'un mot avec MAJ' KO
+vig - 'antiConstiTutioNnellement - foo' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'une phrase longue' KO
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - ' ' KO
+vig - ' - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'null' KO
+vig - 'null - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'Object' KO
+vig - 'Object - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access

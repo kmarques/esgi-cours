@@ -7,21 +7,20 @@ ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'charAt' of null
+	expected : "" - got undefined
 ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - string.charAt is not a function
+	expected : "" - got undefined
 
 Checking capitalize
 capitalize - 'test' OK
 capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+	expected : "" - got undefined
 capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+	expected : "" - got undefined
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
@@ -68,9 +67,9 @@ leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+	expected : "" - got undefined
 leet - 'Object' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
+	expected : "" - got undefined
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -81,9 +80,9 @@ verlan - '70da m L(_)k3' KO
 	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
 verlan - ' ' OK
 verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'length' of null
+	expected : "" - got undefined
 verlan - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+	expected : "" - got undefined
 
 Checking yoda
 yoda - 'anaconda' KO
@@ -100,32 +99,26 @@ yoda - 'Object' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 
 Checking vig
-vig - 'un mot' KO
+vig - 'anticonstitutionnellement - foo' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'un mot avec MAJ' KO
+vig - 'antiConstiTutioNnellement - foo' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'une phrase longue' KO
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - ' ' KO
+vig - ' - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'null' KO
+vig - 'null - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'Object' KO
+vig - 'Object - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
-prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
+prop_access - 'path not exist' OK
+prop_access - 'path empty' OK
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : test not exist - got null
+prop_access - 'path null' OK
 

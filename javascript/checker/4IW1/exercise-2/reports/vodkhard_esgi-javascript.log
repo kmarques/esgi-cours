@@ -20,8 +20,7 @@ Checking type_check_v2
 type_check_v2 - 'number' OK
 type_check_v2 - 'numberNotValue' OK
 type_check_v2 - 'numberNotObject' OK
-type_check_v2 - 'stringEnum' KO
-	expected : false - got true
+type_check_v2 - 'stringEnum' OK
 type_check_v2 - 'objectMatch' OK
 type_check_v2 - 'objectNotMatch' OK
 
@@ -29,8 +28,7 @@ Checking type_check
 type_check - 'number' OK
 type_check - 'numberNotValue' OK
 type_check - 'numberNotObject' OK
-type_check - 'stringEnum' KO
-	expected : false - got true
+type_check - 'stringEnum' OK
 type_check - 'objectMatch' OK
 type_check - 'objectNotMatch' OK
 type_check - 'objectSuperMatch' OK
