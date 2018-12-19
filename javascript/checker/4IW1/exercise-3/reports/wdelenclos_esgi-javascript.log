@@ -2,21 +2,30 @@ Loading script...
 
 Starting tests...
 Checking ucfirst
-ucfirst - 'test' OK
-ucfirst - ' test' OK
-ucfirst - 'Test' OK
-ucfirst - 'TEST' OK
+ucfirst - 'test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+ucfirst - ' test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+ucfirst - 'Test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+ucfirst - 'TEST' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 ucfirst - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'ucfirst' of null
 ucfirst - 'Object' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
 
 Checking capitalize
-capitalize - 'test' OK
-capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' OK
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
+capitalize - 'test' KO
+	Unexpected behaviour : TypeError - this.replace is not a function
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - this.replace is not a function
+capitalize - 'ipsum DOLOR' KO
+	Unexpected behaviour : TypeError - this.replace is not a function
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : TypeError - this.replace is not a function
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : TypeError - this.replace is not a function
 capitalize - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'capitalize' of null
 capitalize - 'Object' KO
@@ -24,17 +33,17 @@ capitalize - 'Object' KO
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - this.capitalize is not a function
+	Unexpected behaviour : TypeError - this.replace is not a function
 camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - this.capitalize is not a function
+	Unexpected behaviour : TypeError - this.replace is not a function
 camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - this.capitalize is not a function
+	Unexpected behaviour : TypeError - this.replace is not a function
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : TypeError - this.capitalize is not a function
+	Unexpected behaviour : TypeError - this.replace is not a function
 camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - this.capitalize is not a function
+	Unexpected behaviour : TypeError - this.replace is not a function
 camelCase - ' toggleCase' KO
-	Unexpected behaviour : TypeError - this.capitalize is not a function
+	Unexpected behaviour : TypeError - this.replace is not a function
 camelCase - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of null
 camelCase - 'Object' KO
