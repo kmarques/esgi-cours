@@ -24,17 +24,17 @@ capitalize - 'Object' KO
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : ReferenceError - capitalize is not defined
+	Unexpected behaviour : TypeError - this.capitalize is not a function
 camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : ReferenceError - capitalize is not defined
+	Unexpected behaviour : TypeError - this.capitalize is not a function
 camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : ReferenceError - capitalize is not defined
+	Unexpected behaviour : TypeError - this.capitalize is not a function
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : ReferenceError - capitalize is not defined
+	Unexpected behaviour : TypeError - this.capitalize is not a function
 camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : ReferenceError - capitalize is not defined
+	Unexpected behaviour : TypeError - this.capitalize is not a function
 camelCase - ' toggleCase' KO
-	Unexpected behaviour : ReferenceError - capitalize is not defined
+	Unexpected behaviour : TypeError - this.capitalize is not a function
 camelCase - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of null
 camelCase - 'Object' KO
@@ -42,17 +42,17 @@ camelCase - 'Object' KO
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : ReferenceError - capitalize is not defined
+	Unexpected behaviour : TypeError - this.capitalize is not a function
 snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : ReferenceError - capitalize is not defined
+	Unexpected behaviour : TypeError - this.capitalize is not a function
 snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : ReferenceError - capitalize is not defined
+	Unexpected behaviour : TypeError - this.capitalize is not a function
 snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : ReferenceError - capitalize is not defined
+	Unexpected behaviour : TypeError - this.capitalize is not a function
 snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : ReferenceError - capitalize is not defined
+	Unexpected behaviour : TypeError - this.capitalize is not a function
 snake_case - ' toggleCase' KO
-	Unexpected behaviour : ReferenceError - capitalize is not defined
+	Unexpected behaviour : TypeError - this.capitalize is not a function
 snake_case - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'snake_case' of null
 snake_case - 'Object' KO
