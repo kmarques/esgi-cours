@@ -53,3 +53,7 @@ snake_case - 'ToggleCase is_the coolest' KO
 snake_case - ' toggleCase' OK
 snake_case - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - str.replace is not a function
+
+Checking leet

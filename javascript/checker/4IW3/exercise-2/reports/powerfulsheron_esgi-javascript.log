@@ -38,5 +38,3 @@ type_check - 'stringEnum' OK
 type_check - 'objectMatch' KO
 	expected : true - got false
 type_check - 'objectNotMatch' OK
-type_check - 'objectSuperMatch' OK
-

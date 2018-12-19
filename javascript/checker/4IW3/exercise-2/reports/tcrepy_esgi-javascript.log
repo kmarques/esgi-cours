@@ -42,4 +42,3 @@ type_check - 'objectNotMatch' KO
 	Unexpected behaviour : TypeError - "type_check" not implemented
 type_check - 'objectSuperMatch' KO
 	Unexpected behaviour : TypeError - "type_check" not implemented
-
