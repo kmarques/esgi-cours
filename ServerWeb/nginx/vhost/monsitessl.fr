@@ -1,0 +1,26 @@
+server {
+	listen 443 ssl;
+
+        include /etc/nginx/snippets/selfsigned.conf;
+        include /etc/nginx/snippets/ssl-params.conf;
+
+	server_name monsitessl.fr;
+	
+	root /var/www/monsitephp/;
+	index index.html;
+
+        rewrite ^/(\w+)/(\w+)/(\w+)\.?.*$ /index.php?controller=$1&action=$2&id=$3 last;
+
+        location ~ \.php$ {
+	    try_files $uri = 404; # Si l’URI ne marche pas, retourne une 404
+	    fastcgi_pass unix:/var/run/php/php7.0-fpm.sock; # Lien vers le socket fpm
+	    fastcgi_index index.php; # Fichier d’appel par défaut 
+	    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;  
+	    include fastcgi_params; # Include des params de base de FPM
+        }
+
+
+	error_log /var/log/nginx/error.log;
+	access_log /var/log/nginx/access.log;
+}
+
