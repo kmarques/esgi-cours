@@ -11,3 +11,5 @@ rsync --daemon
 nginx
 
 php-fpm7.0 -D
+
+fail2ban-client start

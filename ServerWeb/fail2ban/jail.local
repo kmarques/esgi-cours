@@ -1,0 +1,6 @@
+[monfiltre]
+port = http,https
+enabled = true
+filter  = monfiltre
+logpath = /var/log/nginx/access.log
+action = %(action_mwl)s

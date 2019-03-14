@@ -49,6 +49,24 @@ ssl_certificate /etc/ssl/certs/selfsigned.crt; \
 ssl_certificate_key /etc/ssl/private/selfsigned.key;" > /etc/nginx/snippets/selfsigned.conf
 COPY ./nginx/ssl/ssl-params.conf /etc/nginx/snippets/ssl-params.conf
 
+#RUN apt-get install -y ufw
+#RUN sudo iptables -t filter -F
+#RUN sudo iptables -t filter -X
+#RUN ufw enable
+#RUN ufw default deny ingoing
+#RUN ufw allow 80
+#RUN ufw allow 443
+#RUN ufw allow 22
+#RUN ufw allow 25
+#RUN ufw reload
+
+RUN apt-get install -y fail2ban
+RUN mkdir /run/fail2ban
+RUN rm /etc/fail2ban/jail.d/defaults-debian.conf
+
+COPY ./fail2ban/jail.local /etc/fail2ban/jail.d/my-jail.conf
+COPY ./fail2ban/monfiltre.conf /etc/fail2ban/filter.d/monfiltre.conf
+
 COPY ./nginx/www /var/www
 COPY ./nginx/vhost /etc/nginx/sites-available
 
