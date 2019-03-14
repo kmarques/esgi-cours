@@ -67,6 +67,10 @@ RUN rm /etc/fail2ban/jail.d/defaults-debian.conf
 COPY ./fail2ban/jail.local /etc/fail2ban/jail.d/my-jail.conf
 COPY ./fail2ban/monfiltre.conf /etc/fail2ban/filter.d/monfiltre.conf
 
+RUN apt-get install -y postgresql
+RUN useradd -m dev1
+COPY ./postgres/init.sh /root/init_db.sh
+
 COPY ./nginx/www /var/www
 COPY ./nginx/vhost /etc/nginx/sites-available
 
