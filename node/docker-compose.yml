@@ -20,7 +20,7 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: password
   server:
-    build: './server'
+    image: node:10-alpine
     volumes:
       - './server:/home/node/app:rw,consistent'
     working_dir: '/home/node/app'
