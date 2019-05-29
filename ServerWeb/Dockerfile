@@ -27,8 +27,8 @@ log file = /var/log/rsyncd.log \
 pid file = /var/run/rsyncd.pid \
 " > /etc/rsyncd.conf
 
-RUN echo ". /root/entrypoint.sh" >> /root/.profile
-RUN echo ". /root/entrypoint.sh" >> /root/.bashrc
+#RUN echo ". /root/entrypoint.sh" >> /root/.profile
+#RUN echo ". /root/entrypoint.sh" >> /root/.bashrc
 
 RUN apt-get install -y nginx
 
@@ -49,7 +49,7 @@ ssl_certificate /etc/ssl/certs/selfsigned.crt; \
 ssl_certificate_key /etc/ssl/private/selfsigned.key;" > /etc/nginx/snippets/selfsigned.conf
 COPY ./nginx/ssl/ssl-params.conf /etc/nginx/snippets/ssl-params.conf
 
-#RUN apt-get install -y ufw
+RUN apt-get install -y ufw
 #RUN sudo iptables -t filter -F
 #RUN sudo iptables -t filter -X
 #RUN ufw enable
@@ -69,7 +69,21 @@ COPY ./fail2ban/monfiltre.conf /etc/fail2ban/filter.d/monfiltre.conf
 
 RUN apt-get install -y postgresql
 RUN useradd -m dev1
-COPY ./postgres/init.sh /root/init_db.sh
+
+# Install Postfix.
+RUN echo "postfix postfix/main_mailer_type string Internet site" > preseed.txt
+RUN echo "postfix postfix/mailname string mail.example.com" >> preseed.txt
+# Use Mailbox format.
+RUN debconf-set-selections preseed.txt
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -q -y postfix mailutils
+RUN mkdir -p /var/spool/postfix
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -q -y proftpd
+RUN mkdir /run/proftpd
+
+COPY ./postgres/init.sh /opt/.init_db.sh
+
+COPY ./ufw/init.sh /opt/.init_ufw.sh
 
 COPY ./nginx/www /var/www
 COPY ./nginx/vhost /etc/nginx/sites-available
@@ -78,4 +92,9 @@ RUN ln -s /etc/nginx/sites-available/monsite.fr /etc/nginx/sites-enabled/monsite
 RUN ln -s /etc/nginx/sites-available/monsitephp.fr /etc/nginx/sites-enabled/monsitephp.fr
 RUN ln -s /etc/nginx/sites-available/monsitessl.fr /etc/nginx/sites-enabled/monsitessl.fr
 
-COPY ./entrypoint.sh /root/entrypoint.sh
+COPY ./entrypoint.sh /opt/.entrypoint.sh
+
+WORKDIR /root
+
+RUN chmod +x /opt/.entrypoint.sh
+ENTRYPOINT ["/opt/.entrypoint.sh"]
