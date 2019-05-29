@@ -1,0 +1,25 @@
+POST http://127.0.0.1:8099/register HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+MyApp
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="redirect_uri_success"
+
+http://127.0.0.1:8091/oauth_succcess
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="redirect_uri_error"
+
+http://127.0.0.1:8091/oauth_error
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+GET http://localhost:8099/auth?client_id=id_5cee80d2e9c91&scope=general&state=mystate
+
+###
+GET http://localhost:8099/auth-success?state=mystate&client_id=id_5cee80d2e9c91
+
+###
+GET http://localhost:8099/token?code=code_5cee924ec2bf4&client_id=id_5cee80d2e9c91&client_secret=secret_5cee80d2e9cc8
