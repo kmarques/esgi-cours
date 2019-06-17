@@ -7,3 +7,11 @@ services:
     working_dir: /var/www/html
     ports:
       - 127.0.0.1:8099:80
+
+  auth-client:
+    image: php:apache
+    volumes:
+      - ./auth-client:/var/www/html
+    working_dir: /var/www/html
+    ports:
+      - 127.0.0.1:8098:80
