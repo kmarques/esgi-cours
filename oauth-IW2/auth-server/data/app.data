@@ -1,2 +1,0 @@
-a:5:{s:4:"name";s:5:"MyApp";s:20:"redirect_uri_success";s:30:"http://127.0.0.1:8098/callback";s:18:"redirect_uri_error";s:33:"http://127.0.0.1:8091/oauth_error";s:9:"client_id";s:16:"id_5cee80d2e9c91";s:13:"client_secret";s:20:"secret_5cee80d2e9cc8";}
-a:5:{s:4:"name";s:5:"MyApp";s:20:"redirect_uri_success";s:36:"http://127.0.0.1:8091/oauth_succcess";s:18:"redirect_uri_error";s:33:"http://127.0.0.1:8091/oauth_error";s:9:"client_id";s:16:"id_5cee8165ebe51";s:13:"client_secret";s:20:"secret_5cee8165ebe70";}

@@ -8,11 +8,11 @@ MyApp
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="redirect_uri_success"
 
-http://127.0.0.1:8091/oauth_succcess
+http://127.0.0.1:8099/auth-succcess
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
 Content-Disposition: form-data; name="redirect_uri_error"
 
-http://127.0.0.1:8091/oauth_error
+http://127.0.0.1:8099/auth-error
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 ###
