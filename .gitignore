@@ -4,3 +4,4 @@ executor.js
 **/config
 **/exercise-*/scripts/*
 javascript/examples/
+node/**/node_modules

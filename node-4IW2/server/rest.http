@@ -1,0 +1,21 @@
+GET http://localhost:3000/movies?_id=5cbf4a6975a1c9001061813c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJ1c2VyIiwiaWF0IjoxNTU4MDgyNzM4LCJleHAiOjE1NTgwODYzMzh9.AfYDHjftc63zHt1HQ1lhlkp56idxu6rsXThJipYDndA
+
+###
+POST http://localhost:3000/login_check
+Content-Type: application/json
+
+{
+    "username": "user",
+    "password": "password"
+}
+###
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "Avengers 5",
+    "createdAt": "2019-04-23T17:24:57.291Z",
+    "year": 2019,
+    "category": "Action"
+}
