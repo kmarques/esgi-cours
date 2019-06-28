@@ -1,27 +1,24 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 import TodoForm from "./TodoForm";
+import { TodoContext } from "../store/TodoContext";
 
 class TodoList extends React.Component {
+    static contextType = TodoContext;
+
     componentDidMount() {
-        setTimeout(() => this.props.loadTodos(), 2000);
+        this.context.loadTodos();
     }
-
-    handleNew = (todo) => {
-        this.setState({
-            todos: [...this.state.todos, todo]
-        });
-    }
-
+    
     render () {
         return <ul>
                 {
-                    this.props.todos.map(todo => <TodoItem 
+                    this.context.todos.map(todo => <TodoItem 
                         key={todo.text} 
                         todo={todo}
                     />)
                 }
-            </ul>;
+        </ul>;
     }
 }
 

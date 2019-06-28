@@ -11,4 +11,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
 }
 
-export default connect(undefined, mapDispatchToProps)(TodoItemActions);
+export default TodoItemActions;

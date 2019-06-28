@@ -1,13 +1,16 @@
 import React from "react";
+import { TodoContext } from "../store/TodoContext";
 
 class TodoForm extends React.Component {
+    static contextType = TodoContext;
+
     state = {
         text: ""
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.onNew(this.state);
+        this.context.newTodo(this.state);
         return false;
     }
 

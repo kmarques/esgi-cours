@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TodoListContainer from './components/TodoListContainer';
-import TodoFormContainer from './components/TodoFormContainer';
+import { TodoContext, TodoProvider } from './store/TodoContext';
+import TodoList from './components/TodoList';
+import TodoForm from './components/TodoForm';
 
 function App() {
   return (
@@ -21,8 +22,10 @@ function App() {
           Learn React
         </a>
       </header>
-      <TodoFormContainer/>
-      <TodoListContainer/>
+      <TodoProvider>
+        <TodoForm/>
+        <TodoList/>
+      </TodoProvider>
     </div>
   );
 }
