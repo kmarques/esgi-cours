@@ -14,6 +14,8 @@ services:
 
   mongo-express:
     image: mongo-express
+    depends_on:
+      - mongo
     ports:
       - 127.0.0.1:8088:8081
     environment:
