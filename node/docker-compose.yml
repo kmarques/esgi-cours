@@ -1,4 +1,4 @@
-version: '3.1'
+version: '3.4'
 
 services:
   mongo:
@@ -23,7 +23,7 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: password
 
   server:
-    build: './server'
+    image: node:alpine
     volumes:
       - './server:/home/node/app:rw,consistent'
     working_dir: '/home/node/app'
@@ -42,5 +42,7 @@ services:
       - './client:/home/node/app'
     working_dir: '/home/node/app'
     command: 'yarn start'
+    tty: true
+    stdin_open: true
     ports:
       - 127.0.0.1:3001:3000
