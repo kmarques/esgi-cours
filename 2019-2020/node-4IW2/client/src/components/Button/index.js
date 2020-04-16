@@ -10,10 +10,7 @@ class ButtonOld extends React.PureComponent {
 
 // New way
 function Button(props) {
-  return useMemo(
-    () => <button onClick={props.onClick}>{props.title}</button>, 
-    [props.title]
-  );
+  return <button onClick={props.onClick}>{props.title}</button>;
 }
 
 export default Button;

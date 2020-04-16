@@ -32,6 +32,8 @@ services:
       MONGODB_PASS: "password"
       MONGODB_DBNAME: "SampleCollections"
       JWT_SECRET: "MyBestSecret"
+    depends_on:
+        - mongo
     command: 'npm start'
     ports:
       - 127.0.0.1:3000:3000

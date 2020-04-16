@@ -1,42 +1,42 @@
-const db = require('./lib/db');
-const mongoose = require('mongoose');
-const SakilaFilms = require('./models/SakilaFilms');
+const Scrapper = require('./lib/Scrapper');
+const {Pokemon} = require('./models');
+//const url = 'https://pokeapi.co/api/v2/pokemon/';
+const url = 'https://fr.wikipedia.org/wiki/Liste_des_Pok%C3%A9mon';
+const requestOptions = {};
 
-// CGET
-//SakilaFilms.find().limit(10).then(docs => {
-//  console.log("cget", docs);
-//});
-//
-//// Insert
-//const movie = new SakilaFilms({
-//  Title: "TestMongoose",
-//  Length: 15,
-//  Rating: "PP"
-//});
-//movie.save().then(
-//  result => console.log("insert movie", result)
-//);
-//
-// Remove
-SakilaFilms.deleteMany({
-  Title: "TestMongoose"
-}).then(result => console.log("remove", result));
-
-//Update document
-//const movie = new SakilaFilms({
-//  Title: "TestMongoose",
-//  Length: 15,
-//  Rating: "PP"
-//});
-//movie.save().then(result => {
-//
-//    SakilaFilms.findById(result._id).then(doc => {
-//      doc.Title = doc.Title+"V2";
-//      doc.save().then(docUpdated => console.log("updated document", docUpdated));
+//const scrap = Scrapper(
+//  url, requestOptions,
+//  data => data.results,
+//  data => {
+//    data.forEach(pokemon => {
+//      (new Pokemon(pokemon)).save();
 //    });
-//
 //  }
 //);
+const scrap = Scrapper(
+  url, requestOptions,
+  $ => {
+    let results = []
+    $(".colonnes ol li>a")
+      .each(function(index, element) {
+        results.push({
+          name: $(element).text(),
+          url: $(element).attr('href'),
+          source: url
+        });
+      });
+    return results;
+  },
+  data => {
+    //Pokemon.
+    data.forEach(pokemon => {
+      Pokemon.findOneAndUpdate({name: pokemon.name}, pokemon, {
+        upsert: true,
+        new: true,
+        runValidators: true
+      }).then(data => console.log(data));
+    });
+  }
+);
 
-
-
+scrap.end();

@@ -1,34 +1,47 @@
-const mongoose = require('./lib/db');
-const SakilaFilm = require('./models/SakilaFilms');
+const fs = require('fs');
+const Scrapper = require('./lib/Scrapper');
 
-// CGET
-SakilaFilm
-  .find()
-  .limit(2)
-  .then(docs => console.log("cget", docs));
+const processData = (data) => {
+  // date = NOW - 1 day
+  const date = new Date();
+  date.setDate(date.getDate() -1);
 
-// Insert
-const movie = new SakilaFilm({
-  Title: "TestMongoose",
-  Length: 100
-});
-movie.save().then(docInserted => console.log("insertion", docInserted));
+  let result = [];
+  for (country in data) {
+    const stats = data[country];
+    
+    const yesterday = stats.find(stat => stat.date === (date.getFullYear()+"-"+date.getMonth()+"-"+date.getDate()))
+    result.push({
+      country,
+      ...yesterday
+    });
+  }
 
-// Remove
-//SakilaFilm.remove({Title: "TestMongoose"})
-//SakilaFilm.deleteMany({Title: "TestMongoose"})
-//  .then(metadata => console.log("deletion", metadata));
+  return result;
+}
 
-// Update
-const movieU = new SakilaFilm({
-  Title: "TestMongoose",
-  Length: 100
-});
-movieU.save().then(docInserted => {
+const saveResult = (data) => {
+  const csvHeader = Object.keys(data[0]).join(',');
+  const csvValues = data.map(stat => Object.values(stat).join(','));
+  fs.writeFileSync('./stat.csv', csvHeader + "\n" + csvValues.join("\n"));
+}
 
-  SakilaFilm.findById(docInserted._id).then(doc => {
-    doc.Title = "TestMongooseV2";
-    doc.save().then(docUpdated => console.log("modification", docUpdated));
+const req = Scrapper('https://pomber.github.io/covid19/timeseries.json', {}, processData, saveResult);
+req.end();
+
+const processData2 = ($) => {
+  const data = [];
+  $('.wikitable tbody tr:not(:first-child)').each((index, tr)=> {
+
+    const fields = $(tr).find('th,td');
+    data.push({
+      code: fields.eq(0).text().trim(),
+      message: fields.eq(1).text().trim(),
+      signification: fields.eq(2).text().trim()
+    })
   });
 
-});
+  return data;
+}
+const req2 = Scrapper('https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP', {}, processData2, saveResult);
+req2.end();

@@ -15,6 +15,13 @@ function Button(props) {
     backgroundColor: props.theme === "dark" ? "black" : "white"
   }} onClick={props.onClick}>{props.title}</button>;
 }
+
+// Children
+/**
+ * <ButtonV2 onClick={() => console.log('click')}>
+ *      Change Theme
+ * </ButtonV2>
+ */
 export function ButtonV2(props) {
   return <button onClick={props.onClick}>{props.children}</button>;
 }
