@@ -1,84 +1,188 @@
-code,message,signification
-100,Continue,Attente de la suite de la requête.
-101,Switching Protocols,Acceptation du changement de protocole.
-102,Processing,WebDAV  RFC 2518[3],[4]: Traitement en cours (évite que le client dépasse le temps d’attente limite).
-103,Early Hints,RFC 8297[5] : (Expérimental) Dans l'attente de la réponse définitive, le serveur retourne des liens que le client peut commencer à télécharger.
-200,OK,Requête traitée avec succès. La réponse dépendra de la méthode de requête utilisée.
-201,Created,Requête traitée avec succès et création d’un document.
-202,Accepted,Requête traitée, mais sans garantie de résultat.
-203,Non-Authoritative Information,Information retournée, mais générée par une source non certifiée.
-204,No Content,Requête traitée avec succès mais pas d’information à renvoyer.
-205,Reset Content,Requête traitée avec succès, la page courante peut être effacée.
-206,Partial Content,Une partie seulement de la ressource a été transmise.
-207,Multi-Status,WebDAV : Réponse multiple.
-208,Already Reported,WebDAV : Le document a été envoyé précédemment dans cette collection.
-210,Content Different,WebDAV : La copie de la ressource côté client diffère de celle du serveur (contenu ou propriétés).
-226,IM Used,RFC 3229[6] : Le serveur a accompli la requête pour la ressource, et la réponse est une représentation du résultat d'une ou plusieurs manipulations d'instances appliquées à l'instance actuelle.
-300,Multiple Choices,L’URI demandée se rapporte à plusieurs ressources.
-301,Moved Permanently,Document déplacé de façon permanente.
-302,Found,Document déplacé de façon temporaire.
-303,See Other,La réponse à cette requête est ailleurs.
-304,Not Modified,Document non modifié depuis la dernière requête.
-305,Use Proxy (depuis HTTP/1.1),La requête doit être ré-adressée au proxy.
-306,Switch Proxy,Code utilisé par une ancienne version de la RFC 2616[7], à présent réservé. Elle signifiait « Les requêtes suivantes doivent utiliser le proxy spécifié »[8].
-307,Temporary Redirect,La requête doit être redirigée temporairement vers l’URI spécifiée.
-308,Permanent Redirect,La requête doit être redirigée définitivement vers l’URI spécifiée.
-310,Too many Redirects,La requête doit être redirigée de trop nombreuses fois, ou est victime d’une boucle de redirection.
-400,Bad Request,La syntaxe de la requête est erronée.
-401,Unauthorized,Une authentification est nécessaire pour accéder à la ressource.
-402,Payment Required,Paiement requis pour accéder à la ressource.
-403,Forbidden,Le serveur a compris la requête, mais refuse de l'exécuter. Contrairement à l'erreur 401, s'authentifier ne fera aucune différence. Sur les serveurs où l'authentification est requise, cela signifie généralement que l'authentification a été acceptée mais que les droits d'accès ne permettent pas au client d'accéder à la ressource.
-404,Not Found,Ressource non trouvée.
-405,Method Not Allowed,Méthode de requête non autorisée.
-406,Not Acceptable,La ressource demandée n'est pas disponible dans un format qui respecterait les en-têtes « Accept » de la requête.
-407,Proxy Authentication Required,Accès à la ressource autorisé par identification avec le proxy.
-408,Request Time-out,Temps d’attente d’une requête du client, écoulé côté serveur. D'après les spécifications HTTP : « Le client n'a pas produit de requête dans le délai que le serveur était prêt à attendre. Le client PEUT répéter la demande sans modifications à tout moment ultérieur »[9].
-409,Conflict,La requête ne peut être traitée en l’état actuel.
-410,Gone,La ressource n'est plus disponible et aucune adresse de redirection n’est connue.
-411,Length Required,La longueur de la requête n’a pas été précisée.
-412,Precondition Failed,Préconditions envoyées par la requête non vérifiées.
-413,Request Entity Too Large,Traitement abandonné dû à une requête trop importante.
-414,Request-URI Too Long,URI trop longue.
-415,Unsupported Media Type,Format de requête non supporté pour une méthode et une ressource données.
-416,Requested range unsatisfiable,Champs d’en-tête de requête « range » incorrect.
-417,Expectation failed,Comportement attendu et défini dans l’en-tête de la requête insatisfaisante.
-418,I’m a teapot,« Je suis une théière » : Ce code est défini dans la RFC 2324[10] datée du 1er avril 1998, Hyper Text Coffee Pot Control Protocol.
-421,Bad mapping / Misdirected Request,La requête a été envoyée à un serveur qui n'est pas capable de produire une réponse (par exemple, car une connexion a été réutilisée).
-422,Unprocessable entity,WebDAV : L’entité fournie avec la requête est incompréhensible ou incomplète.
-423,Locked,WebDAV : L’opération ne peut avoir lieu car la ressource est verrouillée.
-424,Method failure,WebDAV : Une méthode de la transaction a échoué.
-425,Unordered Collection,WebDAV RFC 3648[11] : Ce code est défini dans le brouillon WebDAV Advanced Collections Protocol, mais est absent de Web Distributed Authoring and Versioning (WebDAV) Ordered Collections Protocol.
-426,Upgrade Required,RFC 2817[12] : Le client devrait changer de protocole, par exemple au profit de TLS/1.0.
-428,Precondition Required,RFC 6585[13] : La requête doit être conditionnelle.
-429,Too Many Requests,RFC 6585[14] : Le client a émis trop de requêtes dans un délai donné.
-431,Request Header Fields Too Large,RFC 6585[14] : Les entêtes HTTP émises dépassent la taille maximale admise par le serveur.
-449,Retry With,Code défini par Microsoft. La requête devrait être renvoyée après avoir effectué une action.
-450,Blocked by Windows Parental Controls,Code défini par Microsoft. Cette erreur est produite lorsque les outils de contrôle parental de Windows sont activés et bloquent l’accès à la page.
-451,Unavailable For Legal Reasons,Ce code d'erreur indique que la ressource demandée est inaccessible pour des raisons d'ordre légal[15],[16].
-456,Unrecoverable Error,WebDAV : Erreur irrécupérable.
-444,No Response,Indique que le serveur n'a retourné aucune information vers le client et a fermé la connexion.
-495,SSL Certificate Error,Une extension de l'erreur 400 Bad Request, utilisée lorsque le client a fourni un certificat invalide.
-496,SSL Certificate Required,Une extension de l'erreur 400 Bad Request, utilisée lorsqu'un certificat client requis n'est pas fourni.
-497,HTTP Request Sent to HTTPS Port,Une extension de l'erreur 400 Bad Request, utilisée lorsque le client envoie une requête HTTP vers le port 443 normalement destiné aux requêtes HTTPS.
-498,Token expired/invalid,Le jeton a expiré ou est invalide.
-499,Client Closed Request,Le client a fermé la connexion avant de recevoir la réponse. Cette erreur se produit quand le traitement est trop long côté serveur[17].
-500,Internal Server Error,Erreur interne du serveur.
-501,Not Implemented,Fonctionnalité réclamée non supportée par le serveur.
-502,Bad Gateway ou Proxy Error,En agissant en tant que serveur proxy ou passerelle, le serveur a reçu une réponse invalide depuis le serveur distant.
-503,Service Unavailable,Service temporairement indisponible ou en maintenance.
-504,Gateway Time-out,Temps d’attente d’une réponse d’un serveur à un serveur intermédiaire écoulé.
-505,HTTP Version not supported,Version HTTP non gérée par le serveur.
-506,Variant Also Negotiates,RFC 2295[18] : Erreur de négociation. Transparent content negociation.
-507,Insufficient storage,WebDAV : Espace insuffisant pour modifier les propriétés ou construire la collection.
-508,Loop detected,WebDAV : Boucle dans une mise en relation de ressources (RFC 5842[19]).
-509,Bandwidth Limit Exceeded,Utilisé par de nombreux serveurs pour indiquer un dépassement de quota.
-510,Not extended,RFC 2774[20] : La requête ne respecte pas la politique d'accès aux ressources HTTP étendues.
-511,Network authentication required,RFC 6585[14] : Le client doit s'authentifier pour accéder au réseau. Utilisé par les portails captifs pour rediriger les clients vers la page d'authentification.
-520,Unknown Error,L'erreur 520 est utilisé en tant que réponse générique lorsque le serveur d'origine retourne un résultat imprévu.
-521,Web Server Is Down,Le serveur a refusé la connexion depuis Cloudflare.
-522,Connection Timed Out,Cloudflare n'a pas pu négocier un TCP handshake avec le serveur d'origine.
-523,Origin Is Unreachable,Cloudflare n'a pas réussi à joindre le serveur d'origine. Cela peut se produire en cas d'échec de résolution de nom de serveur DNS.
-524,A Timeout Occurred,Cloudflare a établi une connexion TCP avec le serveur d'origine mais n'a pas reçu de réponse HTTP avant l'expiration du délai de connexion.
-525,SSL Handshake Failed,Cloudflare n'a pas pu négocier un SSL/TLS handshake avec le serveur d'origine.
-526,Invalid SSL Certificate,Cloudflare n'a pas pu valider le certificat SSL présenté par le serveur d'origine.
-527,Railgun Error,L'erreur 527 indique que la requête a dépassé le délai de connexion ou a échoué après que la connexion WAN ait été établie.
+country,date,confirmed,deaths,recovered
+Afghanistan,2020-4-3,281,6,10
+Albania,2020-4-3,304,17,89
+Algeria,2020-4-3,1171,105,62
+Andorra,2020-4-3,439,16,16
+Angola,2020-4-3,8,2,1
+Antigua and Barbuda,2020-4-3,15,0,0
+Argentina,2020-4-3,1265,39,266
+Armenia,2020-4-3,736,7,43
+Australia,2020-4-3,5330,28,649
+Austria,2020-4-3,11524,168,2022
+Azerbaijan,2020-4-3,443,5,32
+Bahamas,2020-4-3,24,1,1
+Bahrain,2020-4-3,672,4,382
+Bangladesh,2020-4-3,61,6,26
+Barbados,2020-4-3,51,0,0
+Belarus,2020-4-3,351,4,53
+Belgium,2020-4-3,16770,1143,2872
+Benin,2020-4-3,16,0,2
+Bhutan,2020-4-3,5,0,2
+Bolivia,2020-4-3,132,9,1
+Bosnia and Herzegovina,2020-4-3,579,17,27
+Brazil,2020-4-3,9056,359,127
+Brunei,2020-4-3,134,1,65
+Bulgaria,2020-4-3,485,14,30
+Burkina Faso,2020-4-3,302,16,50
+Cabo Verde,2020-4-3,6,1,0
+Cambodia,2020-4-3,114,0,35
+Cameroon,2020-4-3,509,8,17
+Canada,2020-4-3,12437,179,2175
+Central African Republic,2020-4-3,8,0,0
+Chad,2020-4-3,8,0,0
+Chile,2020-4-3,3737,22,427
+China,2020-4-3,82511,3326,76760
+Colombia,2020-4-3,1267,25,55
+Congo (Brazzaville),2020-4-3,22,2,2
+Congo (Kinshasa),2020-4-3,134,13,3
+Costa Rica,2020-4-3,416,2,11
+Cote d'Ivoire,2020-4-3,218,1,19
+Croatia,2020-4-3,1079,8,92
+Diamond Princess,2020-4-3,712,11,619
+Cuba,2020-4-3,269,6,15
+Cyprus,2020-4-3,396,11,28
+Czechia,2020-4-3,4091,53,72
+Denmark,2020-4-3,3946,139,1287
+Djibouti,2020-4-3,49,0,8
+Dominican Republic,2020-4-3,1488,68,16
+Ecuador,2020-4-3,3368,145,65
+Egypt,2020-4-3,985,66,216
+El Salvador,2020-4-3,46,2,0
+Equatorial Guinea,2020-4-3,16,0,1
+Eritrea,2020-4-3,22,0,0
+Estonia,2020-4-3,961,12,48
+Eswatini,2020-4-3,9,0,0
+Ethiopia,2020-4-3,35,0,3
+Fiji,2020-4-3,7,0,0
+Finland,2020-4-3,1615,20,300
+France,2020-4-3,65202,6520,14135
+Gabon,2020-4-3,21,1,1
+Gambia,2020-4-3,4,1,2
+Georgia,2020-4-3,155,0,28
+Germany,2020-4-3,91159,1275,24575
+Ghana,2020-4-3,205,5,31
+Greece,2020-4-3,1613,63,78
+Guatemala,2020-4-3,50,1,12
+Guinea,2020-4-3,73,0,2
+Guyana,2020-4-3,23,4,0
+Haiti,2020-4-3,18,0,1
+Holy See,2020-4-3,7,0,0
+Honduras,2020-4-3,222,15,3
+Hungary,2020-4-3,623,26,43
+Iceland,2020-4-3,1364,4,309
+India,2020-4-3,2567,72,192
+Indonesia,2020-4-3,1986,181,134
+Iran,2020-4-3,53183,3294,17935
+Iraq,2020-4-3,820,54,226
+Ireland,2020-4-3,4273,120,5
+Israel,2020-4-3,7428,40,403
+Italy,2020-4-3,119827,14681,19758
+Jamaica,2020-4-3,47,3,2
+Japan,2020-4-3,2617,63,514
+Jordan,2020-4-3,310,5,58
+Kazakhstan,2020-4-3,464,6,29
+Kenya,2020-4-3,122,4,4
+Korea, South,2020-4-3,10062,174,6021
+Kuwait,2020-4-3,417,0,82
+Kyrgyzstan,2020-4-3,130,1,6
+Latvia,2020-4-3,493,1,1
+Lebanon,2020-4-3,508,17,50
+Liberia,2020-4-3,7,0,0
+Liechtenstein,2020-4-3,75,0,0
+Lithuania,2020-4-3,696,9,7
+Luxembourg,2020-4-3,2612,31,500
+Madagascar,2020-4-3,70,0,0
+Malaysia,2020-4-3,3333,53,827
+Maldives,2020-4-3,19,0,13
+Malta,2020-4-3,202,0,2
+Mauritania,2020-4-3,6,1,2
+Mauritius,2020-4-3,186,7,0
+Mexico,2020-4-3,1688,60,633
+Moldova,2020-4-3,591,8,26
+Monaco,2020-4-3,64,1,3
+Mongolia,2020-4-3,14,0,2
+Montenegro,2020-4-3,174,2,1
+Morocco,2020-4-3,791,48,57
+Namibia,2020-4-3,14,0,3
+Nepal,2020-4-3,6,0,1
+Netherlands,2020-4-3,15821,1490,260
+New Zealand,2020-4-3,868,1,103
+Nicaragua,2020-4-3,5,1,0
+Niger,2020-4-3,120,5,0
+Nigeria,2020-4-3,210,4,25
+North Macedonia,2020-4-3,430,12,20
+Norway,2020-4-3,5370,59,32
+Oman,2020-4-3,252,1,57
+Pakistan,2020-4-3,2686,40,126
+Panama,2020-4-3,1475,37,10
+Papua New Guinea,2020-4-3,1,0,0
+Paraguay,2020-4-3,92,3,6
+Peru,2020-4-3,1595,61,537
+Philippines,2020-4-3,3018,136,52
+Poland,2020-4-3,3383,71,56
+Portugal,2020-4-3,9886,246,68
+Qatar,2020-4-3,1075,3,93
+Romania,2020-4-3,3183,133,283
+Russia,2020-4-3,4149,34,281
+Rwanda,2020-4-3,89,0,0
+Saint Lucia,2020-4-3,13,0,1
+Saint Vincent and the Grenadines,2020-4-3,3,0,1
+San Marino,2020-4-3,245,30,21
+Saudi Arabia,2020-4-3,2039,25,351
+Senegal,2020-4-3,207,1,66
+Serbia,2020-4-3,1476,39,0
+Seychelles,2020-4-3,10,0,0
+Singapore,2020-4-3,1114,5,282
+Slovakia,2020-4-3,450,1,10
+Slovenia,2020-4-3,934,20,70
+Somalia,2020-4-3,7,0,1
+South Africa,2020-4-3,1505,9,95
+Spain,2020-4-3,119199,11198,30513
+Sri Lanka,2020-4-3,159,4,24
+Sudan,2020-4-3,10,2,2
+Suriname,2020-4-3,10,1,0
+Sweden,2020-4-3,6131,358,205
+Switzerland,2020-4-3,19606,591,4846
+Taiwan*,2020-4-3,348,5,50
+Tanzania,2020-4-3,20,1,3
+Thailand,2020-4-3,1978,19,612
+Togo,2020-4-3,40,3,17
+Trinidad and Tobago,2020-4-3,98,6,1
+Tunisia,2020-4-3,495,18,5
+Turkey,2020-4-3,20921,425,484
+Uganda,2020-4-3,48,0,0
+Ukraine,2020-4-3,1072,27,22
+United Arab Emirates,2020-4-3,1264,9,108
+United Kingdom,2020-4-3,38689,4467,208
+Uruguay,2020-4-3,369,4,68
+US,2020-4-3,275367,9246,9707
+Uzbekistan,2020-4-3,227,2,25
+Venezuela,2020-4-3,153,7,52
+Vietnam,2020-4-3,237,0,85
+Zambia,2020-4-3,39,1,2
+Zimbabwe,2020-4-3,9,1,0
+Dominica,2020-4-3,12,0,0
+Grenada,2020-4-3,12,0,0
+Mozambique,2020-4-3,10,0,0
+Syria,2020-4-3,16,2,0
+Timor-Leste,2020-4-3,1,0,0
+Belize,2020-4-3,4,0,0
+Laos,2020-4-3,10,0,0
+Libya,2020-4-3,11,1,0
+West Bank and Gaza,2020-4-3,194,1,21
+Guinea-Bissau,2020-4-3,15,0,0
+Mali,2020-4-3,39,3,0
+Saint Kitts and Nevis,2020-4-3,9,0,0
+Kosovo,2020-4-3,126,1,10
+Burma,2020-4-3,20,1,0
+MS Zaandam,2020-4-3,9,2,0
+Botswana,2020-4-3,4,1,0
+Burundi,2020-4-3,3,0,0
+Sierra Leone,2020-4-3,2,0,0
+Malawi,2020-4-3,3,0,0
+South Sudan,2020-4-3,0,0,0
+Western Sahara,2020-4-3,0,0,0
+Sao Tome and Principe,2020-4-3,0,0,0
+Yemen,2020-4-3,0,0,0
+Comoros,2020-4-3,0,0,0
+Tajikistan,2020-4-3,0,0,0
