@@ -1,8 +1,20 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Board from "../Board";
 
 const BoardList = ({boards, addListsToBoard}) => {
-  const [selectedBoard, setSelectedBoard] = useState(null);
+  const [selectedBoard, setSelectedBoard] = useState(boards[0]);
+
+  useEffect(() => {
+    console.log('componentDidMount')
+    return () => {
+      console.log("unmount");
+    }
+  }, []);
+
+  useEffect(() => {
+    
+    console.log("Selected board is updated", selectedBoard.id);
+  }, [selectedBoard]);
 
   return <>
       <nav style={{display: "flex", justifyContent: "space-around"}}>

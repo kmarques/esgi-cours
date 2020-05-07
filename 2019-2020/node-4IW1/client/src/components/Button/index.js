@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useMemo} from "react";
 
 // Old way
 class Button2 extends React.PureComponent {
@@ -10,10 +10,14 @@ class Button2 extends React.PureComponent {
 
 // New way
 function Button(props) {
-  return <button style={{
-    color: props.theme === "dark" ? "white" : "black",
-    backgroundColor: props.theme === "dark" ? "black" : "white"
-  }} onClick={props.onClick}>{props.title}</button>;
+
+  return useMemo(
+    () => <button style={{
+            color: props.theme === "dark" ? "white" : "black",
+            backgroundColor: props.theme === "dark" ? "black" : "white"
+          }} onClick={props.onClick}>{props.title}</button>,
+    [props.theme, props.title, props.onClick]
+  );
 }
 
 // Children

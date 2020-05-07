@@ -7,6 +7,8 @@ function Board({board, addList}) {
 
    useEffect(() => {
     console.log('componentDidMount');
+
+    return () => console.log("componentWillUnmount");
   }, []);
 
   useEffect(() => {

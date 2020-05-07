@@ -3,6 +3,7 @@ import React from 'react';
 const Form = ({addList}) => {
     function onSubmit(event) {
         event.preventDefault();
+        debugger;
         const data = Object.fromEntries(new FormData(event.currentTarget).entries());
         addList({id: Date.now(), ...data});
     }

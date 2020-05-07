@@ -96,7 +96,7 @@ function ThemeWrapper() {
       backgroundColor: theme === "dark" ? "black" : "white"
     }}>
       <Button color={theme === "dark" ? "white" : "black"} title="switch theme" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}/>
-      <BoardList boards={boards} addList={addList}/>
+      {theme === "light" && <BoardList boards={boards} addList={addList}/>}
     </div>;
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Button, {ButtonV2} from "../Button";
 import BoardList from "../Board";
 
@@ -32,6 +32,13 @@ class ThemeWrapperOld extends React.Component {
  *    [100, 500]
  * ]
  */
+const getResourceLogo = type => {
+  switch(type) {
+    case 'foo':
+      return "barr.jpg";
+  }
+}
+
 // New Way
 function ThemeWrapper() {
   const [theme, setTheme] = useState("dark");
@@ -41,15 +48,17 @@ function ThemeWrapper() {
   });
   const [boards, setBoards] = useState(initialBoards);
 
-  function addList(_board, list) {
+  const addList = useCallback(function(_board, list) {
     setBoards(boards.map(board => {
-      if(board.id === _board.id) {
+      if (board.id === _board.id) {
         board.lists = [...board.lists, list];
       }
 
       return board;
     }))
-  }
+  }, [boards]);
+
+  const onButtonClick = useCallback(() => setTheme(theme === "dark" ? "light" : "dark"), [theme]);
 
   return <div style={{
     width: "100vw",
@@ -58,7 +67,7 @@ function ThemeWrapper() {
     flexDirection: "column",
     backgroundColor: theme === "dark" ? "black" : "white"
   }}>
-    <Button theme={theme} title="switch theme" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}/>
+    <Button theme={theme} title="switch theme" onClick={onButtonClick}/>
     <div style={{
       flex: 1,
       display: "flex",

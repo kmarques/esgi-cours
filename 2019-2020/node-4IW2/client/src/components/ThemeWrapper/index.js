@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useCallback} from "react";
 import Button from "../Button";
 import BoardList from "../BoardList";
 
@@ -50,7 +50,8 @@ const ThemeWrapper = () => {
     })
     setBoards(x)
   }
-
+  const onButtonClick = useCallback(() => setTheme(theme === "dark" ? "light" : "dark"), [theme]);
+  
   return <div style={{
     flex: 1,
     display: "flex",
@@ -58,8 +59,8 @@ const ThemeWrapper = () => {
     backgroundColor: theme === "dark" ? "black" : "white",
     color: theme === "dark" ? "white": "black"
   }}>
-    <Button title="Switch theme" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}/>
-    <BoardList boards={boards} addListsToBoard={addListsToBoard} />
+    <Button title="Switch theme" onClick={onButtonClick}/>
+    {theme === "light" && <BoardList boards={boards} addListsToBoard={addListsToBoard} />}
   </div>;
 }
 

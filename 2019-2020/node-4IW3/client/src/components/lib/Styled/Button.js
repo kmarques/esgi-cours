@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useMemo} from "react";
 
 // OLD WAY
 class Button2 extends React.PureComponent {
@@ -11,8 +11,9 @@ class Button2 extends React.PureComponent {
 
 // NEW WAY
 function Button(props) {
-  return (
-    <button style={{color: props.color}} onClick={props.onClick}>{props.title}</button>
+  return useMemo(
+    () => <button style={{color: props.color}} onClick={props.onClick}>{props.title}</button>, 
+    [props.color, props.title]
   );
 }
 
