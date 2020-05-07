@@ -9,9 +9,7 @@ function Scrapper(url, options, processing, saving) {
 
     let data = '';
     response.on('data', chunk => {
-      while(data.length < response.headers["content-length"]) {
         data += chunk;
-      }
     });
 
     response.on('end', () => {
