@@ -26,6 +26,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import {AuthProvider, AuthContext} from './react/context/AuthContext';
 import HomeScreen from './react/HomeScreen';
 import {Provider as PaperProvider} from 'react-native-paper';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
@@ -37,20 +38,28 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <PaperProvider>
-        <NavigationContainer>
-          {!logged && (
-            <Tab.Navigator>
-              <Tab.Screen name={'Login'} component={HomeScreen} />
-              <Tab.Screen name={'Signup'} component={HomeScreen} />
-            </Tab.Navigator>
-          )}
-          {logged && (
-            <Tab.Navigator>
-              <Tab.Screen name={'Home'} component={HomeScreen} />
-              <Tab.Screen name={'Home2'} component={HomeScreen} />
-            </Tab.Navigator>
-          )}
-        </NavigationContainer>
+        <AuthProvider>
+          <NavigationContainer>
+            <AuthContext.Consumer>
+              {({selectors}) => (
+                <>
+                  {!selectors.isLogged() && (
+                    <Tab.Navigator>
+                      <Tab.Screen name={'Login'} component={HomeScreen} />
+                      <Tab.Screen name={'Signup'} component={HomeScreen} />
+                    </Tab.Navigator>
+                  )}
+                  {selectors.isLogged() && (
+                    <Tab.Navigator>
+                      <Tab.Screen name={'Home'} component={HomeScreen} />
+                      <Tab.Screen name={'Home2'} component={HomeScreen} />
+                    </Tab.Navigator>
+                  )}
+                </>
+              )}
+            </AuthContext.Consumer>
+          </NavigationContainer>
+        </AuthProvider>
       </PaperProvider>
     </>
   );

@@ -1,11 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {Title, Card, Paragraph, Button} from 'react-native-paper';
 import AsyncStorage from '@react-native-community/async-storage';
 import {ActivityIndicator} from 'react-native';
+import {AuthContext} from './context/AuthContext';
 
 const HomeScreen = () => {
   const [count, setCount] = useState(null);
   const [logged, setLogged] = useState(null);
+  const {actions} = useContext(AuthContext);
 
   const onSave = () => {
     AsyncStorage.setItem('count', JSON.stringify(count)).then(() =>
@@ -41,6 +43,7 @@ const HomeScreen = () => {
       <Card.Actions>
         <Button>Cancel</Button>
         <Button onPress={() => setCount(count + 1)}>+1</Button>
+        <Button onPress={() => actions.setUser('test')}>Log Me In</Button>
         <Button onPress={onSave}>save</Button>
       </Card.Actions>
     </Card>
