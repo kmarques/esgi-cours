@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet} from 'react-native';
-import {Card, Title, Paragraph, Button, IconButton} from 'react-native-paper';
+import {Card, Title, Paragraph, Button} from 'react-native-paper';
 import AsyncStorage from '@react-native-community/async-storage';
 
-const HomeScreen = ({route}) => {
+const HomeScreen = ({navigation}) => {
   const [count, setCount] = useState(null);
 
   const onSave = () => {
@@ -17,25 +17,24 @@ const HomeScreen = ({route}) => {
 
   useEffect(() => {
     AsyncStorage.getItem('count').then(data => setCount(data));
-    fetch('http://localhost:8080/posts')
-      .then(res => res.json())
-      .then(data => console.log(data));
   }, []);
 
-  console.log(route.params ? route.params.from : null);
   return (
     <Card style={styles.card}>
       <Card.Title title="Card Title" subtitle="Card Subtitle" />
       <Card.Content>
-        <Title>Card title {count} </Title>
-        <Paragraph>Card content</Paragraph>
+        <Title>Card title 2 {count} </Title>
+        <Paragraph>Card 2 content</Paragraph>
       </Card.Content>
       <Card.Cover source={{uri: 'https://picsum.photos/700'}} />
       <Card.Actions>
         <Button onPress={() => alert('test')}>Cancel</Button>
         <Button onPress={onAdd}>+1</Button>
         <Button onPress={onSave}>Save</Button>
-        <IconButton icon="history" />
+        <Button onPress={() => navigation.goBack()}>Go Back</Button>
+        <Button onPress={() => navigation.navigate('Home', {from: 'navigate'})}>
+          Go To HomeScreen
+        </Button>
       </Card.Actions>
     </Card>
   );
