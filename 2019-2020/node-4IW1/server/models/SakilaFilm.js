@@ -1,17 +1,20 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const db = require("../lib/db");
 
-const Schema = new mongoose.Schema({
-  Category: String,
-  Length: {
-    type: Number,
-    default: 0
+const Schema = new mongoose.Schema(
+  {
+    Category: String,
+    Length: {
+      type: Number,
+      default: 0,
+    },
+    Title: String,
   },
-  Title: String
-}, {
-  collection: 'Sakila_films'
-});
+  {
+    collection: "Sakila_films",
+  }
+);
 
-const SakilaFilm = mongoose.model('SakilaFilm', Schema);
-
+const SakilaFilm = db.model("SakilaFilm", Schema);
 
 module.exports = SakilaFilm;

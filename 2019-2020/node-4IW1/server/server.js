@@ -1,9 +1,16 @@
-const express = require('express');
+const express = require("express");
+const sequelize = require("./lib/sequelize");
+const User = require("./models/sequelize/User");
+const RouterManager = require("./routes");
 const app = express();
 
-app.get('/hello', (req, res) => {
+app.use(express.json());
+
+app.get("/hello", (req, res, next) => {
   console.log(req.query);
-  res.json({msg: "Hello"});
+  res.json({ msg: "Hello" });
 });
 
-app.listen(3000, () => console.log('listening...'));
+RouterManager(app);
+
+app.listen(3000, () => console.log("listening..."));
