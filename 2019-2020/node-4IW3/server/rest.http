@@ -4,3 +4,39 @@ Accept: application/json
 {
   "foo": "bar"
 }
+
+###
+GET http://localhost:3000/movies?Title=test
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJpYXQiOjE1OTA1MDU1NjgsImV4cCI6MTU5MDUwOTE2OH0.kHx5wBJnOp8ZgkFSV4xFObLYAWQSxYG25mG_pd-c4r8
+
+###
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "Title": "test",
+  "Length": 130
+}
+
+###
+GET http://localhost:3000/movies/5ecd154f17ddd50ae1e6bb55
+
+###
+PUT http://localhost:3000/movies/5ecd154f17ddd50ae1e6bb55
+Content-Type: application/json
+
+{
+  "Length": 145
+}
+
+###
+DELETE http://localhost:3000/movies/5ecd154f17ddd50ae1e6bb55
+
+###
+POST http://localhost:3000/login_check
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "pass"
+}

@@ -1,16 +1,23 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const connect = require("../lib/db");
 
-const schema = new mongoose.Schema({
-  Title: String,
-  Length: {
-    type: Number,
-    required: true,
-    default: 0
+const schema = new mongoose.Schema(
+  {
+    Title: {
+      type: String,
+      required: true,
+    },
+    Length: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+  },
+  {
+    collection: "Sakila_films",
   }
-}, {
-  collection: "Sakila_films"
-});
+);
 
-const model = new mongoose.model('SakilaFilms', schema);
+const model = connect.model("SakilaFilms", schema);
 
 module.exports = model;
