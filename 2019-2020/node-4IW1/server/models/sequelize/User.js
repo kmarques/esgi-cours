@@ -1,5 +1,7 @@
 const sequelize = require("../../lib/sequelize");
 const { DataTypes, Model } = require("sequelize");
+const bcrypt = require("bcryptjs");
+const Article = require("./Article");
 
 // Generation du model
 class User extends Model {}
@@ -32,12 +34,36 @@ User.init(
   {
     sequelize,
     modelName: "User",
+    paranoid: true,
   }
 );
 
+// Many to Many
+// User.belongsToMany(Article) => UserArticle => User.articles
+// Article.belongsToMany(User) => UserArticle =>
+
+// One to One
+// User.hasOne(Article) => User.article
+// Article.hasOne(User) => Article.user
+
+// MANY Users TO ONE Article
+// User.belongsTo(Article) => User.article
+// One Article TO MANY Users
+// Article.hasMany(User) => Article.users
+
+// ONE User TO MANY Articles
+User.hasMany(Article); // User.articles
+// MANY Articles TO ONE User
+Article.belongsTo(User); // Article.user
+
+User.addHook("beforeCreate", async (user, options) => {
+  const salt = await bcrypt.genSalt();
+  user.password = await bcrypt.hash(user.password, salt);
+});
+
 // Schema update
 User.sync({
-  force: true,
+  alter: true,
 })
   .then((result) => console.log(result))
   .catch((result) => console.error(result));

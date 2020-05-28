@@ -1,7 +1,7 @@
 const express = require("express");
 const User = require("../models/sequelize/User");
 const { ValidationError, Op } = require("sequelize");
-
+const verifyToken = require("../middlewares/verifyToken");
 const router = express.Router();
 
 // CGET
@@ -13,14 +13,25 @@ router.get("/", (req, res) => {
 
   User.findAll({
     where: conditions,
-    attributes: ["username", "firstname", "lastname", "confirmed"],
-  }).then((data) => res.json(data));
+    paranoid: false,
+  })
+    .then((data) => res.json(data))
+    .catch((err) => res.sendStatus(500));
 });
 
-// POST
-router.post("/", (req, res) => {
-  User.create(req.body)
-    .then((data) => res.status(201).json(data))
+// GET
+router.get("/:id", (req, res) => {
+  User.findByPk(req.params.id)
+    .then((data) => (data ? res.json(data) : res.sendStatus(404)))
+    .catch((err) => res.sendStatus(500));
+});
+
+// PUT
+router.put("/:id", (req, res) => {
+  User.update(req.body, { returning: true, where: { id: req.params.id } })
+    .then(([nbUpdated, result]) =>
+      nbUpdated ? res.json(result[0]) : res.sendStatus(404)
+    )
     .catch((error) => {
       if (error instanceof ValidationError) {
         console.log(error.errors);
@@ -30,22 +41,19 @@ router.post("/", (req, res) => {
         }, {});
         res.status(400).json(errors);
       } else {
+        console.log(error);
         res.sendStatus(500);
       }
     });
 });
 
-// GET
-router.get("/:id", (req, res) => {
-  User.findByPk(req.params.id).then((data) =>
-    data ? res.json(data) : res.sendStatus(404)
-  ).catch(err => res.sendStatus(500));
-});
-
-// PUT
-router.put("/:id", (req, res) => {});
-
 // DELETE
-router.delete("/:id", (req, res) => {});
+router.delete("/:id", (req, res) => {
+  User.destroy({
+    where: { id: req.params.id },
+  })
+    .then((data) => (data ? res.sendStatus(204) : res.sendStatus(404)))
+    .catch((err) => res.sendStatus(500));
+});
 
 module.exports = router;
