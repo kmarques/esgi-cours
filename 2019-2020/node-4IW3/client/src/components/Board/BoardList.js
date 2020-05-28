@@ -1,27 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Board from ".";
+import BoardContext from "../context/BoardContext";
 
-const BoardList = ({boards, addList}) => {
-    const [selectedBoard, setSelectedBoard] = useState(null);
+const BoardList = () => {
+  const [selectedBoard, setSelectedBoard] = useState(null);
+  const { selectors } = useContext(BoardContext);
 
-    useEffect(() => {
-      console.log("mount");
-      return () => console.log('unmount');
-    }, []);
+  useEffect(() => {
+    console.log("mount");
+    return () => console.log("unmount");
+  }, []);
 
-    useEffect(() => {
-      console.log("Updated", selectedBoard);
+  useEffect(() => {
+    console.log("Updated", selectedBoard);
 
-      return () => {console.log("beforeChange")};
-    }, [selectedBoard]);
+    return () => {
+      console.log("beforeChange");
+    };
+  }, [selectedBoard]);
 
-    return <>
-      <nav style={{display: 'flex', justifyContent: 'space-around'}}>
-        {boards.map((board, index) => <span key={index} onClick={() => setSelectedBoard(board)}>{board.name}</span>)}
+  return (
+    <>
+      <nav style={{ display: "flex", justifyContent: "space-around" }}>
+        {selectors.getBoards().map((board, index) => (
+          <span key={index} onClick={() => setSelectedBoard(board)}>
+            {board.name}
+          </span>
+        ))}
       </nav>
-      { selectedBoard && <Board addList={addList} board={selectedBoard}/> }
-      { !selectedBoard && <div>No board selected</div> }
-    </>;
+      {selectedBoard && <Board board={selectedBoard} />}
+      {!selectedBoard && <div>No board selected</div>}
+    </>
+  );
 };
 
 export default BoardList;

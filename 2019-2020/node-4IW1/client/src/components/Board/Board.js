@@ -1,44 +1,36 @@
-import React, {useState, useEffect} from "react";
-import List from './List';
-import Form from './Form';
+import React, { useState, useEffect, useContext } from "react";
+import List from "./List";
+import Form from "./Form";
+import BoardContext from "../../context/boardContext";
 
-function Board({board, addList}) {
-  const [lists, setLists] = useState(board.lists);
-
-   useEffect(() => {
-    console.log('componentDidMount');
-
-    return () => console.log("componentWillUnmount");
-  }, []);
+function Board({ board }) {
+  const { selectors, actions } = useContext(BoardContext);
+  const lists = selectors.getLists(board);
 
   useEffect(() => {
-    console.log('useEffect - componentDidUpdate - board.lists', board.lists);
-    setTimeout(() => {
-      setLists(board.lists);
-    }, 5000);
-    
-    return () => {
-      console.log('useEffect - unmount - board.lists');
-    }
-  }, [board.lists]);
+    actions.fetchList(board);
+  }, [board.id]);
 
-  useEffect(() => {
-    console.log('useEffect - componentDidUpdate - board.name', board.name);
-  }, [board.name]);
-
-  return <>
-    <h1>{board.name} {board.lists.length}</h1>
-    <div style={{
-      flex: 1,
-      display: "flex",
-      justifyContent: "space-around"
-    }}>
-      <Form addList={addList}/>
-      {board.lists.map(list => {
-        return <List key={list.id} list={list}/>;
-      })}
-    </div>
-  </>;
+  return (
+    <>
+      <h1>
+        {board.name} {lists && lists.length}
+      </h1>
+      <div
+        style={{
+          flex: 1,
+          display: "flex",
+          justifyContent: "space-around",
+        }}
+      >
+        <Form addList={(list) => actions.addList(list, board)} />
+        {lists &&
+          lists.map((list) => {
+            return <List key={list.id} list={list} />;
+          })}
+      </div>
+    </>
+  );
 }
 
 export default Board;

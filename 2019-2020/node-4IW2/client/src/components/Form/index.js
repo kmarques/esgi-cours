@@ -1,20 +1,20 @@
 import React from "react";
 
-const Form = ({updateList}) => {
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      const data = Object.fromEntries(
-        new FormData(e.target).entries()
-      );
+const Form = ({ updateList }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(e.target).entries());
 
-      updateList({id: Date.now(), ...data});
-    };
+    updateList({ ...data });
+  };
 
-    // {x:1, y:2} => [['x', 1], ['y', 2]]
-    return <form onSubmit={handleSubmit}>
-            <input type="text" name="title" />
-            <button type="submit">Valider</button>
-    </form>;
-}
+  // {x:1, y:2} => [['x', 1], ['y', 2]]
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" name="title" />
+      <button type="submit">Valider</button>
+    </form>
+  );
+};
 
 export default Form;
