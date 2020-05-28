@@ -5,7 +5,7 @@ const router = express.Router();
 
 // CGET
 router.get("/", (req, res) => {
-  SakilaFilm.find().then((data) => res.json(data));
+  SakilaFilm.find(req.query).then((data) => res.json(data));
 });
 
 // POST

@@ -1,16 +1,27 @@
 const sequelize = require("../../lib/sequelize");
-const { Sequelize, DataTypes, Model } = require("sequelize");
+const { DataTypes, Model } = require("sequelize");
 
 // Generation du model
 class User extends Model {}
 User.init(
   {
-    username: DataTypes.STRING,
-    password: DataTypes.STRING,
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: {
+          msg: "Email non valide",
+        },
+      },
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     firstname: DataTypes.STRING,
     lastname: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     confirmed: {
       type: DataTypes.BOOLEAN,
@@ -25,6 +36,10 @@ User.init(
 );
 
 // Schema update
-User.sync();
+User.sync({
+  force: true,
+})
+  .then((result) => console.log(result))
+  .catch((result) => console.error(result));
 
 module.exports = User;

@@ -36,3 +36,19 @@ Content-Type: application/json
     "username":"user",
     "password": "pass"
 }
+
+
+###
+GET http://localhost:3000/users?username=kmarques
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "username": "kmarques@vetixy.com",
+    "password": "test"
+}
+
+###
+GET http://localhost:3000/users/2
