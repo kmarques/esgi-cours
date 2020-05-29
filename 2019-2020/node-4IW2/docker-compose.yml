@@ -1,4 +1,4 @@
-version: '3.4'
+version: "3.4"
 
 services:
   mongo:
@@ -25,26 +25,42 @@ services:
   server:
     image: node:alpine
     volumes:
-      - './server:/home/node/app:rw,consistent'
-    working_dir: '/home/node/app'
+      - "./server:/home/node/app:rw,consistent"
+    working_dir: "/home/node/app"
     environment:
       MONGODB_USER: "root"
       MONGODB_PASS: "password"
       MONGODB_DBNAME: "SampleCollections"
       JWT_SECRET: "MyBestSecret"
+      DATABASE_URL: "postgres://root:password@db/api"
     depends_on:
-        - mongo
-    command: 'npm start'
+      - mongo
+      - db
+    command: "npm start"
     ports:
       - 127.0.0.1:3000:3000
 
   client:
-    build: './client'
+    build: "./client"
     volumes:
-      - './client:/home/node/app'
-    working_dir: '/home/node/app'
-    command: 'yarn start'
+      - "./client:/home/node/app"
+    working_dir: "/home/node/app"
+    command: "yarn start"
     tty: true
     stdin_open: true
     ports:
       - 127.0.0.1:3001:3000
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=api
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - db-data:/var/lib/postgresql/data:rw
+    ports:
+      - "5432:5432"
+
+volumes:
+  db-data: {}

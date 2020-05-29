@@ -1,15 +1,20 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const connect = require("../lib/db");
 
-const SakilaFilmSchema = new mongoose.Schema({
-  Title: String,
-  Length: {
-    type: Number,
-    required: true,
-    default: 0
+const SakilaFilmSchema = new mongoose.Schema(
+  {
+    Title: String,
+    Length: {
+      type: Number,
+      required: true,
+      default: 0,
+      min: 60,
+    },
+    Rating: String,
   },
-  Rating: String
-}, {collection: "Sakila_films"});
+  { collection: "Sakila_films" }
+);
 
-const SakilaFilms = mongoose.model('SakilaFilms', SakilaFilmSchema);
+const SakilaFilms = connect.model("SakilaFilms", SakilaFilmSchema);
 
 module.exports = SakilaFilms;

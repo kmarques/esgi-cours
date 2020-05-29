@@ -2,9 +2,37 @@ GET http://localhost:3000/hello
 Accept: application/json
 
 ###
-POST http://localhost:3000/new
+GET http://localhost:3000/movies
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJpYXQiOjE1OTA3NDgxNjEsImV4cCI6MTU5MDc1MTc2MX0.1JFWPOn-ukf4978KNPUbkKnDaF3tOlnEvlpyl3apdiA
+
+###
+POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-  "test": "body"
+  "Title": "Frankenstein",
+  "Rating": "PG-13"
+}
+
+###
+GET http://localhost:3000/movies/5ed0cbc5797f8109410a6a8d
+
+###
+PUT http://localhost:3000/movies/5ed0cbc5797f8109410a6a8d
+Content-Type: application/json
+
+{
+  "Length": 123
+}
+
+###
+DELETE http://localhost:3000/movies/5ed0cbc5797f8109410a6a8d
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "pass"
 }
