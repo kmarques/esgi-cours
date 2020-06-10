@@ -1,0 +1,19 @@
+POST http://localhost:8080/register
+Content-Type: application/x-www-form-urlencoded
+
+name=ApplicationTest&uri=http://localhost:8081&redirect_sucess=http://localhost:8081/cb&redirect_error=http://localhost:8081/error
+
+#   name=ApplicationTest&
+#   uri=http://localhost:8081&
+#   redirect_sucess=http://localhost:8081/cb&
+#   redirect_error=http://localhost:8081/error
+
+
+### Access authorization page
+GET http://localhost:7070/auth?response_type=code&client_id=client_5edf6b5a4bd496.60805207&scope[]=test&state=test&redirect_uri=http://localhost:7071/cb
+
+### Access authorization page
+GET http://localhost:7070/auth-sucess?client_id=client_5edf6b5a4bd496.60805207&state=test
+
+### Get token
+GET http://localhost:7070/token?code=5ee126cf84528&grant_type=authorization_code&client_id=client_5edf6b5a4bd496.60805207&client_secret=22a0e9533df65ec194975ae1e6c5631ffc4ef70c&&redirect_uri=http://localhost:7071/cb

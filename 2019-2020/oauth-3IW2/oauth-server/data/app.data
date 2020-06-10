@@ -1,0 +1,1 @@
+a:6:{s:4:"name";s:15:"ApplicationTest";s:3:"uri";s:21:"http://localhost:7071";s:16:"redirect_success";s:24:"http://localhost:7071/cb";s:14:"redirect_error";s:27:"http://localhost:7071/error";s:9:"client_id";s:30:"client_5edf6b5a4bd496.60805207";s:13:"client_secret";s:40:"22a0e9533df65ec194975ae1e6c5631ffc4ef70c";}
