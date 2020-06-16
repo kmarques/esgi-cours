@@ -2,6 +2,37 @@ GET http://localhost:3000/hello
 Accept: application/json
 
 ###
+GET http://localhost:3000/users?article[tag][name]=test
+Accept: application/json
+
+###
+POST http://localhost:3000/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "kmarques@vetixy.com",
+  "password": "pass"
+}
+
+###
+PUT http://localhost:3000/users/2
+Accept: application/json
+Content-Type: application/json
+
+{
+  "password": "pass"
+}
+
+###
+DELETE http://localhost:3000/users/4
+Accept: application/json
+
+###
+GET http://localhost:3000/users/5
+Accept: application/json
+
+###
 GET http://localhost:3000/movies
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJpYXQiOjE1OTA3NDgxNjEsImV4cCI6MTU5MDc1MTc2MX0.1JFWPOn-ukf4978KNPUbkKnDaF3tOlnEvlpyl3apdiA
 
@@ -33,6 +64,6 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-  "username": "user",
+  "username": "kmarques@vetixy.com",
   "password": "pass"
 }
