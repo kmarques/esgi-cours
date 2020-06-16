@@ -2,18 +2,26 @@ const express = require("express");
 const User = require("../models/sequelize/User");
 const { ValidationError, Op } = require("sequelize");
 const verifyToken = require("../middlewares/verifyToken");
+const { Article } = require("../models/sequelize");
 const router = express.Router();
 
 // CGET
 router.get("/", (req, res) => {
-  const { username, ...conditions } = req.query;
+  const { username, article: articleConditions, ...conditions } = req.query;
   if (username) {
     conditions.username = { [Op.startsWith]: req.query.username };
   }
+  console.log(conditions);
 
   User.findAll({
     where: conditions,
     paranoid: false,
+    include: [
+      {
+        model: Article,
+        where: articleConditions,
+      },
+    ],
   })
     .then((data) => res.json(data))
     .catch((err) => res.sendStatus(500));

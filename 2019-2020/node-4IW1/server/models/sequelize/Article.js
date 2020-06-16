@@ -17,11 +17,4 @@ Article.init(
   }
 );
 
-// Schema update
-Article.sync({
-  alter: true,
-})
-  .then((result) => console.log(result))
-  .catch((result) => console.error(result));
-
 module.exports = Article;
