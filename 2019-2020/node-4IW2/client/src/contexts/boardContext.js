@@ -1,55 +1,52 @@
 import React, { createContext, useState, useEffect, useReducer } from "react";
 import { fetchBoards } from "./actions/boards";
 import {
-  fetchLists as aFetchLists,
-  addList as aAddList,
-} from "./actions/lists";
+  reducer as UIReducer,
+  initialState as UIInitialState,
+} from "./reducers/ui";
+import {
+  reducer as BoardReducer,
+  initialState as BoardInitialState,
+} from "./reducers/boards";
 
-const BoardContext = createContext({
-  boards: [],
-  lists: {},
-});
+const BoardContext = createContext(null);
+
+const combineReducers = (reducers) => {
+  return function (state, action) {
+    console.log(`combineReducer - action ${action.type}`);
+    return Object.keys(reducers).reduce((acc, keyReducer) => {
+      console.log(`Reducer ${keyReducer} - action ${action.type}`);
+      return {
+        ...acc,
+        [keyReducer]: reducers[keyReducer](state[keyReducer], action),
+      };
+    }, state);
+  };
+};
 
 /**
- * action = { type: String, payload: any }
+ * rootState = {
+ *  boards: { boards: [], lists: {} },
+ *  ui: { selectedBoard: null }
+ * }
+ *
+ *   boardContext.js:23 combineReducer - action RECEIVE_BOARDS
+ *   boardContext.js:23 Reducer boards - action RECEIVE_BOARDS
+ *   boardContext.js:23 Reducer ui - action RECEIVE_BOARDS
  */
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "RECEIVE_BOARDS":
-      return {
-        ...state,
-        boards: action.payload,
-      };
-    case "RECEIVE_LISTS":
-      return {
-        ...state,
-        lists: {
-          ...state.lists,
-          [action.payload.board.id]: action.payload.data,
-        },
-      };
-    case "ADD_LIST":
-      return {
-        ...state,
-        lists: {
-          ...state.lists,
-          [action.payload.board.id]: [
-            ...(state.lists[action.payload.board.id] || []),
-            action.payload.data,
-          ],
-        },
-      };
-    default:
-      return state;
-  }
+const rootReducer = combineReducers({
+  boards: BoardReducer,
+  ui: UIReducer,
+});
+
+const initialState = {
+  boards: BoardInitialState,
+  ui: UIInitialState,
 };
 
 export const BoardProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, {
-    boards: [],
-    lists: {},
-  });
-
+  const [state, dispatch] = useReducer(rootReducer, initialState);
+  console.log(state);
   useEffect(() => {
     fetchBoards().then((data) =>
       dispatch({
@@ -59,35 +56,21 @@ export const BoardProvider = ({ children }) => {
     );
   }, []);
 
-  const fetchLists = (board) =>
-    !state.lists[board.id] &&
-    aFetchLists(board).then((data) =>
+  const actions = {
+    selectBoard: (board) =>
       dispatch({
-        type: "RECEIVE_LISTS",
-        payload: {
-          board,
-          data,
-        },
-      })
-    );
-
-  const addList = (list) => {
-    aAddList(list).then((data) =>
-      dispatch({
-        type: "ADD_LIST",
-        payload: {
-          board: { id: list.boardId },
-          data,
-        },
-      })
-    );
+        type: "SELECT_BOARD",
+        payload: board,
+      }),
   };
 
-  const getLists = (board) => state.lists[board.id] || [];
-  const getBoards = () => state.boards;
+  const selectors = {
+    getSelectedBoard: () => state.ui.selectedBoard,
+    getMessage: () => state.ui.message,
+  };
 
   return (
-    <BoardContext.Provider value={{ getBoards, getLists, fetchLists, addList }}>
+    <BoardContext.Provider value={{ selectors, actions, state, dispatch }}>
       {children}
     </BoardContext.Provider>
   );

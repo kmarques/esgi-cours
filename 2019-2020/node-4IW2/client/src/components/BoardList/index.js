@@ -1,17 +1,21 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import Board from "../Board";
 import BoardContext from "../../contexts/boardContext";
+import useBoards from "../../hooks/useBoards";
 
 const BoardList = ({}) => {
-  const [selectedBoard, setSelectedBoard] = useState();
-  const { getBoards } = useContext(BoardContext);
-  const boards = getBoards();
+  const { selectors, actions } = useContext(BoardContext);
+  const { selectors: boardsSelectors } = useBoards();
+
+  const boards = boardsSelectors.getBoards();
+  const selectedBoard = selectors.getSelectedBoard();
 
   return (
     <>
+      {selectors.getMessage() && <span>{selectors.getMessage()}</span>}
       <nav style={{ display: "flex", justifyContent: "space-around" }}>
         {boards.map((board) => (
-          <span key={board.id} onClick={() => setSelectedBoard(board)}>
+          <span key={board.id} onClick={() => actions.selectBoard(board)}>
             {board.name}
           </span>
         ))}

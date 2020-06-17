@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import BoardContext from "../../contexts/boardContext";
+import useBoards from "../../hooks/useBoards";
 
 const List = ({ list }) => {
-  const { getBoards } = useContext(BoardContext);
-  const boards = getBoards();
+  const { selectors } = useBoards();
+  const boards = selectors.getBoards();
 
   /* Afficher une liste */
   return (

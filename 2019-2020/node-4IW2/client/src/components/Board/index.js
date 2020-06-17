@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useContext } from "react";
 import List from "../List";
 import Form from "../Form";
-import BoardContext from "../../contexts/boardContext";
+import useBoards from "../../hooks/useBoards";
 
 const Board = ({ board }) => {
-  const { getLists, fetchLists, addList } = useContext(BoardContext);
-  const lists = getLists(board);
+  const { selectors, actions } = useBoards();
+  const lists = selectors.getLists(board);
 
   useEffect(() => {
-    fetchLists(board);
+    actions.fetchLists(board);
   }, [board.id]);
 
   return (
@@ -24,7 +24,9 @@ const Board = ({ board }) => {
         }}
       >
         {/* Afficher un formulaire qui rajoute une liste à un board */}
-        <Form updateList={(list) => addList({ ...list, boardId: board.id })} />
+        <Form
+          updateList={(list) => actions.addList({ ...list, boardId: board.id })}
+        />
         {/*Afficher l'ensemble des listes du Board */}
         {lists.map((list) => (
           <List key={list.id} list={list} />
