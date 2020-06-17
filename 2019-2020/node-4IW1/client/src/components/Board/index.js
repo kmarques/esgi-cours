@@ -1,11 +1,13 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import Board from "./Board";
-import BoardContext from "../../context/boardContext";
+import useBoards from "../../hooks/useBoards";
+import useUI from "../../hooks/useUI";
 
 function BoardList() {
-  const { selectors, actions } = useContext(BoardContext);
+  const { selectors } = useBoards();
+  const { selectors: UISelectors, actions } = useUI();
   const boards = selectors.getBoards();
-  const currentBoard = selectors.getSelectedBoard();
+  const currentBoard = UISelectors.getSelectedBoard();
   return (
     <React.Fragment>
       <nav style={{ display: "flex", justifyContent: "space-around" }}>

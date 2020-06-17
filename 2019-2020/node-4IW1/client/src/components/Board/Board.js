@@ -2,9 +2,12 @@ import React, { useState, useEffect, useContext } from "react";
 import List from "./List";
 import Form from "./Form";
 import BoardContext from "../../context/boardContext";
+import useBoards from "../../hooks/useBoards";
+import useUI from "../../hooks/useUI";
 
 function Board({ board }) {
-  const { selectors, actions } = useContext(BoardContext);
+  const { selectors, actions } = useBoards();
+  const { selectors: UISelectors } = useUI();
   const lists = selectors.getLists(board);
 
   useEffect(() => {
@@ -29,6 +32,7 @@ function Board({ board }) {
             return <List key={list.id} list={list} />;
           })}
       </div>
+      {UISelectors.getMessage() ? <p>{UISelectors.getMessage()}</p> : null}
     </>
   );
 }

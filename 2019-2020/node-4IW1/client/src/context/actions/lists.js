@@ -1,10 +1,10 @@
 export const fetchLists = (board) =>
-  fetch(`http://localhost:3001/boards/${board.id}/lists`).then((res) =>
+  fetch(`http://localhost:3002/boards/${board.id}/lists`).then((res) =>
     res.json()
   );
 
 export const addList = (list) =>
-  fetch(`http://localhost:3001/lists`, {
+  fetch(`http://localhost:3002/lists`, {
     method: "POST",
     headers: {
       "content-type": "application/json",
