@@ -8,6 +8,10 @@ import {
   initialState as uiInitialState,
   reducer as uiReducer,
 } from "./reducers/ui";
+import {
+  initialState as authInitialState,
+  reducer as authReducer,
+} from "./reducers/auth";
 
 const BoardContext = createContext(null);
 
@@ -32,11 +36,13 @@ function combineReducers(reducerDict) {
 const reducers = combineReducers({
   boards: boardsReducer,
   ui: uiReducer,
+  auth: authReducer
 });
 
 const initialState = {
   boards: boardsInitialState,
   ui: uiInitialState,
+  auth: authInitialState,
 };
 
 export const BoardProvider = ({ children }) => {

@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import ThemeWrapper from "./components/lib/ThemeWrapper";
 import BoardList from "./components/Board/BoardList";
-import { BoardProvider } from "./components/context/BoardContext";
+import { BoardProvider } from "./context/BoardContext";
 
 function App() {
   return (

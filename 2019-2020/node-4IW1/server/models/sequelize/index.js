@@ -1,6 +1,8 @@
 const sequelize = require("../../lib/sequelize");
 const Article = require("./Article");
+const Movie = require("./Movie");
 const User = require("./User");
+require("./hooks");
 
 sequelize
   .sync({ alter: true })
@@ -11,4 +13,5 @@ module.exports = {
   sequelize,
   Article,
   User,
+  Movie,
 };

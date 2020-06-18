@@ -5,6 +5,7 @@ import Button, { ButtonV2 } from "./components/Button";
 import ThemeWrapper from "./components/ThemeWrapper";
 import BoardList from "./components/Board";
 import BoardContext, { BoardProvider } from "./context/boardContext";
+import Login from "./components/Login";
 
 function App() {
   //
@@ -19,6 +20,7 @@ function App() {
     <div className="App">
       <ThemeWrapper>
         <BoardProvider>
+          <Login />
           <BoardList />
         </BoardProvider>
       </ThemeWrapper>

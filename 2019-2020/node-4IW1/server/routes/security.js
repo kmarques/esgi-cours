@@ -31,11 +31,11 @@ router.post("/login_check", (req, res) => {
     )
     .catch((err) =>
       err === "invalid"
-        ? res.send(400).json({
+        ? res.status(400).json({
             username: "Invalid credentials",
             password: "Invalid credentials",
           })
-        : res.send(500)
+        : console.error(err) || res.sendStatus(500)
     );
 });
 

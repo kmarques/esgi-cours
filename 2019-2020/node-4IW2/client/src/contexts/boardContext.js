@@ -8,18 +8,27 @@ import {
   reducer as BoardReducer,
   initialState as BoardInitialState,
 } from "./reducers/boards";
+import {
+  reducer as AuthReducer,
+  initialState as AuthInitialState,
+} from "./reducers/auth";
 
 const BoardContext = createContext(null);
 
 const combineReducers = (reducers) => {
-  return function (state, action) {
+  return function rootReducer(state, action) {
     console.log(`combineReducer - action ${action.type}`);
     return Object.keys(reducers).reduce((acc, keyReducer) => {
       console.log(`Reducer ${keyReducer} - action ${action.type}`);
-      return {
-        ...acc,
-        [keyReducer]: reducers[keyReducer](state[keyReducer], action),
-      };
+      const newState = { ...acc };
+      if (
+        !action.stopPropagation &&
+        (!action.audience || action.audience === keyReducer)
+      ) {
+        newState[keyReducer] = reducers[keyReducer](state[keyReducer], action);
+      }
+
+      return newState;
     }, state);
   };
 };
@@ -37,11 +46,13 @@ const combineReducers = (reducers) => {
 const rootReducer = combineReducers({
   boards: BoardReducer,
   ui: UIReducer,
+  auth: AuthReducer,
 });
 
 const initialState = {
   boards: BoardInitialState,
   ui: UIInitialState,
+  auth: AuthInitialState,
 };
 
 export const BoardProvider = ({ children }) => {
@@ -56,21 +67,8 @@ export const BoardProvider = ({ children }) => {
     );
   }, []);
 
-  const actions = {
-    selectBoard: (board) =>
-      dispatch({
-        type: "SELECT_BOARD",
-        payload: board,
-      }),
-  };
-
-  const selectors = {
-    getSelectedBoard: () => state.ui.selectedBoard,
-    getMessage: () => state.ui.message,
-  };
-
   return (
-    <BoardContext.Provider value={{ selectors, actions, state, dispatch }}>
+    <BoardContext.Provider value={{ state, dispatch }}>
       {children}
     </BoardContext.Provider>
   );

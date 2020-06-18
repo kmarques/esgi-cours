@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
 import List from "./List";
 import Form from "./List/NewListForm";
-import BoardContext from "../context/BoardContext";
+import BoardContext from "../../context/BoardContext";
+import useLists from "../../hooks/useLists";
+import useBoards from "../../hooks/useBoards";
 
 const Board = ({ board }) => {
-  const { selectors, actions } = useContext(BoardContext);
+  const { selectors, actions } = useLists();
+  const { selectors: BoardSelectors } = useBoards();
 
   useEffect(() => {
     actions.getLists(board);
@@ -19,7 +22,7 @@ const Board = ({ board }) => {
           selectors
             .getLists(board)
             .map((list) => <List key={list.id} list={list} />)}
-        <span>{selectors.getBoardsCount()}</span>
+        <span>{BoardSelectors.getBoardsCount()}</span>
       </div>
     </>
   );

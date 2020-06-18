@@ -37,6 +37,34 @@ POST http://localhost:3000/login_check
 Content-Type: application/json
 
 {
-  "username": "user",
-  "password": "pass"
+  "username": "test2@test.com",
+  "password": "test"
 }
+
+
+###
+GET http://localhost:3000/users?id=3
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "username": "test3@test.com",
+  "password": "test",
+  "farce": true
+}
+
+###
+GET http://localhost:3000/users/3
+
+###
+PUT http://localhost:3000/users/3
+Content-Type: application/json
+
+{
+  "username": "test3"
+}
+
+###
+DELETE http://localhost:3000/users/4

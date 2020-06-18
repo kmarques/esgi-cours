@@ -4,6 +4,7 @@ import "./App.css";
 import ThemeWrapper from "./components/ThemeWrapper";
 import BoardList from "./components/BoardList";
 import BoardContext, { BoardProvider } from "./contexts/boardContext";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     >
       <ThemeWrapper>
         <BoardProvider>
+          <Login />
           <BoardList />
         </BoardProvider>
       </ThemeWrapper>

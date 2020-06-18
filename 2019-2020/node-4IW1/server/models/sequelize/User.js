@@ -2,6 +2,7 @@ const sequelize = require("../../lib/sequelize");
 const { DataTypes, Model } = require("sequelize");
 const bcrypt = require("bcryptjs");
 const Article = require("./Article");
+const Movie = require("./Movie");
 const denormalize = require("./hooks/denormalizationUser");
 
 // Generation du model
@@ -51,11 +52,31 @@ User.init(
 // User.belongsTo(Article) => User.article
 // One Article TO MANY Users
 // Article.hasMany(User) => Article.users
-
+console.log("User : ", Movie, Article, denormalize, Model);
 // ONE User TO MANY Articles
 User.hasMany(Article); // User.articles
 // MANY Articles TO ONE User
 Article.belongsTo(User); // Article.user
+
+User.belongsToMany(Movie, {
+  as: "DirectedMovies",
+  through: "DirectorMovie",
+});
+
+Movie.belongsToMany(User, {
+  as: "Directors",
+  through: "DirectorMovie",
+});
+
+User.belongsToMany(Movie, {
+  as: "PlayedMovies",
+  through: "ActorMovie",
+});
+
+Movie.belongsToMany(User, {
+  as: "Actors",
+  through: "ActorMovie",
+});
 
 User.addHook("beforeCreate", async (user, options) => {
   const salt = await bcrypt.genSalt();

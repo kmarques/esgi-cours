@@ -7,6 +7,8 @@ const Schema = new mongoose.Schema(
     lastname: String,
     confirmed: Boolean,
     Articles: Array,
+    DirectedMovies: Array,
+    PlayedMovies: Array
   },
   {
     collection: "Users",

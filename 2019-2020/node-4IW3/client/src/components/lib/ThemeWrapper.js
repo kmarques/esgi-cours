@@ -5,6 +5,7 @@ import BoardList from "../../components/Board/BoardList";
 // NEW WAY
 /**
  * component: {
+ *  domElement,
  *  cursor_state: 0,
  *  states: [
  *    "light",

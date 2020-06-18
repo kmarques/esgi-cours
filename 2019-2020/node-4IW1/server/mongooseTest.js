@@ -1,6 +1,6 @@
-const connection = require('./lib/db');
+const connection = require("./lib/db");
 
-const SakilaFilm = require('./models/SakilaFilm');
+const SakilaFilm = require("./models/SakilaFilm");
 
 // Find
 //SakilaFilm.find({
@@ -48,20 +48,20 @@ const SakilaFilm = require('./models/SakilaFilm');
 //);
 
 SakilaFilm.aggregate([
-  {$project: {Category: 1}},
-  {$match: {Category: "Horror"}},
-  {$group: {_id: "$Rating", total: {$sum: 1}}},
-  {$match: {total: {$gt: 10}}},
-  {$sort: {total: 1, _id: 1}},
-]).then(data => console.log(data));
+  { $project: { Category: 1 } },
+  { $match: { Category: "Horror" } },
+  { $group: { _id: "$Rating", total: { $sum: 1 } } },
+  { $match: { total: { $gt: 10 } } },
+  { $sort: { total: 1, _id: 1 } },
+]).then((data) => console.log(data));
 
 SakilaFilm.mapReduce({
-  query: {Category: 'Horror'},
-  map: function() {
-    emit(this.Rating, 1)
+  query: { Category: "Horror" },
+  map: function () {
+    emit(this.Rating, 1);
   },
-  reduce: function(k, values) {
+  reduce: function (k, values) {
     return Array.sum(values);
   },
-  sort: {value: 1, _id: 1}
-}).then(data => console.log(data));
+  sort: { value: 1, _id: 1 },
+}).then((data) => console.log(data));

@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Board from ".";
-import BoardContext from "../context/BoardContext";
+import useBoards from "../../hooks/useBoards";
 
 const BoardList = () => {
   const [selectedBoard, setSelectedBoard] = useState(null);
-  const { selectors } = useContext(BoardContext);
+  const { selectors } = useBoards();
 
   useEffect(() => {
     console.log("mount");
