@@ -1,7 +1,7 @@
 const db = require('./lib/db');
 const mongoose = require('mongoose');
 const SakilaFilms = require('./models/SakilaFilms');
-
+SakilaFilms.del
 // CGET
 //SakilaFilms.find().limit(10).then(docs => {
 //  console.log("cget", docs);
