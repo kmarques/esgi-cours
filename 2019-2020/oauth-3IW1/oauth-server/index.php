@@ -62,6 +62,19 @@ function getCode(string $client_id, string $code)
     return false;
 }
 
+/**
+ * @param string $token
+ * @return false|array
+ */
+function getToken(string $token)
+{
+    $data = read_file('./data/token.data');
+    foreach ($data as $app) {
+        if ($app['token'] === $token) return $app;
+    }
+    return false;
+}
+
 function register()
 {
     // Get client application data
@@ -153,6 +166,87 @@ function authSuccess()
     header("Location: {$app['redirect_success']}?state=$state&code=$code");
 }
 
+function exchangeAuthorizationCodeToToken(string $client_id, $code)
+{
+    // Check if code exist and not expired
+    $code = getCode($client_id, $code);
+    if (false !== $code && $code['expireDate'] > new DateTime()) {
+        // Generate token and its expiration Date
+        $token = uniqid("", true);
+        $expireDate = new DateTime('+ 3600 seconds');
+        // Save them into the database
+        $data = read_file('./data/token.data');
+        $data[] =
+            [
+                "token" => $token,
+                'expireDate' => $expireDate,
+                'user_id' => uniqid()
+            ];
+        $file = './data/token.data';
+        write_file($data, $file);
+        // Send token and expirationDate as a json response
+        http_response_code(201);
+        echo json_encode([
+            'token' => $token, 'expireDate' => $expireDate
+        ]);
+    } else {
+        http_response_code(400);
+        echo !$code ? "Code not found" : "Code expired";
+    }
+}
+
+function exchangePasswordToToken(string $username, string $client_id, $password)
+{ // Mais du coup on récupère le password par où? C'est via un fichier? 
+    // Check if code exist and not expired
+    if ($username === "user" && $password === "password") {
+        // Generate token and its expiration Date
+        $token = uniqid("", true);
+        $expireDate = new DateTime('+ 3600 seconds');
+        // Save them into the database
+        $data = read_file('./data/token.data');
+        $data[] =
+            [
+                "token" => $token,
+                'expireDate' => $expireDate,
+                'user_id' => uniqid()
+            ];
+        $file = './data/token.data';
+        write_file($data, $file);
+        // Send token and expirationDate as a json response
+        http_response_code(201);
+        echo json_encode([
+            'token' => $token, 'expireDate' => $expireDate
+        ]);
+    } else {
+        http_response_code(400);
+        echo "Invalid credentials";
+    }
+}
+
+
+function exchangeClientCredentialsToToken(string $client_secret, string $client_id)
+{
+    // Generate token and its expiration Date
+    $token = uniqid("", true);
+    $expireDate = new DateTime('+ 3600 seconds');
+    // Save them into the database
+    $data = read_file('./data/token_client.data');
+    $data[] =
+        [
+            "token" => $token,
+            'expireDate' => $expireDate,
+            'client_id' => $client_id
+        ];
+    $file = './data/token_client.data';
+    write_file($data, $file);
+    // Send token and expirationDate as a json response
+    http_response_code(201);
+    echo json_encode([
+        'token' => $token, 'expireDate' => $expireDate
+    ]);
+}
+
+
 // Partie auth
 /**
  * https://auth-server/token?
@@ -174,39 +268,41 @@ function token()
         "grant_type" => $grant_type,
         "client_id" => $client_id,
         "client_secret" => $client_secret,
-        "code" => $code,
-        "redirect_uri" => $redirect_uri,
+        "redirect_uri" => $redirect_uri
     ] = $_GET;
     // Check if app exist and secret is valid
     if (false !== ($app = getClientId($client_id)) && $app['client_secret'] == $client_secret) {
-        // Check if code exist and not expired
-        $code = getCode($client_id, $code);
-        if (false !== $code && $code['expireDate'] > new DateTime()) {
-            // Generate token and its expiration Date
-            $token = uniqid("", true);
-            $expireDate = new DateTime('+ 3600 seconds');
-            // Save them into the database
-            $data = read_file('./data/token.data');
-            $data[] =
+        switch ($grant_type) {
+            case "authorization_code":
+                ["code" => $code] = $_GET;
+                exchangeAuthorizationCodeToToken($client_id, $code);
+                break;
+            case "password":
                 [
-                    "token" => $token,
-                    'expireDate' => $expireDate,
-                    'user_id' => uniqid()
-                ];
-            $file = './data/token.data';
-            write_file($data, $file);
-            // Send token and expirationDate as a json response
-            http_response_code(201);
-            echo json_encode([
-                'token' => $token, 'expireDate' => $expireDate
-            ]);
-        } else {
-            http_response_code(400);
-            echo !$code ? "Code not found" : "Code expired";
+                    "username" => $username,
+                    "password" => $password
+                ] = $_GET;
+                exchangePasswordToToken($username, $client_id, $password);
+                break;
+            case "client_credentials":
+                exchangeClientCredentialsToToken($client_secret, $client_id);
+                break;
         }
     } else {
         http_response_code(404);
         echo "App not found";
+    }
+}
+
+function me()
+{
+    ['Authorization' => $auth] = getallheaders();
+    $token = str_replace('Bearer ', '', $auth);
+    if (false !== ($token = getToken($token))) {
+        echo json_encode(['user_id' => $token['user_id'], "email" => 'test@test.com']);
+    } else {
+        http_response_code(401);
+        echo "Token not found";
     }
 }
 
@@ -224,5 +320,8 @@ switch ($route) {
         break;
     case '/token':
         token();
+        break;
+    case '/me':
+        me();
         break;
 }
