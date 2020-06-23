@@ -119,7 +119,7 @@ function authSucess()
     ] = $_GET;
 
     $code = uniqid();
-    $expiration = new DateTime('+ 60 seconds');
+    $expiration = new DateTime('+ 120 seconds');
     $data = read_file('./data/code.data');
     $data[] = [
         'code'       => $code,
@@ -143,20 +143,10 @@ function authSucess()
  * 4) Générer un token et sa date d'expiration (1H), sauvegarder en base (ajouter user_id)
  * 4) Renvoyer le tout au format JSON
  */
-function token()
+function exchangeAuthorizationCodeToToken(array $client, string $code)
 {
-    // Get request parameters
-    [
-        'grant_type' => $grant_type,
-        'client_id' => $client_id,
-        'client_secret' => $client_secret,
-        'code' => $code,
-        'redirect_uri' => $redirect_uri
-    ] = $_GET;
-    // Check client credentials
-    $client = getClient($client_id);
-    if ($client && $client['client_secret'] == $client_secret) {
-        $client_code = getCode($client_id, $code);
+    if ($code) {
+        $client_code = getCode($client["client_id"], $code);
         // Check code validity
         if ($client_code && $client_code['expiration'] > new DateTime()) {
             // Generate token
@@ -173,6 +163,78 @@ function token()
             write_file($data, './data/token.data');
             // Send it to client server
             echo json_encode(["access_token" => $token, "expirationDate" => $token_expiration]);
+        }
+    }
+}
+
+function exchangePasswordToToken(string $username, string $password)
+{
+    if ($username && $password) {
+        if ($username == 'user' && $password == 'password') {
+            // Generate token
+            $token = uniqid();
+            $token_expiration = new DateTime('+ 1 hours');
+            $user_id = uniqid();
+            // Save into database
+            $data = read_file('./data/token.data');
+            $data[] = [
+                'token' => $token,
+                'token_expiration' => $token_expiration,
+                'user_id' => $user_id
+            ];
+            write_file($data, './data/token.data');
+            // Send it to client server
+            echo json_encode(["access_token" => $token, "expirationDate" => $token_expiration]);
+        }
+    }
+}
+
+function exchangeClientCredentialToToken(array $client)
+{
+    // Generate token
+    $token = uniqid();
+    $token_expiration = new DateTime('+ 1 hours');
+    // Save into database
+    $data = read_file('./data/token_client.data');
+    $data[] = [
+        'client_id' => $client['client_id'],
+        'token' => $token,
+        'token_expiration' => $token_expiration,
+    ];
+    write_file($data, './data/token_client.data');
+    // Send it to client server
+    echo json_encode(["access_token" => $token, "expirationDate" => $token_expiration]);
+}
+
+
+function token()
+{
+    // Get request parameters
+    [
+        'grant_type' => $grant_type,
+        'client_id' => $client_id,
+        'redirect_uri' => $redirect_uri,
+        'client_secret' => $client_secret
+    ] = $_GET;
+    // Check client credentials
+    $client = getClient($client_id);
+    if ($client && $client['client_secret'] === $client_secret) {
+        switch ($grant_type) {
+            case 'authorization_code':
+                ['code' => $code] = $_GET;
+                exchangeAuthorizationCodeToToken($client, $code);
+                break;
+            case 'client_credentials':
+                exchangeClientCredentialToToken($client);
+                break;
+            case 'password':
+                // Get REQUEST PARAMS for PASSWORD process
+                [
+                    'username' => $username,
+                    'password' => $password
+                ] = $_GET;
+                exchangePasswordToToken($username, $password);
+                break;
         }
     }
 }
@@ -202,5 +264,9 @@ switch ($route) {
         break;
     case '/token':
         token();
+        break;
+    case '/me':
+        error_log(json_encode(getallheaders()));
+        echo json_encode(["id" => 213124, "email" => "test@test.com"]);
         break;
 }
