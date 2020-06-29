@@ -24,7 +24,7 @@ Le pilote possède un nom (_publique_) et un état (_privé_).
 Il peut agir de 3 manières différentes:
 
 - receiveData(data): (_publique_) permet de recevoir des données de la voiture
-    ```JSON
+    ```javascript
     {
         state: "normal"|"happy"|"sad"|"ready",
         origin: "Luigi"
@@ -47,7 +47,7 @@ Un véhicule possède un pilote (_privé_), un numéro (_publique_) et potentiel
 Un véhicule peut agir de X manières :
 
 - init(conf): (constructor) permet d'initialiser un véhicule
-    ```JSON
+    ```javascript
         {
             name: "Mario",
             number: 1,
@@ -56,7 +56,7 @@ Un véhicule peut agir de X manières :
         }
     ```
 - receiveData(data): (_publique_) permet de recevoir des données du circuit
-    ```JSON
+    ```javascript
         {
             event: "start"|"info"|"weapon"|"attack"|"finish",
             value:
