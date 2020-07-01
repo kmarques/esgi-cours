@@ -7,11 +7,12 @@ Accept: application/json
 
 ###
 GET http://localhost:3000/movies?Title=test
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJpYXQiOjE1OTA1MDU1NjgsImV4cCI6MTU5MDUwOTE2OH0.kHx5wBJnOp8ZgkFSV4xFObLYAWQSxYG25mG_pd-c4r8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyQHRlc3QuY29tIiwiaWF0IjoxNTkzNTkzMDEwLCJleHAiOjE1OTM1OTY2MTB9.WNkhIxffM7zDNjgVBAVI8ocP9sC4hx3K4E6drLCvZAs
 
 ###
 POST http://localhost:3000/movies
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyQHRlc3QuY29tIiwiaWF0IjoxNTkzNTkzMDEwLCJleHAiOjE1OTM1OTY2MTB9.WNkhIxffM7zDNjgVBAVI8ocP9sC4hx3K4E6drLCvZAs
 
 {
   "Title": "test",
@@ -56,15 +57,18 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/users/3
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyQHRlc3QuY29tIiwiaWF0IjoxNTkyNTc1NTE4LCJleHAiOjE1OTI1NzkxMTh9.ilXj9VgrahREtNIwtC3N3XZy2bAgkE-NmLjO2j8dNsI
 
 ###
-PUT http://localhost:3000/users/3
+PUT http://localhost:3000/users/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyQHRlc3QuY29tIiwiaWF0IjoxNTkyNTY5MDUyLCJleHAiOjE1OTI1NzI2NTJ9.3rpZ6uDRkuw0RV4r5zyU94_FhY0028KVyVWUYB1snhI
 Content-Type: application/json
 
 {
-  "username": "test3"
+  "username": "test2.1@test.com"
 }
 
 ###
-DELETE http://localhost:3000/users/4
+DELETE http://localhost:3000/users/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyQHRlc3QuY29tIiwiaWF0IjoxNTkyNTY5MDUyLCJleHAiOjE1OTI1NzI2NTJ9.3rpZ6uDRkuw0RV4r5zyU94_FhY0028KVyVWUYB1snhI

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 const CLIENTID = "ezafe23RAEZFCze";
 const CLIENTSECRET = "ezafe23RAEZFCze";
 
@@ -10,10 +11,10 @@ const products = {
 };
 
 const createTransaction = (cart) => {
-  fetch("http://api-paiement/transaction", {
+  return fetch("http://api-paiement/transaction", {
     method: "POST",
     headers: {
-      Authorization: "Basic ".atob(`${CLIENTID}:${CLIENTSECRET}`),
+      Authorization: "Basic " + btoa(`${CLIENTID}:${CLIENTSECRET}`),
     },
     body: JSON.stringify({
       amount:
@@ -42,14 +43,16 @@ const createTransaction = (cart) => {
       },
       metadata: {
         consumer_id: 1,
-        order_id: "1E2EZDAZD2ZREZD2ED",
+        order_id: Date.now(),
       },
     }),
   });
 };
 
-const OrderPage = () => {
+const OrderPage = ({ history: defaultHistory }) => {
   const [cart, setCart] = useState({});
+  const history = useHistory();
+
   return (
     <>
       {Object.keys(products).map((product) => (
@@ -80,7 +83,13 @@ const OrderPage = () => {
           </a>
         </li>
       ))}
-      <a onClick={() => createTransaction(cart)}>Create Transaction</a>
+      <a
+        onClick={() => createTransaction(cart).catch((e) => history.push("/"))}
+      >
+        Create Transaction
+      </a>
     </>
   );
 };
+
+export default OrderPage;

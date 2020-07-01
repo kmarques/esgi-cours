@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Board from ".";
 import useBoards from "../../hooks/useBoards";
+import { Redirect } from "react-router";
 
-const BoardList = () => {
+const BoardList = ({ location, match, toto }) => {
   const [selectedBoard, setSelectedBoard] = useState(null);
   const { selectors } = useBoards();
 
@@ -19,8 +20,13 @@ const BoardList = () => {
     };
   }, [selectedBoard]);
 
+  if (parseInt(match.params.id, 10) === 404) {
+    return <Redirect to="/login" />;
+  }
+
   return (
     <>
+      {JSON.stringify(match)}
       <nav style={{ display: "flex", justifyContent: "space-around" }}>
         {selectors.getBoards().map((board, index) => (
           <span key={index} onClick={() => setSelectedBoard(board)}>

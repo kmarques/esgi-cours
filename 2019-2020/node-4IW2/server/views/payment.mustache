@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <ul>
+            {{#movies}}
+                <li>{{Title}}</li>
+            {{/movies}}
+        </ul>
+        <form method="POST">
+            <input name="cardHolder" />
+            <input name="creditCard" />
+            <input name="CVV" />
+            <input type="submit" value="Process" />
+        </form>
+    </body>
+</html>

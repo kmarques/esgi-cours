@@ -32,7 +32,6 @@ const combineReducers = (reducers) => {
 
 const rootReducer = combineReducers({
   boards: combineReducers({ boards: BoardReducer, lists: ListReducer }),
-  auth: AuthReducer,
 });
 
 const rootInitialState = {
