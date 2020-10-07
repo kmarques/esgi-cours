@@ -5,7 +5,11 @@
     <!--HelloWorld msg="Welcome to Your Vue.js App" v-bind:theme="theme" :toggleTheme="toggleTheme" /-->
     <a href @click.prevent="toggleIf">"Toggle If</a>
     <a href @click.prevent="toggleShow">"Toggle Show</a>
-    <List v-if="visible" v-show="appear" />
+    <List
+      v-if="visible"
+      v-show="appear"
+      :listStyle="{ backgroundColor: 'red' }"
+    />
   </div>
 </template>
 
